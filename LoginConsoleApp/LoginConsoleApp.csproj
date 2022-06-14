@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<LangVersion>9.0</LangVersion>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="readme.md" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="protobuf-net" Version="3.1.4" />
+		<PackageReference Include="Spectre.Console" Version="0.44.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
+	</ItemGroup>
+
+</Project>

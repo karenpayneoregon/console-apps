@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net5.0</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<ApplicationIcon>csharp.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Spectre.Console" Version="0.44.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
+	  <ProjectReference Include="..\UtilityLibrary\UtilityLibrary.csproj" />
+	</ItemGroup>
+
+	<!--<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+	</ItemGroup>-->
+
+</Project>

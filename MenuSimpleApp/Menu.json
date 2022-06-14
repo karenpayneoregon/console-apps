@@ -1,0 +1,67 @@
+[
+  {
+    "Id": 1,
+    "Name": "January",
+    "Information": "was named after the Roman god Janus"
+  },
+  {
+    "Id": 2,
+    "Name": "February",
+    "Information": "is the only month to have a length of fewer than 30 days!"
+  },
+  {
+    "Id": 3,
+    "Name": "March",
+    "Information": "National Women's History Month."
+  },
+  {
+    "Id": 4,
+    "Name": "April",
+    "Information": "America's first astronauts were announced by NASA on April 9, 1959."
+  },
+  {
+    "Id": 5,
+    "Name": "May",
+    "Information": "brings warmer temps, blooming flowers, and the fresh beginnings of summer."
+  },
+  {
+    "Id": 6,
+    "Name": "June",
+    "Information": " is the month with the longest daylight hours of the year in the Northern Hemisphere, and conversely, June has the shortest daylight hours of the year in the Southern Hemisphere."
+  },
+  {
+    "Id": 7,
+    "Name": "July",
+    "Information": "It is the second summer month after June."
+  },
+  {
+    "Id": 8,
+    "Name": "August",
+    "Information": "5 is a Civic Holiday in parts of Canada."
+  },
+  {
+    "Id": 9,
+    "Name": "September",
+    "Information": "comes from an old Roman word, “septem,” which actually means 7"
+  },
+  {
+    "Id": 10,
+    "Name": "October",
+    "Information": "October ends on the same day as February, every year"
+  },
+  {
+    "Id": 11,
+    "Name": "November",
+    "Information": "3 is Sadie Hawkins Day."
+  },
+  {
+    "Id": 12,
+    "Name": "December",
+    "Information": "comes from the Latin decem for “ten”, as it was the 10th month in the Roman Calendar. 3"
+  },
+  {
+    "Id": -1,
+    "Name": "Exit",
+    "Information": "Nada"
+  }
+]

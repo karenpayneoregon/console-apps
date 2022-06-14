@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TraverseFolder": {
+      "commandName": "Project",
+      "commandLineArgs": "list -d C:\\Users\\paynek\\Documents\\Snagit"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net5.0</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<ApplicationIcon>csharp.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <NoWarn>1701;1702;CA1416</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="EPPlus" Version="6.0.4" />
+	  <PackageReference Include="Spectre.Console" Version="0.44.0" />
+	  <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="ExcelFiles\Customers.xlsx">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="ExcelFiles\oops.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="ExcelFiles\ReadWorkbook.xlsx">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<!--<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+	</ItemGroup>-->
+
+</Project>
