@@ -16,7 +16,7 @@ namespace TreeConsoleApp.Classes
                 => new()
                 {
                     new () { Id = 1, List = new List<string>() { "C#", "F#", "Type script", "VB.NET" } },
-                    new () { Id = 2, List = new List<string>() { "Visual Studio", "Visual Studio Code", "Visual Studio Code web", "Notepad ++" } },
+                    new () { Id = 2, List = new List<string>() { "[green1][b]Visual Studio[/][/]", "Visual Studio Code", "Visual Studio Code web", "Notepad ++", "[green1][b]Rider[/][/]" } },
                     new () {Id = 3, List = new List<string>(){ "StackOverflow", "Microsoft Q&A" } }
                 };
 
