@@ -14,7 +14,7 @@ namespace DataTableGroupApp
     {
         static void Main(string[] args)
         {
-            //Example2();
+            Example2();
             Console.ReadLine();
         }
 

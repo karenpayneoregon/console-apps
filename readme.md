@@ -1,5 +1,10 @@
 # Learn how to work with Console project user interfaces
 
+*Console applications are back in vogue, hosting everything from input-focused command-line apps, worker services, and ASP.NET Core. As we all use current and future target frameworks, the upgraded console experience is the glow-up story of .NET.*
+
+[Khalid Abuhakmeh](https://twitter.com/buhakmeh)
+
+---
 
 
 ## Solution structure
@@ -15,8 +20,10 @@ This library has about 100 issues/bugs/feature request, even so knowing them you
 ## Resources
 
 - [Configure](https://www.programmingwithwolfgang.com/configure-dependency-injection-for-net-5-console-applications/) Dependency Injection for .NET 5 Console Applications
+- Microsoft Make [HTTP requests](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient) in a .NET console app using C#
 - [Building a Useful](https://www.codeproject.com/Articles/816301/Csharp-Building-a-Useful-Extensible-NET-Console-Ap), Extensible .NET Console Application Template for Development and Testing
 - [Hiding the Console Window of the .NET/C# Console Application](https://jamilhallal.blogspot.com/2022/02/hiding-the-console-window-of-the-dotnet-console-application.html)
+- [Cross-platform](https://opensource.com/article/17/5/cross-platform-console-apps) console apps with .NET Core
 
 ## Other libraries to check out
 
