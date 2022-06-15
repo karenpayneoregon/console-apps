@@ -26,6 +26,15 @@ Hope for those just starting out with coding using Console projects find these c
 
 ![Tree](assets/tree.png)
 
+![Data Table Group](assets/dataTableGroup.png)
+
+![Chart](assets/chart.png)
+
+
+In the following screen the autor of the library does not show events, mine does.
+
+![Gui](assets/gui.png)
+
 ## Solution structure
 
 Solution folders are used to separate various third party libraries used to work with user interfaces for console projects.
