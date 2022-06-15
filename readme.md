@@ -24,6 +24,8 @@ Both Spectre.Console and Terminal.Gui provide examples for using their libraries
 
 Hope for those just starting out with coding using Console projects find these code samples helpful.
 
+![Tree](assets/tree.png)
+
 ## Solution structure
 
 Solution folders are used to separate various third party libraries used to work with user interfaces for console projects.
