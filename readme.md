@@ -6,6 +6,23 @@
 
 ---
 
+What place do console applications have today? 
+
+First and foremost, provides a place to learn how to program in this case C# language without worrying about learning how to connect basic coding like learning to work with strings, dates with a user interface.
+
+For helper utilities with a simple user interface which can be with user input, or no user interface with parameters sent to the application or read from a configuration file.
+
+Another use as mentioned above, worker services and ASP.NET Core.
+
+Other than projects located under the Basics folder use enhanced user interfaces provided by Spectre.Console NuGet package and Terminal.Gui which provides mouse support.
+
+Both Spectre.Console and Terminal.Gui provide examples for using their libraries although in many cases they are not simple examples which is where these code samples are helpful, broken down, easy to run.
+
+- In several projects EF Core is used and for those projects require a script to run to create SQL-Server databases along with populating tables first.
+- Other than one project, Program class is setup as partial with startup code under the Classes folder for each project.
+- Most projects are centered on screen or full screen using code in ConsoleHelperLibrary
+
+Hope for those just starting out with coding using Console projects find these code samples helpful.
 
 ## Solution structure
 
@@ -28,6 +45,7 @@ This library has about 100 issues/bugs/feature request, even so knowing them you
 
 ## Other libraries to check out
 
+- [Terminal.Gui](https://github.com/migueldeicaza/gui.cs) Console-based user interface toolkit for .NET applications.
 - [ShellProgressBar](https://github.com/Mpdreamz/shellprogressbar) display progress in your console application
 - [Colorful.Console](https://github.com/tomakita/Colorful.Console) Style your .NET console output!
 - [Devlead.Console.Template](https://www.devlead.se/posts/2021/2021-01-15-my-preferred-console-stack) this is considered advance console app coding

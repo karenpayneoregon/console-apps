@@ -6,23 +6,12 @@ using Spectre.Console.Rendering;
 using static System.Globalization.DateTimeFormatInfo;
 using static System.DateTime;
 
-namespace AskConsoleApp
+namespace ConsoleStashApp
 {
     partial class Program
     {
         static void Main(string[] args)
         {
-
-            //var favoriteMonths = GetFavoriteMonths();
-            //if (favoriteMonths.Any())
-            //{
-            //    foreach (var favorite in favoriteMonths)
-            //    {
-            //        Console.WriteLine(favorite);
-            //    }
-
-            //}
- 
 
             AnsiConsole.Write(
                 new Panel(new Text("Solution folders are used to separate various third party libraries used to work with user interfaces for console projects.").Centered())
@@ -166,15 +155,6 @@ namespace AskConsoleApp
             );
 
         
-        public static string AskSport()
-        {
-            return AnsiConsole.Prompt(
-                new TextPrompt<string>("What's your [green]favorite sport[/]?")
-                    .InvalidChoiceMessage("[red]That's not a sport![/]")
-                    .DefaultValue("Sport?")
-                    .AddChoice("[white]Soccer[/]")
-                    .AddChoice("Hockey")
-                    .AddChoice("Basketball"));
-        }
+
     }
 }
