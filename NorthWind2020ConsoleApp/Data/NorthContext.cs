@@ -13,13 +13,13 @@ using ConfigurationLibrary.Classes;
 
 namespace NorthWind2020ConsoleApp.Data
 {
-    public partial class Context : DbContext
+    public partial class NorthContext : DbContext
     {
-        public Context()
+        public NorthContext()
         {
         }
 
-        public Context(DbContextOptions<Context> options)
+        public NorthContext(DbContextOptions<NorthContext> options)
             : base(options)
         {
         }

@@ -22,7 +22,7 @@ namespace NorthWind2020ConsoleApp.Classes
         [SuppressMessage("ReSharper", "All")]
         public static void EmployeeReportsToManager()
         {
-            using var context = new Context();
+            using var context = new NorthContext();
 
             List<Employees> employees = context.Employees.ToList();
             
