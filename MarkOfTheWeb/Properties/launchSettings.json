@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MarkOfTheWeb": {
+      "commandName": "Project",
+      "commandLineArgs": "--dir C:\\OED\\Dotnetland\\VS2019\\WorkingWithConsoleAppsSolution\\MarkOfTheWeb"
+    }
+  }
+}

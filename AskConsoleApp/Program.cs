@@ -16,6 +16,10 @@ namespace AskConsoleApp
     {
         static void Main(string[] args)
         {
+
+            
+
+
             //OldSchool();
             CurrentSchool();
             Console.ReadLine();
