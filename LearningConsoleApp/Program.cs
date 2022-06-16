@@ -1,7 +1,5 @@
 ﻿using System;
 using LearningConsoleApp.Classes;
-using LearningConsoleApp.DataClasses;
-using Spectre.Console;
 
 namespace LearningConsoleApp
 {
@@ -12,10 +10,10 @@ namespace LearningConsoleApp
 
             //LearningStrings.IterateArray();
             //LearningStrings.ArrayContains();
-            LearningDateTime.StringToDateTime();
+            //LearningDateTime.StringToDateTime();
             //LearningDateTime.TimeDesignator();
             //LearningDateTime.TimeOfDayCode();
-            //LearningNumbers.GetDecimalFraction();
+            LearningNumbers.GetDecimalFraction();
 
             Console.ReadLine();
         }
