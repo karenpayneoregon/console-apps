@@ -13,6 +13,7 @@ namespace NorthWind2020ConsoleApp
         static void Main(string[] args)
         {
             EmployeeOperations.EmployeeReportsToManager();
+            //OffTheDeepEnd.Coloring();
             Colored.ShowMessage("Press any key to continue");
             Console.ReadLine();
         }

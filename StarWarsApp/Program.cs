@@ -7,14 +7,11 @@ namespace StarWarsApp
     {
         static void Main(string[] args)
         {
-
             Console.CursorTop = 10;
 
             string[] words = { "May", "the", "Force", "be", "with", "you" };
 
-            // https://github.com/xero/figlet-fonts/blob/master/starwars.flf
             var font = FigletFont.Load("starwars.flf");
-
 
             foreach (var word in words)
             {
@@ -24,7 +21,9 @@ namespace StarWarsApp
                         .Color(Color.Chartreuse3));
 
             }
+
             Console.ReadLine();
+
         }
     }
 }
