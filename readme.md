@@ -35,6 +35,14 @@ In the following screen the autor of the library does not show events, mine does
 
 ![Gui](assets/gui.png)
 
+## Learn process
+
+- To learn basic coding, pick a topic such as working with strings than select a specific operation like does a string contain a specific value case and case insensitive. Now write code as done in the project `LearningConsoleApp`. Follow with up by writing unit test to ensure code works correctly.
+- Avoid coding with one character variables, for instance in a `for` most use `i` which may seem okay until debugging, use `index` instead. Don't just settle on `index`, be expressive.
+- Lots of developers tend to use ambiguous and/or short variable names. I promote using variable names that make sense, look at it and you know what it's for. I recommend the same to those reading this.
+- Find code which can be used in other projects and move code in a class project
+  - Now write unit test
+
 ## Solution structure
 
 Solution folders are used to separate various third party libraries used to work with user interfaces for console projects.
@@ -44,6 +52,8 @@ Solution folders are used to separate various third party libraries used to work
 This library has about 100 issues/bugs/feature request, even so knowing them you can still create useful console applications
 
 - [Resizing Tables and Panels #356](https://github.com/spectreconsole/spectre.console/discussions/356) discussion on inability to refresh tables and panels with 
+- Not all colors and borders work in the default font
+- `Emojis` can be used is completely up to the `operating system` and/or `terminal` you're using, and no guarantees can be made of how it will look.
 
 ## Resources
 
