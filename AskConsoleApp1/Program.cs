@@ -7,7 +7,7 @@ namespace AskConsoleApp1
 {
     partial class Program
     {
-        private static List<int> _list = new List<int>();
+        private static List<int> _list = new();
 
         static void Main(string[] args)
         {
