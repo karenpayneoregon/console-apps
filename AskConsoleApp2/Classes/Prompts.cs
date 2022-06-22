@@ -12,7 +12,7 @@ namespace AskConsoleApp2.Classes
                     .DefaultValue(12)
                     .DefaultValueStyle(new Style(Color.Aqua))
                     .ValidationErrorMessage("[red]Must be integer[/]")
-                    .Validate(age => age switch
+                    .Validate(value => value switch
                     {
                         <= 0 => ValidationResult.Error("[red]1 is min value[/]"),
                         >= 12 => ValidationResult.Error("[red]12 is max value[/]"),
