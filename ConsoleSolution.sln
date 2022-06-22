@@ -81,7 +81,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningConsoleApp", "Learn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWarsApp", "StarWarsApp\StarWarsApp.csproj", "{16F869D6-B44D-4CD6-AA47-D6AF50E6A9E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AskConsoleApp1", "AskConsoleApp1\AskConsoleApp1.csproj", "{87EF6E83-F379-4BD1-ADF9-505213D62F3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AskConsoleApp1", "AskConsoleApp1\AskConsoleApp1.csproj", "{87EF6E83-F379-4BD1-ADF9-505213D62F3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AskConsoleApp2", "AskConsoleApp2\AskConsoleApp2.csproj", "{D60B71F7-74F4-475B-9033-DC2A6D381375}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -209,6 +211,10 @@ Global
 		{87EF6E83-F379-4BD1-ADF9-505213D62F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87EF6E83-F379-4BD1-ADF9-505213D62F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87EF6E83-F379-4BD1-ADF9-505213D62F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D60B71F7-74F4-475B-9033-DC2A6D381375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D60B71F7-74F4-475B-9033-DC2A6D381375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D60B71F7-74F4-475B-9033-DC2A6D381375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D60B71F7-74F4-475B-9033-DC2A6D381375}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -244,6 +250,7 @@ Global
 		{0DADB327-CC31-4813-BF87-F1543D0F7BC1} = {D41E8ACC-6999-41E2-BF35-B1F84BD6FA2D}
 		{16F869D6-B44D-4CD6-AA47-D6AF50E6A9E0} = {1296AE50-A024-4118-B43D-2F9802A567BB}
 		{87EF6E83-F379-4BD1-ADF9-505213D62F3C} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
+		{D60B71F7-74F4-475B-9033-DC2A6D381375} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22709C88-5741-4CC8-8E81-A66A17B04A0D}
