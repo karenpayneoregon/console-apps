@@ -30,7 +30,7 @@ namespace AskConsoleCalcApp
             //    Console.WriteLine("N");
             //}
 
-            Console.WriteLine(Prompts.AskConfirmation("Continue"));
+            Console.WriteLine(Prompts.AskConfirmation("Perform another calculation?"));
             
             Console.ReadLine();
         }
