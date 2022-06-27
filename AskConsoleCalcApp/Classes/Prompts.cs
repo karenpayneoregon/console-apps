@@ -34,7 +34,7 @@ namespace AskConsoleCalcApp.Classes
                 new TextPrompt<string>($"[white]Continue[/] {string.Join(",", QuestionOptions)}")
                     .PromptStyle("cyan")
                     .DefaultValue("y")
-                    .ValidationErrorMessage($"[red]Please enter a valid operator[/] [white]{string.Join(",", QuestionOptions)}[/] [red]or press ENTER for default[/]")
+                    .ValidationErrorMessage($"[red]Valid responses[/] [white]{string.Join(",", QuestionOptions)}[/] [red]or press ENTER for default[/]")
                     .Validate(text => QuestionOptions.Contains(text, StringComparer.CurrentCultureIgnoreCase) switch
                     {
                         false => ValidationResult.Error("[red]Must be[/] [yellow]y[/] [red]or[/] [yellow]n[/]"),
