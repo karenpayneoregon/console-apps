@@ -31,5 +31,17 @@ namespace ConsoleHelperLibrary.Classes
             DeleteMenu(GetSystemMenu(GetConsoleWindow(), false), SC_MINIMIZE, MF_BYCOMMAND);
             DeleteMenu(GetSystemMenu(GetConsoleWindow(), false), SC_MAXIMIZE, MF_BYCOMMAND);
         }
+
+        /// <summary>
+        /// Disable close button
+        /// </summary>
+        /// <remarks>
+        /// In most cases not a good idea along with the user can still close with ALT+F4 or Task Manager.
+        /// If using this consider informing the user why the button is disabled.
+        /// </remarks>
+        public static void DisableCloseButton()
+        {
+            DeleteMenu(GetSystemMenu(GetConsoleWindow(), false), SC_CLOSE, MF_BYCOMMAND);
+        }
     }
 }
