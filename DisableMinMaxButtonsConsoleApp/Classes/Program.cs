@@ -29,10 +29,7 @@ namespace DisableMinMaxButtonsConsoleApp
             AnsiConsole.Write(new Panel(grid).Header("Information"));
 
         }
-        private static string YesNo(bool value)
-        {
-            return value ? "Yes" : "No";
-        }
+
     }
 }
 
