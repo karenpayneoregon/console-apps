@@ -85,7 +85,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AskConsoleApp1", "AskConsol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AskConsoleApp2", "AskConsoleApp2\AskConsoleApp2.csproj", "{D60B71F7-74F4-475B-9033-DC2A6D381375}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AskConsoleCalcApp", "AskConsoleCalcApp\AskConsoleCalcApp.csproj", "{4BF59E26-5127-44A1-BE60-5700829F1FA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AskConsoleCalcApp", "AskConsoleCalcApp\AskConsoleCalcApp.csproj", "{4BF59E26-5127-44A1-BE60-5700829F1FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisableMinMaxButtonsConsoleApp", "DisableMinMaxButtonsConsoleApp\DisableMinMaxButtonsConsoleApp.csproj", "{CA6E26F9-8A1B-4B48-B7FF-8CA3A95E528D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -221,6 +223,10 @@ Global
 		{4BF59E26-5127-44A1-BE60-5700829F1FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BF59E26-5127-44A1-BE60-5700829F1FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BF59E26-5127-44A1-BE60-5700829F1FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA6E26F9-8A1B-4B48-B7FF-8CA3A95E528D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6E26F9-8A1B-4B48-B7FF-8CA3A95E528D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6E26F9-8A1B-4B48-B7FF-8CA3A95E528D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6E26F9-8A1B-4B48-B7FF-8CA3A95E528D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -258,6 +264,7 @@ Global
 		{87EF6E83-F379-4BD1-ADF9-505213D62F3C} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
 		{D60B71F7-74F4-475B-9033-DC2A6D381375} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
 		{4BF59E26-5127-44A1-BE60-5700829F1FA7} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
+		{CA6E26F9-8A1B-4B48-B7FF-8CA3A95E528D} = {1296AE50-A024-4118-B43D-2F9802A567BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22709C88-5741-4CC8-8E81-A66A17B04A0D}
