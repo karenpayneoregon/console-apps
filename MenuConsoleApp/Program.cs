@@ -1,5 +1,6 @@
 ﻿using System;
 using MenuConsoleApp.Classes;
+using MenuConsoleApp.Models;
 using Spectre.Console;
 
 namespace MenuConsoleApp
@@ -11,11 +12,11 @@ namespace MenuConsoleApp
         {
             //var categorySelection = MenuOperations.ConfigureCategorySelectionPrompt();
             var productContinue = true;
-
-            while (true)
+            Categories categories = new Categories();
+            while (categories.CategoryId > -1)
             {
 
-                var categories = AnsiConsole.Prompt(MenuOperations.CategoryMenu());
+                categories = AnsiConsole.Prompt(MenuOperations.CategoryMenu());
 
                 if (categories.CategoryId != -1)
                 {

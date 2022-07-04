@@ -32,6 +32,11 @@ namespace AskConsoleApp.Classes
             AnsiConsole.Prompt(
                 new TextPrompt<string>("[white]First name[/]?")
                     .PromptStyle("yellow")
+                    .Validate(value => value.Length switch
+                    {
+                        < 3 => ValidationResult.Error("[red]Must have at least three characters[/]"),
+                        _ => ValidationResult.Success(),
+                    })
                     .ValidationErrorMessage("[red]Please enter your first name[/]"));
 
 

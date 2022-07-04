@@ -9,7 +9,7 @@ namespace AskConsoleApp
 {
     partial class Program
     {
-
+        
         [ModuleInitializer]
         public static void Init()
         {
