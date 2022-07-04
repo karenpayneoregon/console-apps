@@ -36,7 +36,7 @@ namespace MenuConsoleAppBasic.Classes
             AnsiConsole.Prompt(
                 new TextPrompt<double>("[white]Salary[/]?")
                     .PromptStyle("yellow")
-                    .ValidationErrorMessage("[red]Please enter salary[/]"));
+                    .ValidationErrorMessage("[red]Please enter salary (numbers only)[/]"));
 
         public static void List(List<Employee> list)
         {
