@@ -24,6 +24,8 @@ Both Spectre.Console and Terminal.Gui provide examples for using their libraries
 
 Hope for those just starting out with coding using Console projects find these code samples helpful.
 
+:heavy_check_mark: MenuConsoleAppBasic project is a great place to see a menu system with json data.
+
 ![Tree](assets/tree.png)
 
 ![Data Table Group](assets/dataTableGroup.png)

@@ -17,6 +17,13 @@ namespace MenuConsoleAppBasic
             while (menuItem.Id > -1)
             {
                 AnsiConsole.Clear();
+                AnsiConsole.Write(
+                    new Panel(new Text("Some fictitious company HR").Centered())
+                        .Expand()
+                        .SquareBorder()
+                        .BorderStyle(new Style(Color.Cornsilk1))
+                        .Header("[LightGreen]About[/]")
+                        .HeaderAlignment(Justify.Center));
                 menuItem = AnsiConsole.Prompt(MenuOperations.MainMenu());
                 Selection(menuItem, EmployeesList);
             }
