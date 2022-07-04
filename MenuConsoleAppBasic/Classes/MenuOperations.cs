@@ -20,7 +20,7 @@ namespace MenuConsoleAppBasic.Classes
                     Decoration.None)
             };
 
-            menu.Title("Select an [B]options[/]");
+            menu.Title("Select an [B]option[/]");
             menu.AddChoices(new List<MenuItem>()
             {
                 new MenuItem() {Id = 0, Text = "List employees"},
