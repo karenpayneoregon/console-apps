@@ -10,25 +10,46 @@ namespace MenuConsoleAppBasic.Classes
 {
     public class MenuOperations
     {
+        private static Style _highLightStyle => new(
+            Color.LightGreen,
+            Color.Black,
+            Decoration.None);
+
         public static SelectionPrompt<MenuItem> MainMenu()
         {
+
             SelectionPrompt<MenuItem> menu = new()
             {
-                HighlightStyle = new Style(
-                    Color.DodgerBlue1, 
-                    Color.Black, 
-                    Decoration.None)
+                HighlightStyle = _highLightStyle
             };
 
             menu.Title("Select an [B]option[/]");
             menu.AddChoices(new List<MenuItem>()
             {
-                new MenuItem() {Id = 0, Text = "List employees"},
-                new MenuItem() {Id = 1, Text = "Add manager"},
-                new MenuItem() {Id = 2, Text = "Add Engineer"},
-                new MenuItem() {Id = 3, Text = "Delete"},
-                new MenuItem() {Id = -1, Text = "Exit"},
+                new() {Id = 0,  Text = "List employees"},
+                new() {Id = 1,  Text = "Add manager"},
+                new() {Id = 2,  Text = "Add engineer"},
+                new() {Id = 3,  Text = "Add employee"},
+                new() {Id = 4,  Text = "Delete an employee "},
+                new() {Id = 5,  Text = "Save all"},
+                new() {Id = -1, Text = "Exit"},
             });
+
+            return menu;
+        }
+
+        public static SelectionPrompt<Employee> RemoveMenu(List<Employee> list)
+        {
+
+            list.Add(new Employee() {FirstName = "Return", LastName = "to menu", Id = -2});
+
+            SelectionPrompt<Employee> menu = new()
+            {
+                HighlightStyle = _highLightStyle
+            };
+
+            menu.Title("Select an employee to [B]remove[/] or select [B]return to menu[/] to abort.");
+            menu.AddChoices(list);
 
             return menu;
         }

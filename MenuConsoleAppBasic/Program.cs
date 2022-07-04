@@ -12,31 +12,13 @@ namespace MenuConsoleAppBasic
         {
             MenuItem menuItem = new MenuItem();
 
-            List<Employee> EmployeesList = new List<Employee>();
+            List<Employee> EmployeesList = Operations.ReadEmployees();
 
             while (menuItem.Id > -1)
             {
-
                 AnsiConsole.Clear();
                 menuItem = AnsiConsole.Prompt(MenuOperations.MainMenu());
-                switch (menuItem.Id)
-                {
-                    case 0:
-                        Operations.List(EmployeesList);
-                        break;
-                    case 1:
-                        Console.WriteLine("Add manager");
-                        EmployeesList.Add(Operations.AddEmployee());
-                        break;
-                    case 2:
-                        Console.WriteLine("Add Engineer");
-                        Console.ReadLine();
-                        break;
-                    case 3:
-                        Console.WriteLine("Delete");
-                        Console.ReadLine();
-                        break;
-                }
+                Selection(menuItem, EmployeesList);
             }
         }
     }
