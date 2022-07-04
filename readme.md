@@ -6,6 +6,8 @@
 
 ---
 
+![F1](MenuConsoleAppBasic/assets/f1.png)
+
 What place do console applications have today? 
 
 First and foremost, provides a place to learn how to program in this case C# language without worrying about learning how to connect basic coding like learning to work with strings, dates with a user interface.
@@ -65,6 +67,7 @@ This library has about 100 issues/bugs/feature request, even so knowing them you
 - [Building a Useful](https://www.codeproject.com/Articles/816301/Csharp-Building-a-Useful-Extensible-NET-Console-Ap), Extensible .NET Console Application Template for Development and Testing
 - [Hiding the Console Window of the .NET/C# Console Application](https://jamilhallal.blogspot.com/2022/02/hiding-the-console-window-of-the-dotnet-console-application.html)
 - [Cross-platform](https://opensource.com/article/17/5/cross-platform-console-apps) console apps with .NET Core
+- [Working With .NET Console Host Lifetime Events](https://khalidabuhakmeh.com/working-with-dotnet-console-host-lifetime-events)
 
 ## Other libraries to check out
 
