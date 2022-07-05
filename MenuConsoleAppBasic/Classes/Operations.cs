@@ -90,9 +90,18 @@ namespace MenuConsoleAppBasic.Classes
             Console.ReadLine();
         }
 
-        public static bool Remove(Employee employee)
+        public static bool Remove(List<Employee> list,Employee employee)
         {
-            return true; // TODO
+            var item = list.FirstOrDefault(emp => emp.Id == employee.Id);
+            if (item is not null)
+            {
+                list.Remove(employee);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>

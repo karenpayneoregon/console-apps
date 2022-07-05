@@ -7,17 +7,17 @@
     "JobType": 2
   },
   {
-    "Id": 2,
-    "FirstName": "Jim",
-    "LastName": "Smith",
-    "Salary": 80000,
-    "JobType": 2
-  },
-  {
     "Id": 3,
     "FirstName": "Kim",
     "LastName": "Gallagher",
     "Salary": 99000,
     "JobType": 2
+  },
+  {
+    "Id": -2,
+    "FirstName": "Return",
+    "LastName": "to menu",
+    "Salary": 0,
+    "JobType": 0
   }
 ]
