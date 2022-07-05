@@ -89,7 +89,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AskConsoleCalcApp", "AskCon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisableMinMaxButtonsConsoleApp", "DisableMinMaxButtonsConsoleApp\DisableMinMaxButtonsConsoleApp.csproj", "{CA6E26F9-8A1B-4B48-B7FF-8CA3A95E528D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuConsoleAppBasic", "MenuConsoleAppBasic\MenuConsoleAppBasic.csproj", "{26203801-49A7-439C-811D-440AF55A4BF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuConsoleAppBasic", "MenuConsoleAppBasic\MenuConsoleAppBasic.csproj", "{26203801-49A7-439C-811D-440AF55A4BF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsConsoleAppGlobal", "ExceptionsConsoleAppGlobal\ExceptionsConsoleAppGlobal.csproj", "{AB7EFB73-D116-44A5-8CBB-7A83AC6E2714}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -233,6 +235,10 @@ Global
 		{26203801-49A7-439C-811D-440AF55A4BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26203801-49A7-439C-811D-440AF55A4BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26203801-49A7-439C-811D-440AF55A4BF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB7EFB73-D116-44A5-8CBB-7A83AC6E2714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7EFB73-D116-44A5-8CBB-7A83AC6E2714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7EFB73-D116-44A5-8CBB-7A83AC6E2714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7EFB73-D116-44A5-8CBB-7A83AC6E2714}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -272,6 +278,7 @@ Global
 		{4BF59E26-5127-44A1-BE60-5700829F1FA7} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
 		{CA6E26F9-8A1B-4B48-B7FF-8CA3A95E528D} = {1296AE50-A024-4118-B43D-2F9802A567BB}
 		{26203801-49A7-439C-811D-440AF55A4BF5} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
+		{AB7EFB73-D116-44A5-8CBB-7A83AC6E2714} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22709C88-5741-4CC8-8E81-A66A17B04A0D}
