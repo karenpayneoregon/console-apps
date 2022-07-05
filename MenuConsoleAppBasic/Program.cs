@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using MenuConsoleAppBasic.Classes;
 using MenuConsoleAppBasic.Models;
 using Spectre.Console;
+using static ConsoleHelperLibrary.Classes.KeysHelper;
 
 namespace MenuConsoleAppBasic
 {
@@ -27,6 +28,9 @@ namespace MenuConsoleAppBasic
                 menuItem = AnsiConsole.Prompt(MenuOperations.MainMenu());
                 Selection(menuItem, EmployeesList);
             }
+
+            ReadLineTimed("bye");
+
         }
     }
 }

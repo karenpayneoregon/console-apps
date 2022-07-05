@@ -52,11 +52,7 @@ namespace MenuConsoleAppBasic
                     }
                     if (AnsiConsole.Confirm($"Remove {employee.FirstName} {employee.LastName}"))
                     {
-                        var success = Operations.Remove(EmployeesList,employee);
-                        if (success == false)
-                        {
-                            
-                        }
+                        _ = Operations.Remove(EmployeesList,employee);
                     }
                     break;
                 case 5:

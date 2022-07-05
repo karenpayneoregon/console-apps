@@ -10,9 +10,17 @@ namespace MenuConsoleAppBasic.Classes
 {
     public class Operations
     {
+        /// <summary>
+        /// Location for reading and saving employees to and from
+        /// </summary>
         private static string _fileName => Path.Combine(
             AppDomain.CurrentDomain.BaseDirectory, "Employees.json");
 
+        /// <summary>
+        /// Add new employee
+        /// </summary>
+        /// <param name="jobType"><see cref="JobType"/></param>
+        /// <returns>new employee</returns>
         public static Employee AddEmployee(JobType jobType = JobType.Employee)
         {
             
@@ -37,6 +45,8 @@ namespace MenuConsoleAppBasic.Classes
             return employee;
         }
 
+        #region Methods to obtain user input
+
         public static string GetFirstName() =>
             AnsiConsole.Prompt(
                 new TextPrompt<string>("[white]First name[/]?")
@@ -55,6 +65,12 @@ namespace MenuConsoleAppBasic.Classes
                     .PromptStyle("yellow")
                     .ValidationErrorMessage("[red]Please enter salary (numbers only)[/]"));
 
+        #endregion
+
+        /// <summary>
+        /// Present list of employees in a table/grid
+        /// </summary>
+        /// <param name="list"></param>
         public static void List(List<Employee> list)
         {
             if (list.Count == 0)
@@ -90,6 +106,12 @@ namespace MenuConsoleAppBasic.Classes
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Remove an employee from a given list
+        /// </summary>
+        /// <param name="list">List to remove employee from</param>
+        /// <param name="employee">Employee to remove from list</param>
+        /// <returns>sucess</returns>
         public static bool Remove(List<Employee> list,Employee employee)
         {
             var item = list.FirstOrDefault(emp => emp.Id == employee.Id);
