@@ -1,6 +1,6 @@
 ﻿# About
 
-For positioning a console window
+## For positioning a console window
 
 > using  W = ConsoleHelperLibrary.Classes.WindowUtility;
 
@@ -28,4 +28,24 @@ public enum AnchorWindow
     Center = 0x10,
     Fill = 0x20
 }
+```
+
+## Disable Min/Max buttons
+
+> using M = ConsoleHelperLibrary.Classes.ConsoleMenu;
+
+...
+
+```csharp
+M.DisableMinMaxButtons();
+```
+
+## ReadLine timeout
+
+> using static ConsoleHelperLibrary.Classes.KeysHelper;
+
+...
+
+```csharp
+ReadLineTimed("bye");
 ```
