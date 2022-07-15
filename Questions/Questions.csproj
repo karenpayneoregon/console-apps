@@ -12,16 +12,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="bin\Debug\net5.0\Employees.json" />
 		<Content Include="readme.md" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Spectre.Console" Version="0.44.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
 	</ItemGroup>
+
+	<!--<ItemGroup>
+		<PackageReference Include="Spectre.Console" Version="0.44.0" />
+	</ItemGroup>-->
+
+	<!--<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+	</ItemGroup>-->
 
 </Project>
