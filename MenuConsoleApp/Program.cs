@@ -10,9 +10,8 @@ namespace MenuConsoleApp
 
         static void Main(string[] args)
         {
-            //var categorySelection = MenuOperations.ConfigureCategorySelectionPrompt();
-            var productContinue = true;
-            Categories categories = new Categories();
+            
+            Categories categories = new();
             while (categories.CategoryId > -1)
             {
 
@@ -26,8 +25,11 @@ namespace MenuConsoleApp
 
                     if (products.Count > 0)
                     {
-                        productContinue = true;
-                        MenuOperations.ProductMenu(productContinue, categories);
+
+                        /*
+                         * returns selected product or exit with no selection with id of -1
+                         */
+                        var product = MenuOperations.ProductMenu(categories);
                     }
                     else
                     {

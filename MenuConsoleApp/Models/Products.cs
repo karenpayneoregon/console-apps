@@ -11,6 +11,7 @@ namespace MenuConsoleApp.Models
         public string ProductName { get; set; }
         public int? SupplierId { get; set; }
         public int? CategoryId { get; set; }
+        public double Price { get; set; }
 
         public virtual Categories Category { get; set; }
 

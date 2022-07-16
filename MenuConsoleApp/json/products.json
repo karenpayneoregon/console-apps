@@ -1,470 +1,626 @@
 [
   {
-    "ProductID": 1,
+    "ProductId": 1,
     "ProductName": "Chai",
-    "SupplierID": 1,
-    "CategoryID": 1
+    "SupplierId": 1,
+    "CategoryId": 1,
+    "Price": 2.66,
+    "Category": null
   },
   {
-    "ProductID": 2,
+    "ProductId": 2,
     "ProductName": "Chang",
-    "SupplierID": 6,
-    "CategoryID": 1
+    "SupplierId": 6,
+    "CategoryId": 1,
+    "Price": 5.17,
+    "Category": null
   },
   {
-    "ProductID": 3,
+    "ProductId": 3,
     "ProductName": "Aniseed Syrup",
-    "SupplierID": 1,
-    "CategoryID": 2
+    "SupplierId": 1,
+    "CategoryId": 2,
+    "Price": 43.82,
+    "Category": null
   },
   {
-    "ProductID": 4,
+    "ProductId": 4,
     "ProductName": "Chef Anton's Cajun Seasoning",
-    "SupplierID": 2,
-    "CategoryID": 2
+    "SupplierId": 2,
+    "CategoryId": 2,
+    "Price": 36.55,
+    "Category": null
   },
   {
-    "ProductID": 5,
+    "ProductId": 5,
     "ProductName": "Chef Anton's Gumbo Mix",
-    "SupplierID": 2,
-    "CategoryID": 2
+    "SupplierId": 2,
+    "CategoryId": 2,
+    "Price": 6.55,
+    "Category": null
   },
   {
-    "ProductID": 6,
+    "ProductId": 6,
     "ProductName": "Grandma's Boysenberry Spread",
-    "SupplierID": 3,
-    "CategoryID": 2
+    "SupplierId": 3,
+    "CategoryId": 2,
+    "Price": 42.45,
+    "Category": null
   },
   {
-    "ProductID": 7,
+    "ProductId": 7,
     "ProductName": "Uncle Bob's Organic Dried Pears",
-    "SupplierID": 3,
-    "CategoryID": 7
+    "SupplierId": 3,
+    "CategoryId": 7,
+    "Price": 49.64,
+    "Category": null
   },
   {
-    "ProductID": 8,
+    "ProductId": 8,
     "ProductName": "Northwoods Cranberry Sauce",
-    "SupplierID": 3,
-    "CategoryID": 2
+    "SupplierId": 3,
+    "CategoryId": 2,
+    "Price": 29.27,
+    "Category": null
   },
   {
-    "ProductID": 9,
+    "ProductId": 9,
     "ProductName": "Mishi Kobe Niku",
-    "SupplierID": 4,
-    "CategoryID": 6
+    "SupplierId": 4,
+    "CategoryId": 6,
+    "Price": 48.13,
+    "Category": null
   },
   {
-    "ProductID": 10,
+    "ProductId": 10,
     "ProductName": "Ikura",
-    "SupplierID": 4,
-    "CategoryID": 8
+    "SupplierId": 4,
+    "CategoryId": 8,
+    "Price": 14.44,
+    "Category": null
   },
   {
-    "ProductID": 11,
+    "ProductId": 11,
     "ProductName": "Queso Cabrales",
-    "SupplierID": 5,
-    "CategoryID": 4
+    "SupplierId": 5,
+    "CategoryId": 4,
+    "Price": 32.19,
+    "Category": null
   },
   {
-    "ProductID": 12,
+    "ProductId": 12,
     "ProductName": "Queso Manche La Pastora",
-    "SupplierID": 5,
-    "CategoryID": 4
+    "SupplierId": 5,
+    "CategoryId": 4,
+    "Price": 27.44,
+    "Category": null
   },
   {
-    "ProductID": 13,
+    "ProductId": 13,
     "ProductName": "Konbu",
-    "SupplierID": 6,
-    "CategoryID": 8
+    "SupplierId": 6,
+    "CategoryId": 8,
+    "Price": 40.56,
+    "Category": null
   },
   {
-    "ProductID": 14,
+    "ProductId": 14,
     "ProductName": "Tofu",
-    "SupplierID": 6,
-    "CategoryID": 7
+    "SupplierId": 6,
+    "CategoryId": 7,
+    "Price": 29.46,
+    "Category": null
   },
   {
-    "ProductID": 15,
+    "ProductId": 15,
     "ProductName": "Genen Shouyu",
-    "SupplierID": 6,
-    "CategoryID": 2
+    "SupplierId": 6,
+    "CategoryId": 2,
+    "Price": 8.39,
+    "Category": null
   },
   {
-    "ProductID": 16,
+    "ProductId": 16,
     "ProductName": "Pavlova",
-    "SupplierID": 7,
-    "CategoryID": 3
+    "SupplierId": 7,
+    "CategoryId": 3,
+    "Price": 27.61,
+    "Category": null
   },
   {
-    "ProductID": 17,
+    "ProductId": 17,
     "ProductName": "Alice Mutton",
-    "SupplierID": 7,
-    "CategoryID": 6
+    "SupplierId": 7,
+    "CategoryId": 6,
+    "Price": 29.82,
+    "Category": null
   },
   {
-    "ProductID": 18,
+    "ProductId": 18,
     "ProductName": "Carnarvon Tigers",
-    "SupplierID": 7,
-    "CategoryID": 8
+    "SupplierId": 7,
+    "CategoryId": 8,
+    "Price": 8.86,
+    "Category": null
   },
   {
-    "ProductID": 19,
+    "ProductId": 19,
     "ProductName": "Teatime Chocolate Biscuits",
-    "SupplierID": 8,
-    "CategoryID": 3
+    "SupplierId": 8,
+    "CategoryId": 3,
+    "Price": 42.78,
+    "Category": null
   },
   {
-    "ProductID": 20,
+    "ProductId": 20,
     "ProductName": "Sir Rodney's Marmalade",
-    "SupplierID": 8,
-    "CategoryID": 3
+    "SupplierId": 8,
+    "CategoryId": 3,
+    "Price": 37.27,
+    "Category": null
   },
   {
-    "ProductID": 21,
+    "ProductId": 21,
     "ProductName": "Sir Rodney's Scones",
-    "SupplierID": 8,
-    "CategoryID": 3
+    "SupplierId": 8,
+    "CategoryId": 3,
+    "Price": 15.74,
+    "Category": null
   },
   {
-    "ProductID": 22,
+    "ProductId": 22,
     "ProductName": "Gustaf's KnÃ¤ckebrÃ¶d",
-    "SupplierID": 9,
-    "CategoryID": 5
+    "SupplierId": 9,
+    "CategoryId": 5,
+    "Price": 28.7,
+    "Category": null
   },
   {
-    "ProductID": 23,
+    "ProductId": 23,
     "ProductName": "TunnbrÃ¶d",
-    "SupplierID": 9,
-    "CategoryID": 5
+    "SupplierId": 9,
+    "CategoryId": 5,
+    "Price": 29.35,
+    "Category": null
   },
   {
-    "ProductID": 24,
+    "ProductId": 24,
     "ProductName": "GuaranÃ¡ FantÃ¡stica",
-    "SupplierID": 10,
-    "CategoryID": 1
+    "SupplierId": 10,
+    "CategoryId": 1,
+    "Price": 18.78,
+    "Category": null
   },
   {
-    "ProductID": 25,
+    "ProductId": 25,
     "ProductName": "NuNuCa NuÃŸ-Nougat-Creme",
-    "SupplierID": 11,
-    "CategoryID": 3
+    "SupplierId": 11,
+    "CategoryId": 3,
+    "Price": 47.21,
+    "Category": null
   },
   {
-    "ProductID": 26,
+    "ProductId": 26,
     "ProductName": "GumbÃ¤r GummibÃ¤rchen",
-    "SupplierID": 11,
-    "CategoryID": 3
+    "SupplierId": 11,
+    "CategoryId": 3,
+    "Price": 46.41,
+    "Category": null
   },
   {
-    "ProductID": 27,
+    "ProductId": 27,
     "ProductName": "Schoggi Schokolade",
-    "SupplierID": 11,
-    "CategoryID": 3
+    "SupplierId": 11,
+    "CategoryId": 3,
+    "Price": 37.18,
+    "Category": null
   },
   {
-    "ProductID": 28,
+    "ProductId": 28,
     "ProductName": "RÃ¶ssle Sauerkraut",
-    "SupplierID": 12,
-    "CategoryID": 7
+    "SupplierId": 12,
+    "CategoryId": 7,
+    "Price": 12.62,
+    "Category": null
   },
   {
-    "ProductID": 29,
+    "ProductId": 29,
     "ProductName": "ThÃ¼ringer Rostbratwurst",
-    "SupplierID": 12,
-    "CategoryID": 6
+    "SupplierId": 12,
+    "CategoryId": 6,
+    "Price": 6.28,
+    "Category": null
   },
   {
-    "ProductID": 30,
+    "ProductId": 30,
     "ProductName": "Nord-Ost Matjeshering",
-    "SupplierID": 13,
-    "CategoryID": 8
+    "SupplierId": 13,
+    "CategoryId": 8,
+    "Price": 19.75,
+    "Category": null
   },
   {
-    "ProductID": 31,
+    "ProductId": 31,
     "ProductName": "rnzola Telino",
-    "SupplierID": 14,
-    "CategoryID": 4
+    "SupplierId": 14,
+    "CategoryId": 4,
+    "Price": 39.61,
+    "Category": null
   },
   {
-    "ProductID": 32,
+    "ProductId": 32,
     "ProductName": "Mascarpone Fabioli",
-    "SupplierID": 14,
-    "CategoryID": 4
+    "SupplierId": 14,
+    "CategoryId": 4,
+    "Price": 43.7,
+    "Category": null
   },
   {
-    "ProductID": 33,
+    "ProductId": 33,
     "ProductName": "Geitost",
-    "SupplierID": 15,
-    "CategoryID": 4
+    "SupplierId": 15,
+    "CategoryId": 4,
+    "Price": 20.16,
+    "Category": null
   },
   {
-    "ProductID": 34,
+    "ProductId": 34,
     "ProductName": "Sasquatch Ale",
-    "SupplierID": 16,
-    "CategoryID": 1
+    "SupplierId": 16,
+    "CategoryId": 1,
+    "Price": 15.84,
+    "Category": null
   },
   {
-    "ProductID": 35,
+    "ProductId": 35,
     "ProductName": "Steeleye Stout",
-    "SupplierID": 16,
-    "CategoryID": 1
+    "SupplierId": 16,
+    "CategoryId": 1,
+    "Price": 45.68,
+    "Category": null
   },
   {
-    "ProductID": 36,
+    "ProductId": 36,
     "ProductName": "Inlagd Sill",
-    "SupplierID": 17,
-    "CategoryID": 8
+    "SupplierId": 17,
+    "CategoryId": 8,
+    "Price": 46.79,
+    "Category": null
   },
   {
-    "ProductID": 37,
+    "ProductId": 37,
     "ProductName": "Gravad lax",
-    "SupplierID": 17,
-    "CategoryID": 8
+    "SupplierId": 17,
+    "CategoryId": 8,
+    "Price": 16.17,
+    "Category": null
   },
   {
-    "ProductID": 38,
+    "ProductId": 38,
     "ProductName": "CÃ´te de Blaye",
-    "SupplierID": 18,
-    "CategoryID": 1
+    "SupplierId": 18,
+    "CategoryId": 1,
+    "Price": 17.27,
+    "Category": null
   },
   {
-    "ProductID": 39,
+    "ProductId": 39,
     "ProductName": "Chartreuse verte",
-    "SupplierID": 18,
-    "CategoryID": 1
+    "SupplierId": 18,
+    "CategoryId": 1,
+    "Price": 15.4,
+    "Category": null
   },
   {
-    "ProductID": 40,
+    "ProductId": 40,
     "ProductName": "Boston Crab Meat",
-    "SupplierID": 19,
-    "CategoryID": 8
+    "SupplierId": 19,
+    "CategoryId": 8,
+    "Price": 17.52,
+    "Category": null
   },
   {
-    "ProductID": 41,
+    "ProductId": 41,
     "ProductName": "Jack's New England Clam Chowder",
-    "SupplierID": 19,
-    "CategoryID": 8
+    "SupplierId": 19,
+    "CategoryId": 8,
+    "Price": 22.69,
+    "Category": null
   },
   {
-    "ProductID": 42,
+    "ProductId": 42,
     "ProductName": "Singaporean Hokkien Fried Mee",
-    "SupplierID": 20,
-    "CategoryID": 5
+    "SupplierId": 20,
+    "CategoryId": 5,
+    "Price": 39.55,
+    "Category": null
   },
   {
-    "ProductID": 43,
+    "ProductId": 43,
     "ProductName": "Ipoh Coffee",
-    "SupplierID": 20,
-    "CategoryID": 1
+    "SupplierId": 20,
+    "CategoryId": 1,
+    "Price": 11.25,
+    "Category": null
   },
   {
-    "ProductID": 44,
+    "ProductId": 44,
     "ProductName": "Gula Malacca",
-    "SupplierID": 20,
-    "CategoryID": 2
+    "SupplierId": 20,
+    "CategoryId": 2,
+    "Price": 15.8,
+    "Category": null
   },
   {
-    "ProductID": 45,
+    "ProductId": 45,
     "ProductName": "Rogede sild",
-    "SupplierID": 21,
-    "CategoryID": 8
+    "SupplierId": 21,
+    "CategoryId": 8,
+    "Price": 16.07,
+    "Category": null
   },
   {
-    "ProductID": 46,
+    "ProductId": 46,
     "ProductName": "Spegesild",
-    "SupplierID": 21,
-    "CategoryID": 8
+    "SupplierId": 21,
+    "CategoryId": 8,
+    "Price": 35.54,
+    "Category": null
   },
   {
-    "ProductID": 47,
+    "ProductId": 47,
     "ProductName": "Zaanse koeken",
-    "SupplierID": 22,
-    "CategoryID": 3
+    "SupplierId": 22,
+    "CategoryId": 3,
+    "Price": 36.35,
+    "Category": null
   },
   {
-    "ProductID": 48,
+    "ProductId": 48,
     "ProductName": "Chocolade",
-    "SupplierID": 22,
-    "CategoryID": 3
+    "SupplierId": 22,
+    "CategoryId": 3,
+    "Price": 12.14,
+    "Category": null
   },
   {
-    "ProductID": 49,
+    "ProductId": 49,
     "ProductName": "Maxilaku",
-    "SupplierID": 23,
-    "CategoryID": 3
+    "SupplierId": 23,
+    "CategoryId": 3,
+    "Price": 30.55,
+    "Category": null
   },
   {
-    "ProductID": 50,
+    "ProductId": 50,
     "ProductName": "Valkoinen suklaa",
-    "SupplierID": 23,
-    "CategoryID": 3
+    "SupplierId": 23,
+    "CategoryId": 3,
+    "Price": 14.33,
+    "Category": null
   },
   {
-    "ProductID": 51,
+    "ProductId": 51,
     "ProductName": "Manjimup Dried Apples",
-    "SupplierID": 24,
-    "CategoryID": 7
+    "SupplierId": 24,
+    "CategoryId": 7,
+    "Price": 48.25,
+    "Category": null
   },
   {
-    "ProductID": 52,
+    "ProductId": 52,
     "ProductName": "Filo Mix",
-    "SupplierID": 24,
-    "CategoryID": 5
+    "SupplierId": 24,
+    "CategoryId": 5,
+    "Price": 27.51,
+    "Category": null
   },
   {
-    "ProductID": 53,
+    "ProductId": 53,
     "ProductName": "Perth Pastie",
-    "SupplierID": 24,
-    "CategoryID": 6
+    "SupplierId": 24,
+    "CategoryId": 6,
+    "Price": 36.87,
+    "Category": null
   },
   {
-    "ProductID": 54,
+    "ProductId": 54,
     "ProductName": "Tourt",
-    "SupplierID": 25,
-    "CategoryID": 6
+    "SupplierId": 25,
+    "CategoryId": 6,
+    "Price": 49.53,
+    "Category": null
   },
   {
-    "ProductID": 55,
+    "ProductId": 55,
     "ProductName": "PÃ¢tÃ© chinois",
-    "SupplierID": 25,
-    "CategoryID": 6
+    "SupplierId": 25,
+    "CategoryId": 6,
+    "Price": 14.78,
+    "Category": null
   },
   {
-    "ProductID": 56,
+    "ProductId": 56,
     "ProductName": "Gnocchi di nonna Alice",
-    "SupplierID": 26,
-    "CategoryID": 5
+    "SupplierId": 26,
+    "CategoryId": 5,
+    "Price": 10.81,
+    "Category": null
   },
   {
-    "ProductID": 57,
+    "ProductId": 57,
     "ProductName": "Ravioli Angelo",
-    "SupplierID": 26,
-    "CategoryID": 5
+    "SupplierId": 26,
+    "CategoryId": 5,
+    "Price": 12.67,
+    "Category": null
   },
   {
-    "ProductID": 58,
+    "ProductId": 58,
     "ProductName": "Escarts de Bourgne",
-    "SupplierID": 27,
-    "CategoryID": 8
+    "SupplierId": 27,
+    "CategoryId": 8,
+    "Price": 13.89,
+    "Category": null
   },
   {
-    "ProductID": 59,
+    "ProductId": 59,
     "ProductName": "Raclette Courdavault",
-    "SupplierID": 28,
-    "CategoryID": 4
+    "SupplierId": 28,
+    "CategoryId": 4,
+    "Price": 26.2,
+    "Category": null
   },
   {
-    "ProductID": 60,
+    "ProductId": 60,
     "ProductName": "Camembert Pierrot",
-    "SupplierID": 28,
-    "CategoryID": 4
+    "SupplierId": 28,
+    "CategoryId": 4,
+    "Price": 44.99,
+    "Category": null
   },
   {
-    "ProductID": 61,
+    "ProductId": 61,
     "ProductName": "Sirop d'Ã©rable",
-    "SupplierID": 29,
-    "CategoryID": 2
+    "SupplierId": 29,
+    "CategoryId": 2,
+    "Price": 42.13,
+    "Category": null
   },
   {
-    "ProductID": 62,
+    "ProductId": 62,
     "ProductName": "Tarte au sucre",
-    "SupplierID": 29,
-    "CategoryID": 3
+    "SupplierId": 29,
+    "CategoryId": 3,
+    "Price": 25.87,
+    "Category": null
   },
   {
-    "ProductID": 63,
+    "ProductId": 63,
     "ProductName": "Vegie-spread",
-    "SupplierID": 7,
-    "CategoryID": 2
+    "SupplierId": 7,
+    "CategoryId": 2,
+    "Price": 11.84,
+    "Category": null
   },
   {
-    "ProductID": 64,
+    "ProductId": 64,
     "ProductName": "Wimmers gute SemmelknÃ¶del",
-    "SupplierID": 12,
-    "CategoryID": 5
+    "SupplierId": 12,
+    "CategoryId": 5,
+    "Price": 17.23,
+    "Category": null
   },
   {
-    "ProductID": 65,
+    "ProductId": 65,
     "ProductName": "Louisiana Fiery Hot Pepper Sauce",
-    "SupplierID": 2,
-    "CategoryID": 2
+    "SupplierId": 2,
+    "CategoryId": 2,
+    "Price": 11.68,
+    "Category": null
   },
   {
-    "ProductID": 66,
+    "ProductId": 66,
     "ProductName": "Louisiana Hot Spiced Okra",
-    "SupplierID": 2,
-    "CategoryID": 2
+    "SupplierId": 2,
+    "CategoryId": 2,
+    "Price": 25.34,
+    "Category": null
   },
   {
-    "ProductID": 67,
+    "ProductId": 67,
     "ProductName": "Laughing Lumberjack Lager",
-    "SupplierID": 16,
-    "CategoryID": 1
+    "SupplierId": 16,
+    "CategoryId": 1,
+    "Price": 44.14,
+    "Category": null
   },
   {
-    "ProductID": 68,
+    "ProductId": 68,
     "ProductName": "Scottish Longbreads",
-    "SupplierID": 8,
-    "CategoryID": 3
+    "SupplierId": 8,
+    "CategoryId": 3,
+    "Price": 13.58,
+    "Category": null
   },
   {
-    "ProductID": 69,
+    "ProductId": 69,
     "ProductName": "Gudbrandsdalsost",
-    "SupplierID": 15,
-    "CategoryID": 4
+    "SupplierId": 15,
+    "CategoryId": 4,
+    "Price": 20.63,
+    "Category": null
   },
   {
-    "ProductID": 70,
+    "ProductId": 70,
     "ProductName": "Outback Lager",
-    "SupplierID": 7,
-    "CategoryID": 1
+    "SupplierId": 7,
+    "CategoryId": 1,
+    "Price": 46.46,
+    "Category": null
   },
   {
-    "ProductID": 71,
+    "ProductId": 71,
     "ProductName": "Flotemysost",
-    "SupplierID": 15,
-    "CategoryID": 4
+    "SupplierId": 15,
+    "CategoryId": 4,
+    "Price": 48.29,
+    "Category": null
   },
   {
-    "ProductID": 72,
+    "ProductId": 72,
     "ProductName": "Mozzarella di Giovanni",
-    "SupplierID": 14,
-    "CategoryID": 4
+    "SupplierId": 14,
+    "CategoryId": 4,
+    "Price": 49.41,
+    "Category": null
   },
   {
-    "ProductID": 73,
+    "ProductId": 73,
     "ProductName": "RÃ¶d Kaviar",
-    "SupplierID": 17,
-    "CategoryID": 8
+    "SupplierId": 17,
+    "CategoryId": 8,
+    "Price": 30.31,
+    "Category": null
   },
   {
-    "ProductID": 74,
+    "ProductId": 74,
     "ProductName": "Longlife Tofu",
-    "SupplierID": 4,
-    "CategoryID": 7
+    "SupplierId": 4,
+    "CategoryId": 7,
+    "Price": 14.11,
+    "Category": null
   },
   {
-    "ProductID": 75,
+    "ProductId": 75,
     "ProductName": "RhonbrÃ¤u Klosterbier",
-    "SupplierID": 12,
-    "CategoryID": 1
+    "SupplierId": 12,
+    "CategoryId": 1,
+    "Price": 3.43,
+    "Category": null
   },
   {
-    "ProductID": 76,
+    "ProductId": 76,
     "ProductName": "LakkalikÃ¶Ã¶ri",
-    "SupplierID": 23,
-    "CategoryID": 1
+    "SupplierId": 23,
+    "CategoryId": 1,
+    "Price": 13.04,
+    "Category": null
   },
   {
-    "ProductID": 77,
+    "ProductId": 77,
     "ProductName": "Original Frankfurter grÃ¼ne SoÃŸe",
-    "SupplierID": 12,
-    "CategoryID": 2
+    "SupplierId": 12,
+    "CategoryId": 2,
+    "Price": 6.3,
+    "Category": null
   },
   {
-    "ProductID": -1,
+    "ProductId": -1,
     "ProductName": "return",
-    "SupplierID": 12,
-    "CategoryID": 2
+    "SupplierId": 12,
+    "CategoryId": 2,
+    "Price": 2.41,
+    "Category": null
   }
 ]

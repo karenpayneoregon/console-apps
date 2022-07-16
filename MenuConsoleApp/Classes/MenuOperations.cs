@@ -13,7 +13,7 @@ namespace MenuConsoleApp.Classes
         {
             SelectionPrompt<Categories> menu = new()
             {
-                HighlightStyle = new Style(Color.DodgerBlue1, Color.Black, Decoration.None)
+                HighlightStyle = new Style(Color.Cyan1, Color.Black, Decoration.None)
             };
 
             menu.Title("Select a [B]category[/]");
@@ -33,7 +33,7 @@ namespace MenuConsoleApp.Classes
                 .Title("Select[b] [white]category[/][/] to show products");
 
             selection.HighlightStyle = new Style(
-                Color.DodgerBlue1, 
+                Color.Cyan1, 
                 Color.Black, 
                 Decoration.None);
 
@@ -45,8 +45,10 @@ namespace MenuConsoleApp.Classes
         /// </summary>
         /// <param name="productContinue">used to terminate menu</param>
         /// <param name="category">Filter products by category identifier</param>
-        public static void ProductMenu(bool productContinue, Categories category)
+        public static Products ProductMenu(Categories category)
         {
+            Products product = null;
+            bool productContinue = true;
 
             while (productContinue)
             {
@@ -56,12 +58,12 @@ namespace MenuConsoleApp.Classes
                     HighlightStyle = new Style(Color.Aqua, Color.Red, Decoration.None)
                 };
 
-                menu.Title("Select a [B]category[/]");
+                menu.Title("Select a [B]Product[/]");
                 menu.PageSize = 15;
                 menu.MoreChoicesText("[grey](Move up and down to reveal more categories)[/]");
                 menu.AddChoices(DataOperations.ProductListFromJson(category.CategoryId));
 
-                var product = AnsiConsole.Prompt(menu);
+                product = AnsiConsole.Prompt(menu);
 
                 if (product.ProductId == -1)
                 {
@@ -69,16 +71,18 @@ namespace MenuConsoleApp.Classes
                 }
                 else
                 {
-                    MenuOperations.AskConfirmation(product);
+                    AskConfirmation(product);
                     productContinue = false;
                 }
 
             }
+
+            return product;
         }
 
         public static void AskConfirmation(Products products)
         {
-            if (AnsiConsole.Confirm($"Process [B]{products.ProductName}[/]?"))
+            if (AnsiConsole.Confirm($"Select [B]{products.ProductName}[/]?"))
             {
                 // TODO
             }
@@ -92,8 +96,7 @@ namespace MenuConsoleApp.Classes
         /// <summary>
         /// Product menu list
         /// </summary>
-        /// <param name="productContinue">used to terminate menu</param>
-        /// <param name="category">Filter products by category identifier</param>
+        /// <param name="categoryIdentifier">Filter products by category identifier</param>
 
         public static void ShowRecords(int categoryIdentifier)
         {
@@ -117,6 +120,7 @@ namespace MenuConsoleApp.Classes
             }
 
             AnsiConsole.Write(table);
+
         }
     }
 }

@@ -65,5 +65,18 @@ namespace MenuConsoleApp.Classes
             list.Insert(list.Count, new Products() {ProductId = -1, ProductName = "Go back"});
             return list.ToArray();
         }
+
+        public static void SetProductPrices()
+        {
+            var products = ProductsArray();
+
+            for (int index = 0; index < products.Length; index++)
+            {
+                products[index].Price = NumberHelpers.GetRandomNumber(2, 50);
+            }
+
+            string json = JsonConvert.SerializeObject(products, Formatting.Indented);
+            File.WriteAllText("Products1.json", json);
+        }
     }
 }
