@@ -8,12 +8,10 @@ namespace MenuConsoleApp.Classes
 {
     public class NumberHelpers
     {
-        public static double GetRandomNumber(double minimum, double maximum)
-        {
-            Random random = new Random();
+        public static double GetRandomDouble(double minimum, double maximum)
+            => Math.Truncate(100 * new Random().NextDouble() * (maximum - minimum) + minimum) / 100;
 
-            var result = random.NextDouble() * (maximum - minimum) + minimum;
-            return Math.Truncate(100 * result) / 100;
-        }
+        public static int GetRandomInt(int minimum, int maximum)
+            => new Random().Next(minimum, maximum);
     }
 }
