@@ -1,5 +1,6 @@
 ﻿using System;
 using Spectre.Console;
+using UtilityLibrary.Classes;
 
 namespace CenterWindow
 {
@@ -7,7 +8,7 @@ namespace CenterWindow
     {
         static void Main(string[] args)
         {
-            AnsiConsole.MarkupLine("[cyan]Press a key[/]");
+            AnsiConsole.MarkupLine($"[yellow]{Howdy.TimeOfDay()}[/] [cyan]Press a key[/]");
             Console.ReadLine();
         }
     }

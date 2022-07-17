@@ -17,6 +17,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
+		<ProjectReference Include="..\UtilityLibrary\UtilityLibrary.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
