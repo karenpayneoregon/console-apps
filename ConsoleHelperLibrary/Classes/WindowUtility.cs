@@ -81,6 +81,7 @@ namespace ConsoleHelperLibrary.Classes
             }
         }
 
+        [Flags]
         public enum AnchorWindow
         {
             None = 0x0,
