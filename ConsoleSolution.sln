@@ -29,6 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
 		stash.txt = stash.txt
+		userInput.md = userInput.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgressApp", "ProgressApp\ProgressApp.csproj", "{077C25F6-CC42-453D-8BC5-3D98B183A67C}"
@@ -120,6 +121,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WelcomeApp", "WelcomeApp\WelcomeApp.csproj", "{49B035A9-5424-45CB-B707-D974E756FE78}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallWindowApp", "SmallWindowApp\SmallWindowApp.csproj", "{ED94D059-7F5D-4A7E-8033-B953AAD1BBDA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{8688C334-8680-49CD-9614-79F749976D21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanoramicDataLogging", "PanoramicDataLogging\PanoramicDataLogging.csproj", "{63B21F5D-2038-488C-95E7-88A587AAE85B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -307,6 +312,10 @@ Global
 		{ED94D059-7F5D-4A7E-8033-B953AAD1BBDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED94D059-7F5D-4A7E-8033-B953AAD1BBDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED94D059-7F5D-4A7E-8033-B953AAD1BBDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B21F5D-2038-488C-95E7-88A587AAE85B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B21F5D-2038-488C-95E7-88A587AAE85B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B21F5D-2038-488C-95E7-88A587AAE85B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B21F5D-2038-488C-95E7-88A587AAE85B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -360,6 +369,7 @@ Global
 		{FB6D4FB3-9F3A-4DD1-A938-9316603A1E96} = {DD926E12-C692-469A-A54E-BE5536FB49E5}
 		{49B035A9-5424-45CB-B707-D974E756FE78} = {1296AE50-A024-4118-B43D-2F9802A567BB}
 		{ED94D059-7F5D-4A7E-8033-B953AAD1BBDA} = {959E72FF-F1CE-458C-906F-C3DF28B444B4}
+		{63B21F5D-2038-488C-95E7-88A587AAE85B} = {8688C334-8680-49CD-9614-79F749976D21}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22709C88-5741-4CC8-8E81-A66A17B04A0D}
