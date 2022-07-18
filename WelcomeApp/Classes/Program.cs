@@ -12,8 +12,10 @@ namespace WelcomeApp
         public static void Init()
         {
             Console.Title = "Code sample";
-            W.SetConsoleWindowPosition(W.AnchorWindow.Center);
 
+            Console.SetWindowSize(40, 10);
+            W.SetConsoleWindowPosition(W.AnchorWindow.Center);
+            
             Console.CursorVisible = false;
             PrintLinesInCenter("Welcome", "To working with console apps", "Press a key to continue");
             Console.ReadLine();
@@ -25,8 +27,9 @@ namespace WelcomeApp
         {
             int verticalStart = (Console.WindowHeight - lines.Length) / 2;
             int verticalPosition = verticalStart;
-            foreach (var line in lines)
+            for (var index = 0; index < lines.Length; index++)
             {
+                var line = lines[index];
                 int horizontalStart = (Console.WindowWidth - line.Length) / 2;
                 Console.SetCursorPosition(horizontalStart, verticalPosition);
                 Console.Write(line);
