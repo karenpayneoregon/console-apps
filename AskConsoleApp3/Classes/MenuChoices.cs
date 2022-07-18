@@ -5,7 +5,7 @@ namespace AskConsoleApp3.Classes
 {
     public class MenuChoices
     {
-        public static List<Route> Routes => new List<Route>()
+        public static List<Route> Routes => new()
         {
             new Route() { Id = 1, Title = "First"},
             new Route() { Id = 2, Title = "Second"},

@@ -101,19 +101,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Questions", "Questions\Ques
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AskConsoleApp4", "AskConsoleApp4\AskConsoleApp4.csproj", "{13A8F3AC-8D05-4A45-98BB-38FF3ABDD662}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullScreen", "FullScreen\FullScreen.csproj", "{A3A4731F-B211-42CE-A6A6-72E0B5C68D87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FullScreen", "FullScreen\FullScreen.csproj", "{A3A4731F-B211-42CE-A6A6-72E0B5C68D87}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Window Positioning", "Window Positioning", "{959E72FF-F1CE-458C-906F-C3DF28B444B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopRightPosition", "TopRightPosition\TopRightPosition.csproj", "{27F261C3-F36A-4DF7-9DF0-59529F938385}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopRightPosition", "TopRightPosition\TopRightPosition.csproj", "{27F261C3-F36A-4DF7-9DF0-59529F938385}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BottomRightPositioning", "BottomRightPositioning\BottomRightPositioning.csproj", "{C60B08F3-3B29-4F24-B728-B89875686588}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BottomRightPositioning", "BottomRightPositioning\BottomRightPositioning.csproj", "{C60B08F3-3B29-4F24-B728-B89875686588}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CenterWindow", "CenterWindow\CenterWindow.csproj", "{8CC25B9E-FF27-4256-9AF4-1CFC66C78348}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CenterWindow", "CenterWindow\CenterWindow.csproj", "{8CC25B9E-FF27-4256-9AF4-1CFC66C78348}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Get input from user", "Get input from user", "{DD926E12-C692-469A-A54E-BE5536FB49E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Menu", "Menu", "{696DDFE7-F646-43EB-9230-AF54C703F361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AskConsoleApp5", "AskConsoleApp5\AskConsoleApp5.csproj", "{FB6D4FB3-9F3A-4DD1-A938-9316603A1E96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WelcomeApp", "WelcomeApp\WelcomeApp.csproj", "{49B035A9-5424-45CB-B707-D974E756FE78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -289,6 +293,14 @@ Global
 		{8CC25B9E-FF27-4256-9AF4-1CFC66C78348}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CC25B9E-FF27-4256-9AF4-1CFC66C78348}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CC25B9E-FF27-4256-9AF4-1CFC66C78348}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB6D4FB3-9F3A-4DD1-A938-9316603A1E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB6D4FB3-9F3A-4DD1-A938-9316603A1E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB6D4FB3-9F3A-4DD1-A938-9316603A1E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB6D4FB3-9F3A-4DD1-A938-9316603A1E96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49B035A9-5424-45CB-B707-D974E756FE78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49B035A9-5424-45CB-B707-D974E756FE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49B035A9-5424-45CB-B707-D974E756FE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49B035A9-5424-45CB-B707-D974E756FE78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -339,6 +351,8 @@ Global
 		{8CC25B9E-FF27-4256-9AF4-1CFC66C78348} = {959E72FF-F1CE-458C-906F-C3DF28B444B4}
 		{DD926E12-C692-469A-A54E-BE5536FB49E5} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
 		{696DDFE7-F646-43EB-9230-AF54C703F361} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
+		{FB6D4FB3-9F3A-4DD1-A938-9316603A1E96} = {DD926E12-C692-469A-A54E-BE5536FB49E5}
+		{49B035A9-5424-45CB-B707-D974E756FE78} = {1296AE50-A024-4118-B43D-2F9802A567BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22709C88-5741-4CC8-8E81-A66A17B04A0D}

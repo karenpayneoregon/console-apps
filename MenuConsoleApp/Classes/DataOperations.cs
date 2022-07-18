@@ -72,7 +72,7 @@ namespace MenuConsoleApp.Classes
 
             for (int index = 0; index < products.Length; index++)
             {
-                products[index].Price = NumberHelpers.GetRandomNumber(2, 50);
+                products[index].Price = NumberHelpers.GetRandomDouble(2, 50);
             }
 
             string json = JsonConvert.SerializeObject(products, Formatting.Indented);
