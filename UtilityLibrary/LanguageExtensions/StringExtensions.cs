@@ -35,5 +35,6 @@ namespace UtilityLibrary.LanguageExtensions
         /// <returns></returns>
         [DebuggerStepThrough]
         public static bool IsNumeric(this string text) => double.TryParse(text, out _);
+
     }
 }
