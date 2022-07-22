@@ -6,6 +6,8 @@
 
 ...
 
+### Center window
+
 ```csharp
 [ModuleInitializer]
 public static void Init()
@@ -15,7 +17,40 @@ public static void Init()
 }
 ```
 
-Options
+### Top left
+
+```csharp
+[ModuleInitializer]
+public static void Init()
+{
+    Console.Title = "Code sample - Top left";
+    W.SetConsoleWindowPosition(W.AnchorWindow.Top | W.AnchorWindow.Left);
+}
+```
+
+### Top right
+
+```csharp
+[ModuleInitializer]
+public static void Init()
+{
+    Console.Title = "Code sample - Top right";
+    W.SetConsoleWindowPosition(W.AnchorWindow.Top | W.AnchorWindow.Right);
+}
+```
+
+### Bottom right
+
+```csharp
+[ModuleInitializer]
+public static void Init()
+{
+    Console.Title = "Code sample - bottom right";
+    W.SetConsoleWindowPosition(W.AnchorWindow.Bottom | W.AnchorWindow.Right);
+}
+```
+
+**Options**
 
 ```csharp
 public enum AnchorWindow
@@ -48,4 +83,29 @@ M.DisableMinMaxButtons();
 
 ```csharp
 ReadLineTimed("bye");
+```
+
+##  Center text in a window
+
+The method `CenterLines` take a string array where each element is written to a new line.
+
+```csharp
+using System;
+using System.Runtime.CompilerServices;
+using W = ConsoleHelperLibrary.Classes.WindowUtility;
+using D = ConsoleHelperLibrary.Classes.WriteUtility;
+
+namespace SmallWindowApp
+{
+    partial class Program
+    {
+        [ModuleInitializer]
+        public static void Init()
+        {
+            W.SetConsoleWindowPosition(W.AnchorWindow.Center);
+            D.CenterLines("Small", "Window");
+            Console.CursorVisible = false;
+        }
+    }
+}
 ```
