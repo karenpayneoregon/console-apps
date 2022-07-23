@@ -123,7 +123,7 @@ public class Prompts
 }
 ```
 
-## Accept a single input from a lisr
+## Accept a single input from a list
 
 Example, we have an app that the user be English or Arabic?
 
