@@ -226,3 +226,29 @@ partial class Program
 - A model/class represents data and properly mocked up so each time the app runs data is different
 - Gone are the days of dull looking apps, color is easily done with Spectre.Console
 - Menues are used rather than asking for string input which in the end requires more assertion and is not easy to maintain which is why using Spectre.Console menu/selections makes sense.
+
+# Challenge
+
+Complete the `Create(Student student)` new student method in `Prompts.cs`. 
+
+If you get stuck, feel free to ask Karen for help.
+
+```csharp
+/// <summary>
+/// Same code as <see cref="Edit"/> which expects values for each property, for this method
+/// simply pass in a new student without setting any properties. Once done add the Student to
+/// <see cref="BogusOperations.Students"/>
+/// </summary>
+/// <param name="student">new student without any properties set</param>
+public static void Create(Student student)
+{
+    student.FirstName = FirstName(student.FirstName);
+    student.LastName = LastName(student.LastName);
+    student.Grade = Grade(student.Grade);
+
+    /*
+     * TODO, get last student id and increment by 1 and set to Id property
+     */
+}
+```
+
