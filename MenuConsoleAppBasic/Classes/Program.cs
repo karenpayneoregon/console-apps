@@ -45,17 +45,20 @@ namespace MenuConsoleAppBasic
                     }
                     break;
                 case 4:
+                    // TODO - edit
+                    break;
+                case 5:
                     var employee = AnsiConsole.Prompt(MenuOperations.RemoveMenu(EmployeesList));
                     if (employee.Id == -2)
                     {
                         break;
                     }
-                    if (AnsiConsole.Confirm($"Remove {employee.FirstName} {employee.LastName}"))
+                    if (AnsiConsole.Confirm($"Remove {employee.FirstName} {employee.LastName}", false))
                     {
                         _ = Operations.Remove(EmployeesList,employee);
                     }
                     break;
-                case 5:
+                case 6:
                     Operations.Save(EmployeesList);
                     break;
             }

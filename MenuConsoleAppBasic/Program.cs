@@ -29,8 +29,6 @@ namespace MenuConsoleAppBasic
                 Selection(menuItem, EmployeesList);
             }
 
-            ReadLineTimed("bye");
-
         }
     }
 }

@@ -92,7 +92,11 @@ namespace MenuConsoleAppBasic.Classes
 
             foreach (var employee in list)
             {
-                
+
+                if (employee.FirstName == "Return")
+                {
+                    continue;
+                }
                 table.AddRow(
                     employee.FirstName, 
                     employee.LastName, 
@@ -111,7 +115,7 @@ namespace MenuConsoleAppBasic.Classes
         /// </summary>
         /// <param name="list">List to remove employee from</param>
         /// <param name="employee">Employee to remove from list</param>
-        /// <returns>sucess</returns>
+        /// <returns>success</returns>
         public static bool Remove(List<Employee> list,Employee employee)
         {
             var item = list.FirstOrDefault(emp => emp.Id == employee.Id);

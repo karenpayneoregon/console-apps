@@ -30,8 +30,9 @@ namespace MenuConsoleAppBasic.Classes
                 new() {Id = 1,  Text = "Add manager"},
                 new() {Id = 2,  Text = "Add engineer"},
                 new() {Id = 3,  Text = "Add employee"},
-                new() {Id = 4,  Text = "Delete an employee "},
-                new() {Id = 5,  Text = "Save all"},
+                new() {Id = 4,  Text = "Edit an employee "},
+                new() {Id = 5,  Text = "Delete an employee "},
+                new() {Id = 6,  Text = "Save all"},
                 new() {Id = -1, Text = "Exit"},
             });
 
@@ -40,8 +41,6 @@ namespace MenuConsoleAppBasic.Classes
 
         public static SelectionPrompt<Employee> RemoveMenu(List<Employee> list)
         {
-
-            list.Add(new Employee() {FirstName = "Return", LastName = "to menu", Id = -2});
 
             SelectionPrompt<Employee> menu = new()
             {
