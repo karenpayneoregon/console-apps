@@ -4,6 +4,10 @@
 
 A menu system to edit, view and remove objects. In this case we are dealing with the following model.
 
+Based off a Stackoverflow question 
+[Update details after retrieving the list item by index](https://stackoverflow.com/questions/73096248/update-details-after-retrieving-the-list-item-by-index) 
+ which I did not respond as I doubt they are ready for this code.
+
 ```csharp
 public class Student
 {
