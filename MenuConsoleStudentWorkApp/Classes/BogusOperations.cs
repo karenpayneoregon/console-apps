@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Bogus;
 using MenuConsoleStudentWorkApp.Models;
 
@@ -34,5 +35,24 @@ namespace MenuConsoleStudentWorkApp.Classes
         /// </summary>
         /// <returns></returns>
         public static List<Student> GetStudents() => Students ??= GenerateStudents();
+
+        /// <summary>
+        /// Get next available key for a Student
+        /// </summary>
+        /// <returns></returns>
+        public static int NextIdentifier()
+        {
+            var identifier = GetStudents().LastOrDefault(x => x.Id > -1)!.Id;
+            if (identifier == 0)
+            {
+                identifier = 1;
+            }
+            else
+            {
+                identifier++;
+            }
+
+            return identifier;
+        }
     }
 }
