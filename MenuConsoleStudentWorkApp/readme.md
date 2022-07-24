@@ -219,3 +219,10 @@ partial class Program
     }
 }
 ```
+
+# Learning points
+
+- Most developers will write all code in the Main method while here code is logically chunked up into appropriate classes
+- A model/class represents data and properly mocked up so each time the app runs data is different
+- Gone are the days of dull looking apps, color is easily done with Spectre.Console
+- Menues are used rather than asking for string input which in the end requires more assertion and is not easy to maintain which is why using Spectre.Console menu/selections makes sense.
