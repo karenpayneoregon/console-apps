@@ -141,6 +141,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopWaitForSpecificKeys", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuVeryBasic", "MenuVeryBasic\MenuVeryBasic.csproj", "{DB26ABBD-9328-4CCA-AEC6-5F8A4E25B6E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityCoreConsoleApp", "EntityCoreConsoleApp\EntityCoreConsoleApp.csproj", "{509F7FE4-2D1B-435D-AC27-6C357C2B007F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerDatabaseLibraryEntityFramework", "CustomerDatabaseLibraryEntityFramework\CustomerDatabaseLibraryEntityFramework.csproj", "{116F1AB0-BA30-4954-A367-91177861CEEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -351,6 +355,14 @@ Global
 		{DB26ABBD-9328-4CCA-AEC6-5F8A4E25B6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB26ABBD-9328-4CCA-AEC6-5F8A4E25B6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB26ABBD-9328-4CCA-AEC6-5F8A4E25B6E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{509F7FE4-2D1B-435D-AC27-6C357C2B007F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{509F7FE4-2D1B-435D-AC27-6C357C2B007F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{509F7FE4-2D1B-435D-AC27-6C357C2B007F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{509F7FE4-2D1B-435D-AC27-6C357C2B007F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116F1AB0-BA30-4954-A367-91177861CEEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116F1AB0-BA30-4954-A367-91177861CEEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116F1AB0-BA30-4954-A367-91177861CEEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116F1AB0-BA30-4954-A367-91177861CEEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -411,6 +423,8 @@ Global
 		{E2E67CF1-3E5E-4F6E-A1D5-B6B14C0364D4} = {696DDFE7-F646-43EB-9230-AF54C703F361}
 		{14956DBC-20D5-4ABF-90AF-BDB6ED7D8461} = {DC3C214D-82F0-48E4-8068-4A56C5DBA7DC}
 		{DB26ABBD-9328-4CCA-AEC6-5F8A4E25B6E2} = {696DDFE7-F646-43EB-9230-AF54C703F361}
+		{509F7FE4-2D1B-435D-AC27-6C357C2B007F} = {64DA130D-DB60-4939-9D2A-7670524C44F1}
+		{116F1AB0-BA30-4954-A367-91177861CEEE} = {1072D076-83B5-4716-A721-3211D9339E91}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22709C88-5741-4CC8-8E81-A66A17B04A0D}
