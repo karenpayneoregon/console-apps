@@ -10,6 +10,7 @@ namespace MenuVeryBasic
         [ModuleInitializer]
         public static void Init()
         {
+            Console.SetWindowSize(40, 10);
             Console.Title = "Code sample";
             W.SetConsoleWindowPosition(W.AnchorWindow.Center);
         }

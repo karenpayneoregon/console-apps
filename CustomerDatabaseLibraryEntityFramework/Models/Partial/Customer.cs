@@ -14,6 +14,7 @@ namespace CustomerDatabaseLibraryEntityFramework.Models
             
         }
 
+        // for Bogus library if used
         public Customer(int identifier)
         {
             Identifier = identifier;
