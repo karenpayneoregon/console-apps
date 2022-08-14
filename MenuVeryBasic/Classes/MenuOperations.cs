@@ -24,7 +24,7 @@ namespace MenuVeryBasic.Classes
             menu.PageSize = 14;
             menu.AddChoices(new List<MenuItem>()
             {
-                new () {Id = 1, Text = "Add item",  Information = "First",  Action = () => AnsiConsole.MarkupLine("[yellow]Add[/]") },
+                new () {Id = 1, Text = "Add item",  Information = "First",  Action = () =>  AnsiConsole.MarkupLine("[yellow]Add[/]") },
                 new () {Id = 2, Text = "Edit item", Information = "Second", Action = () =>  AnsiConsole.MarkupLine("[red]Edit[/]") },
                 new () {Id = 3, Text = "View all",  Information = "Third",  Action = () =>  AnsiConsole.MarkupLine("[cyan]View[/]") },
                 new () {Id = -1,Text = "Exit"},
