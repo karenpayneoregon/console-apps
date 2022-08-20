@@ -31,6 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		SpectreUserInput.md = SpectreUserInput.md
 		SpectreUtilities.md = SpectreUtilities.md
 		stash.txt = stash.txt
+		ToolBox.txt = ToolBox.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgressApp", "ProgressApp\ProgressApp.csproj", "{077C25F6-CC42-453D-8BC5-3D98B183A67C}"
@@ -139,9 +140,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Looping", "Looping", "{DC3C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopWaitForSpecificKeys", "LoopWaitForSpecificKeys\LoopWaitForSpecificKeys.csproj", "{14956DBC-20D5-4ABF-90AF-BDB6ED7D8461}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuVeryBasic", "MenuVeryBasic\MenuVeryBasic.csproj", "{DB26ABBD-9328-4CCA-AEC6-5F8A4E25B6E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuVeryBasic", "MenuVeryBasic\MenuVeryBasic.csproj", "{DB26ABBD-9328-4CCA-AEC6-5F8A4E25B6E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityCoreConsoleApp", "EntityCoreConsoleApp\EntityCoreConsoleApp.csproj", "{509F7FE4-2D1B-435D-AC27-6C357C2B007F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityCoreConsoleApp", "EntityCoreConsoleApp\EntityCoreConsoleApp.csproj", "{509F7FE4-2D1B-435D-AC27-6C357C2B007F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerDatabaseLibraryEntityFramework", "CustomerDatabaseLibraryEntityFramework\CustomerDatabaseLibraryEntityFramework.csproj", "{116F1AB0-BA30-4954-A367-91177861CEEE}"
 EndProject

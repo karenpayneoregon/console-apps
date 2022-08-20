@@ -1,0 +1,25 @@
+W.SetConsoleWindowPosition(W.AnchorWindow.Center);
+
+using W = ConsoleHelperLibrary.Classes.WindowUtility;
+
+Console.Title = $"Code sample: {Assembly.GetCallingAssembly().GetName().Name}";
+
+```csharp
+```
+
+| C1        |   C2    |   C3 |
+|:------------- |:-------------|:-------------|
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
+Console.WriteLine(context.Model.ToDebugString(MetadataDebugStringOptions.LongDefault));
+
+#pragma warning disable 
+#pragma warning restore
+
+// ReSharper disable All
+
+:house:  [back home](readme.md)
+
+[![](assets/Link_16x.png)]()
