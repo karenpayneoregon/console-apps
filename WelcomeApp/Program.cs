@@ -1,19 +1,17 @@
-﻿using System;
-using Spectre.Console;
+﻿using Spectre.Console;
 
-namespace WelcomeApp
+namespace WelcomeApp;
+
+partial class Program
 {
-    partial class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
 
-            AnsiConsole.Write(
-                new FigletText("Do whatever")
-                    .Centered()
-                    .Color(Color.DeepPink1));
+        AnsiConsole.Write(
+            new FigletText("Do whatever")
+                .Centered()
+                .Color(Color.DeepPink1));
 
-            Console.ReadLine();
-        }
+        Console.ReadLine();
     }
 }
