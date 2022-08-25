@@ -42,4 +42,4 @@ namespace LearningConsoleApp
 
 - All methods in helper classes or class with language extensions can be written in the code which will use it then when satisfied move it to it's own file.
 - For the above I highly recommend for next step is to write unit test.
-- 
+-
