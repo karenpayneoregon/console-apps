@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace SqlServerColumnDescriptions.Classes;
 
-namespace SqlServerColumnDescriptions.Classes
+internal class SqlStatements
 {
-    internal class SqlStatements
-    {
-        public static string GetDatabaseNames 
-            => "SELECT name FROM sys.databases WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb') ORDER BY name";
+    public static string GetDatabaseNames 
+        => "SELECT name FROM sys.databases WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb') ORDER BY name";
 
-        public static string GetTableNames(string name)
-            => $"SELECT TABLE_SCHEMA + '.' + TABLE_NAME FROM {name}.INFORMATION_SCHEMA.TABLES " + 
-               "WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME <> 'sysdiagrams' ORDER BY TABLE_NAME";
+    public static string GetTableNames(string name)
+        => $"SELECT TABLE_SCHEMA + '.' + TABLE_NAME FROM {name}.INFORMATION_SCHEMA.TABLES " + 
+           "WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME <> 'sysdiagrams' ORDER BY TABLE_NAME";
 
-        public static string Descriptions()
-            => @$"SELECT C.COLUMN_NAME AS ColumnName, C.ORDINAL_POSITION AS ColumnId, P.value AS Description
+    public static string Descriptions()
+        => @$"SELECT C.COLUMN_NAME AS ColumnName, C.ORDINAL_POSITION AS ColumnId, P.value AS Description
 FROM INFORMATION_SCHEMA.TABLES AS T
      INNER JOIN INFORMATION_SCHEMA.COLUMNS AS C ON C.TABLE_NAME = T.TABLE_NAME
      INNER JOIN sys.columns AS SC1 ON SC1.object_id = OBJECT_ID(T.TABLE_SCHEMA + '.' + T.TABLE_NAME)
@@ -26,5 +20,4 @@ FROM INFORMATION_SCHEMA.TABLES AS T
                                                      AND P.name = 'MS_Description'
 WHERE T.TABLE_NAME = @TableName AND P.value IS NOT NULL ORDER BY ColumnId;
 ";
-    }
 }

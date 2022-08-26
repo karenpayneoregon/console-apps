@@ -2,7 +2,17 @@
 
 This project shows a menu of all databases under .\SQLEXPRESS which when selecting a database if any table has one or more columns with descriptions displays them.
 
+## Important
 
+Server used 
+
+```csharp
+public static string Server { get; set; } = ".\\SQLEXPRESS";
+```
+
+</br>
+
+## Screenshots
 
 ![Main](assets/main.png)
 
@@ -19,3 +29,4 @@ Description is set in SSMS.
 - **TODO** 
     - Pack as a tool but will make another project which will not display details, instead write to a file.
     - Need better names for models
+

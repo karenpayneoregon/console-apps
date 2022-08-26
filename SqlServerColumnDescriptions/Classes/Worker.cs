@@ -1,60 +1,61 @@
 ﻿using Spectre.Console;
 using SqlServerColumnDescriptions.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SqlServerColumnDescriptions.Classes
+
+namespace SqlServerColumnDescriptions.Classes;
+
+public class Worker
 {
-    public class Worker
+    /// <summary>
+    /// * Present a menu of database
+    ///     * Traverse database tables
+    ///     * If at least one column in a table has a description add to list else bypass it
+    ///     * Display details
+    /// </summary>
+    public static void Execute()
     {
-        public static void Execute()
+        DatabaseName databaseName = new DatabaseName() { Id = 0 };
+
+        while (databaseName.Id != -1)
         {
-            DatabaseName databaseName = new DatabaseName() { Id = 0 };
+            AnsiConsole.Clear();
 
-            while (databaseName.Id != -1)
+            databaseName = AnsiConsole.Prompt(MenuOperations.DatabaseNamesMenu());
+
+            if (databaseName.Id == -1)
             {
-                AnsiConsole.Clear();
+                return;
+            }
 
-                databaseName = AnsiConsole.Prompt(MenuOperations.DatabaseNamesMenu());
+            List<DatabaseTable> result = DataOperations.GetDetails(databaseName.Name);
+            if (result.Count == 0)
+            {
+                AnsiConsole.MarkupLine($"[cyan]{databaseName.Name}[/] has no columns with descriptions press and key for menu");
+                Console.ReadLine();
+            }
+            else
+            {
+                AnsiConsole.MarkupLine($"Database: [yellow]{databaseName.Name}[/]");
+                var resultTable = new Table()
+                    .RoundedBorder()
+                    .AddColumn("[b]Column name[/]")
+                    .AddColumn("[b]Description[/]")
+                    .Alignment(Justify.Left)
+                    .BorderColor(Color.LightSlateGrey);
 
-                if (databaseName.Id == -1)
+
+                foreach (var table in result)
                 {
-                    return;
-                }
-
-                List<DatabaseTable> result = DataOperations.GetDetails(databaseName.Name);
-                if (result.Count == 0)
-                {
-                    AnsiConsole.MarkupLine($"[cyan]{databaseName.Name}[/] has no columns with descriptions press and key for menu");
-                    Console.ReadLine();
-                }
-                else
-                {
-                    AnsiConsole.MarkupLine($"Database: [yellow]{databaseName.Name}[/]");
-                    var resultTable = new Table()
-                        .RoundedBorder()
-                        .AddColumn("[b]Column name[/]")
-                        .AddColumn("[b]Description[/]")
-                        .Alignment(Justify.Left)
-                        .BorderColor(Color.LightSlateGrey);
-
-
-                    foreach (var table in result)
+                    resultTable.AddRow($"[yellow]{table.TableName}[/]");
+                    foreach (var col in table.ColumnsList)
                     {
-                        resultTable.AddRow($"[yellow]{table.TableName}[/]");
-                        foreach (var col in table.ColumnsList)
-                        {
-                            resultTable.AddRow(col.Name, col.Description);
-                        }
+                        resultTable.AddRow(col.Name, col.Description);
                     }
-
-                    AnsiConsole.Write(resultTable);
-                    AnsiConsole.MarkupLine("[yellow]Press a key for the menu[/]");
-                    Console.ReadLine();
                 }
+
+                AnsiConsole.Write(resultTable);
+                AnsiConsole.MarkupLine("[yellow]Press a key for the menu[/]");
+                Console.ReadLine();
             }
         }
     }

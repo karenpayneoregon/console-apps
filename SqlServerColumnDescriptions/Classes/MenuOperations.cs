@@ -6,22 +6,21 @@ using System.Text;
 using System.Threading.Tasks;
 using SqlServerColumnDescriptions.Models;
 
-namespace SqlServerColumnDescriptions.Classes
+namespace SqlServerColumnDescriptions.Classes;
+
+internal class MenuOperations
 {
-    internal class MenuOperations
+    public static SelectionPrompt<DatabaseName> DatabaseNamesMenu()
     {
-        public static SelectionPrompt<DatabaseName> DatabaseNamesMenu()
+        SelectionPrompt<DatabaseName> menu = new()
         {
-            SelectionPrompt<DatabaseName> menu = new()
-            {
-                HighlightStyle = new Style(Color.Cyan1, Color.Black, Decoration.None)
-            };
+            HighlightStyle = new Style(Color.Cyan1, Color.Black, Decoration.None)
+        };
 
-            menu.Title("Select a [B]database[/]");
-            menu.MoreChoicesText("[grey](Move up and down to reveal more databases)[/]");
-            menu.AddChoices(DataOperations.DatabaseNames());
+        menu.Title("Select a [B]database[/]");
+        menu.MoreChoicesText("[grey](Move up and down to reveal more databases)[/]");
+        menu.AddChoices(DataOperations.DatabaseNames());
 
-            return menu;
-        }
+        return menu;
     }
 }

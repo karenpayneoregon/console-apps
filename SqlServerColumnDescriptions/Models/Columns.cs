@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SqlServerColumnDescriptions.Models
+﻿
+namespace SqlServerColumnDescriptions.Models;
+#nullable disable
+public class Columns
 {
-    public class Columns
-    {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public override string ToString() => Name;
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public override string ToString() => Name;
 
-    }
 }
