@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32428.217
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class projects", "{1072D076-83B5-4716-A721-3211D9339E91}"
 EndProject
@@ -145,6 +145,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityCoreConsoleApp", "EntityCoreConsoleApp\EntityCoreConsoleApp.csproj", "{509F7FE4-2D1B-435D-AC27-6C357C2B007F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerDatabaseLibraryEntityFramework", "CustomerDatabaseLibraryEntityFramework\CustomerDatabaseLibraryEntityFramework.csproj", "{116F1AB0-BA30-4954-A367-91177861CEEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CLI", "CLI", "{6440A8DF-39ED-4868-8F57-ADFAA85781E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "SpectreConsoleShared\Shared.csproj", "{18CB4A96-191D-4CFC-9917-B47EC7CC4B5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpectreCli1", "SpectreConsoleCliDemo\SpectreCli1.csproj", "{83900450-FD0A-4010-98B9-70D87E4B84DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -364,6 +370,14 @@ Global
 		{116F1AB0-BA30-4954-A367-91177861CEEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{116F1AB0-BA30-4954-A367-91177861CEEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{116F1AB0-BA30-4954-A367-91177861CEEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18CB4A96-191D-4CFC-9917-B47EC7CC4B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18CB4A96-191D-4CFC-9917-B47EC7CC4B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18CB4A96-191D-4CFC-9917-B47EC7CC4B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18CB4A96-191D-4CFC-9917-B47EC7CC4B5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83900450-FD0A-4010-98B9-70D87E4B84DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83900450-FD0A-4010-98B9-70D87E4B84DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83900450-FD0A-4010-98B9-70D87E4B84DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83900450-FD0A-4010-98B9-70D87E4B84DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -426,6 +440,9 @@ Global
 		{DB26ABBD-9328-4CCA-AEC6-5F8A4E25B6E2} = {696DDFE7-F646-43EB-9230-AF54C703F361}
 		{509F7FE4-2D1B-435D-AC27-6C357C2B007F} = {64DA130D-DB60-4939-9D2A-7670524C44F1}
 		{116F1AB0-BA30-4954-A367-91177861CEEE} = {1072D076-83B5-4716-A721-3211D9339E91}
+		{6440A8DF-39ED-4868-8F57-ADFAA85781E1} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
+		{18CB4A96-191D-4CFC-9917-B47EC7CC4B5E} = {6440A8DF-39ED-4868-8F57-ADFAA85781E1}
+		{83900450-FD0A-4010-98B9-70D87E4B84DE} = {6440A8DF-39ED-4868-8F57-ADFAA85781E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22709C88-5741-4CC8-8E81-A66A17B04A0D}
