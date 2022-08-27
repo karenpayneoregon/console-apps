@@ -25,13 +25,13 @@ namespace MarkOfTheWeb.Classes
             };
 
             using var process = Process.Start(start);
-            process.WaitForExit();
+            process!.WaitForExit();
         }
 
-        [ModuleInitializer]
-        public static void Init()
-        {
-            Console.Title = "Remove mark of the web";
-        }
+        //[ModuleInitializer]
+        //public static void Init()
+        //{
+        //    Console.Title = "Remove mark of the web";
+        //}
     }
 }

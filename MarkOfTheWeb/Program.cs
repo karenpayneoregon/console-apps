@@ -1,12 +1,11 @@
 ﻿using MarkOfTheWeb.Classes;
 
-namespace MarkOfTheWeb
+namespace MarkOfTheWeb;
+
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            CommandLineHelp.ParseArguments(args);
-        }
+        CommandLineHelp.ParseArguments(args);
     }
 }

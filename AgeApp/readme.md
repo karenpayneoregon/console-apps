@@ -11,7 +11,8 @@ Install globally `dotnet tool install -g myage` and `dotnet tool uninstall myage
 
 ## NuGet package
 
-![Nuget](https://img.shields.io/nuget/v/myage?style=for-the-badge)
+
+https://www.nuget.org/packages/myage/
 
 ### Installation
 

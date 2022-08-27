@@ -40,3 +40,18 @@ In the project file
 *Uninstall*
 
 **Run** dotnet tool uninstall -g traverse-demo
+
+## Path
+
+See `launchSettings.json` for path to traverse, currently shown below.
+
+```json
+{
+  "profiles": {
+    "TraverseFolder": {
+      "commandName": "Project",
+      "commandLineArgs": "list -d C:\\Users\\paynek\\Documents\\Snagit"
+    }
+  }
+}
+```

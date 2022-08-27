@@ -21,7 +21,7 @@ namespace MarkOfTheWeb.Classes
                 ? task.Result
                 : string.Empty;
 
-            return result;
+            return result!;
         }
 
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 using Spectre.Console;
 using TraverseFolder.Models;
 
@@ -45,16 +46,10 @@ namespace TraverseFolder.Classes
                     groupItem.ToList()))
                 .ToList();
 
+            //WriteToFile(grouped);
+
             foreach (GroupItem parent in grouped)
             {
-
-                //var rule = new Rule($"[lightsteelblue1]{parent.FolderName}[/]")
-                //{
-                //    Alignment = Justify.Left,
-                //    Style = Style.Parse("navy")
-                //};
-
-                //AnsiConsole.Write(rule);
 
                 AnsiConsole.MarkupLine($"[lightsteelblue1]{parent.FolderName}[/]");
 
@@ -63,6 +58,18 @@ namespace TraverseFolder.Classes
 
             AnsiConsole.WriteLine();
             AnsiConsole.MarkupLine($"[cyan]Finish[/] traversing [cyan][b]{grouped.Count}[/][/] folders");
+        }
+
+        /// <summary>
+        /// File results to a file
+        /// * Before enabling, change the path and file name
+        /// </summary>
+        /// <param name="grouped"></param>
+        private static void WriteToFile(List<GroupItem> grouped)
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string jsonString = JsonSerializer.Serialize(grouped, options);
+            File.WriteAllText("C:\\OED\\Files.json", jsonString);
         }
     }
 }

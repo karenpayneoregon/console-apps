@@ -32,6 +32,22 @@ public static void UnblockFiles(string folderName)
 
 
 
-##  Next level
+##  Tool
 
-Convert to a dotnet tool
+### Install/uninstall
+
+```
+dotnet tool install --global --add-source ./nupkg MarkOfTheWeb
+dotnet tool uninstall -g MarkOfTheWeb
+```
+
+#### Run without arguments
+
+![Noargs](assets/noargs.png)
+
+
+#### Run with arguments
+
+Here a .zip file was downloaded and files extracted which at that point several files had mark of the web.
+
+![Using](assets/using.png)

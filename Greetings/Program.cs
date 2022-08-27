@@ -17,6 +17,7 @@ class Program
     public void OnExecute()
     {
         AnsiConsole.Clear();
+        AnsiConsole.MarkupLine($"[white on red]Greetings[/][red on red]{new string('.',12)}[/]");
         AnsiConsole.MarkupLine($"[yellow on red]Iterating[/][red on red]{new string('.',12)}[/]");
         for (var index = 0; index < Count; index++)
         {
@@ -25,5 +26,6 @@ class Program
         }
 
         Console.WriteLine();
+
     }
 }
