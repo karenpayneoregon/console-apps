@@ -180,6 +180,54 @@ Take it up a level (project MenuConsoleApp) to provide an easy to create menu sy
 
 ![Menu](MenuConsoleApp/assets/menu.png)
 
+# Validation
+
+Spectre.console `TextPrompt` has a `Validate` which in the example below uses a `switch` to perform validation and the second code block below uses an `if` statement.
+
+Using either a `switch` of `if` statement makes it easy to validate user input but there are some gottchas like in the second code block for checking if a folder exists. The first method to validate a folder does not provide anyway to get out of the prompt as there is no property to allow a user to enter a blank entry while the second method expects the caller to validate the folder exists or not and act accordingly.
+
+
+```csharp
+public static int GetInt() =>
+    AnsiConsole.Prompt(
+        new TextPrompt<int>("Enter a [green]number[/] between [b]1[/] and [b]10[/]")
+            .PromptStyle("green")
+            .ValidationErrorMessage("[red]That's not a valid age[/]")
+            .Validate(age => age switch
+            {
+                <= 0 => ValidationResult.Error("[red]1 is min value[/]"),
+                >= 10 => ValidationResult.Error("[red]10 is max value[/]"),
+                _ => ValidationResult.Success(),
+            }));
+```
+
+
+```csharp
+/// <summary>
+/// Ask for folder name, no way to breakout as per validation
+/// </summary>
+/// <returns>string</returns>
+public static string GetFolderName() =>
+    AnsiConsole.Prompt(
+        new TextPrompt<string>("[white]Folder name[/]?")
+            .PromptStyle("yellow")
+            .Validate(folderName =>
+                Directory.Exists(folderName) ?
+                    ValidationResult.Success() :
+                    ValidationResult.Error($"[red]{folderName} not found[/]"))
+            .ValidationErrorMessage("[red]Please enter a folder name[/]"));
+
+/// <summary>
+/// Ask for folder name, no validation
+/// </summary>
+/// <returns>string</returns>
+public static string GetFolderNameAllowNone() =>
+    AnsiConsole.Prompt(
+        new TextPrompt<string>("[white]Folder name[/]?")
+            .PromptStyle("yellow")
+            .AllowEmpty());
+```
+
 # Summary
 
 Using Spectre.Console makes obtaining user input a snap along with when done properly your code will be cleaner and easier to maintain than using conventional methods to obtain user input.

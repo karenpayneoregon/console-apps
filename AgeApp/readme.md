@@ -23,4 +23,10 @@ dotnet tool install --global myage --version 1.1.2
 
 ```powershell
 dotnet tool update -g myage --no-cache
+```
 
+### Uninstall
+
+```powershell
+dotnet tool uninstall -g myAge
+```

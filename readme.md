@@ -51,6 +51,10 @@ In the following screen the autor of the library does not show events, mine does
 
 Solution folders are used to separate various third party libraries used to work with user interfaces for console projects.
 
+## How to
+
+
+
 ## Spectre.console
 
 - Obtaining [user input](userInput.md)

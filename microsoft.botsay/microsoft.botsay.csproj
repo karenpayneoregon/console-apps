@@ -6,7 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackAsTool>true</PackAsTool>
-		<ToolCommandName>dircount</ToolCommandName>
+		<ToolCommandName>botsay</ToolCommandName>
 		<PackageOutputPath>./nupkg</PackageOutputPath>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	</PropertyGroup>
@@ -18,10 +18,5 @@
 	<ItemGroup>
 	  <Content Include="readme.md" />
 	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="Spectre.Console" Version="0.44.0" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="assets\" />
-	</ItemGroup>
+
 </Project>
