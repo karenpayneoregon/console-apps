@@ -27,6 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spectre.Console", "Spectre.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48C90D4C-F2FF-433E-9CB0-9DBB21B7298B}"
 	ProjectSection(SolutionItems) = preProject
+		dotnetTools.md = dotnetTools.md
 		readme.md = readme.md
 		SpectreUserInput.md = SpectreUserInput.md
 		SpectreUtilities.md = SpectreUtilities.md

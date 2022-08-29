@@ -18,9 +18,9 @@ Another use as mentioned above, worker services and ASP.NET Core.
 
 Other than projects located under the Basics folder use enhanced user interfaces provided by Spectre.Console NuGet package and Terminal.Gui which provides mouse support.
 
-Both Spectre.Console and Terminal.Gui provide examples for using their libraries although in many cases they are not simple examples which is where these code samples are helpful, broken down, easy to run.
+Both `Spectre.Console` and `Terminal.Gui` provide examples for using their libraries although in many cases they are not simple examples which is where these code samples are helpful, broken down, easy to run.
 
-- In several projects EF Core is used and for those projects require a script to run to create SQL-Server databases along with populating tables first.
+- In several projects `EF Core` is used and for those projects require a script to run to create SQL-Server databases along with populating tables first.
 - Other than one project, Program class is setup as partial with startup code under the Classes folder for each project.
 - Most projects are centered on screen or full screen using code in ConsoleHelperLibrary
 
