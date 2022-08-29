@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using Spectre.Console;
 
@@ -23,6 +24,33 @@ namespace LoginConsoleApp.Classes
                     .Secret());
         }
 
+        static string AskUsernameIfMissing(string current)
+            => !string.IsNullOrWhiteSpace(current)
+                ? current
+                : AnsiConsole.Prompt(
+                    new TextPrompt<string>("What's the username?")
+                        .Validate(username
+                            => !string.IsNullOrWhiteSpace(username)
+                                ? ValidationResult.Success()
+                                : ValidationResult.Error("[yellow]Invalid username[/]")));
+
+        static string AskPasswordIfMissing(string current)
+            => TryGetValidPassword(current, out var validPassword)
+                ? validPassword
+                : AnsiConsole.Prompt(
+                    new TextPrompt<string>("What's the password?")
+                        .Secret()
+                        .Validate(password
+                            => TryGetValidPassword(password, out _)
+                                ? ValidationResult.Success()
+                                : ValidationResult.Error("[yellow]Invalid password[/]")));
+
+        static bool TryGetValidPassword(string? password, [NotNullWhen(true)] out string? validPassword)
+        {
+            var isValidPassword = !string.IsNullOrWhiteSpace(password) && password.Length > 2;
+            validPassword = password;
+            return isValidPassword;
+        }
         public static void DrawHeader()
         {
             Render(

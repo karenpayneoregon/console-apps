@@ -11,14 +11,46 @@
 		<ApplicationIcon>ConfigurationFile.ico</ApplicationIcon>
 		<PackageOutputPath>./nupkg</PackageOutputPath>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>Remove Mark of the web</Title>
+		<Company>Karen Payne</Company>
+		<Authors>Karen Payne</Authors>
+		<Description>A command line dotnet tool to recursively remove mark of the web from a folder</Description>
+		<RepositoryUrl>https://github.com/karenpayneoregon/console-apps/tree/master/MarkOfTheWeb</RepositoryUrl>
+		<PackageReadmeFile>NuGetReadme.md</PackageReadmeFile>
+		<PackageIcon>MarkOfTheWebSmall.png</PackageIcon>
 	</PropertyGroup>
+	
+	<PropertyGroup>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<Version>1.0.1</Version>
+		<PackageReleaseNotes>Fixed typos in readme</PackageReleaseNotes>
+		<Copyright>Copyright (c) Karen Payne 2022</Copyright>
+		<PackageProjectUrl>https://github.com/karenpayneoregon/console-apps/tree/master/MarkOfTheWeb</PackageProjectUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>dotnet tool</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="licenses\LICENSE.txt" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="NuGetReadme.md" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="CommandLineParser" Version="2.8.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="assets\" />
+	  <None Update="MarkOfTheWebSmall.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Update="NuGetReadme.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 </Project>
