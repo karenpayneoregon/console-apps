@@ -1,5 +1,4 @@
-﻿using CommandLine;
-using PasswordGenerator;
+﻿
 using PasswordGeneratorApp.Classes;
 
 namespace PasswordGeneratorApp
