@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommandLine.Text;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -15,5 +16,7 @@ static partial class Program
     {
         Console.Title = "Code sample";
         WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
+
+
     }
 }

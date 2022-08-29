@@ -1,4 +1,5 @@
-﻿using PasswordGenerator;
+﻿using CommandLine;
+using PasswordGenerator;
 using PasswordGeneratorApp.Classes;
 
 namespace PasswordGeneratorApp
@@ -9,23 +10,10 @@ namespace PasswordGeneratorApp
         {
 
             AnsiConsole.MarkupLine("[b]Create a random password[/]");
-            var length = Prompts.GetInt();
-            if (length > 0)
-            {
-                var pwd = new Password()
-                    .IncludeLowercase()
-                    .IncludeUppercase()
-                    .IncludeNumeric()
-                    .IncludeSpecial("@_")
-                    .LengthRequired(length);
 
-                for (int index = 0; index < 4; index++)
-                {
-                    Console.WriteLine(pwd.Next());
-                }
-            }
+            CommandLineHelp.ParseArguments(args);
 
- 
+
             Console.ReadLine();
         }
     }

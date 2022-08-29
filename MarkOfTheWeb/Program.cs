@@ -7,5 +7,6 @@ class Program
     static void Main(string[] args)
     {
         CommandLineHelp.ParseArguments(args);
+        Console.ReadLine();
     }
 }

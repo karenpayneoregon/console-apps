@@ -178,6 +178,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Holidays", "Holidays\Holida
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordGeneratorApp", "PasswordGenerator\PasswordGeneratorApp.csproj", "{91AD3A69-A920-43D9-83B2-C575F3A76C2A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clones", "Clones", "{BFEA051F-3C8D-4055-A3AF-EA78C0639457}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordGenerator", "PasswordGeneratorNuGet\PasswordGenerator.csproj", "{002C022D-63DC-49E3-B91E-71D4324075EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -444,6 +448,10 @@ Global
 		{91AD3A69-A920-43D9-83B2-C575F3A76C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91AD3A69-A920-43D9-83B2-C575F3A76C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91AD3A69-A920-43D9-83B2-C575F3A76C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{002C022D-63DC-49E3-B91E-71D4324075EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{002C022D-63DC-49E3-B91E-71D4324075EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{002C022D-63DC-49E3-B91E-71D4324075EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{002C022D-63DC-49E3-B91E-71D4324075EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -520,6 +528,8 @@ Global
 		{F95CDEFE-4038-4B87-8F53-F02D32FDF9AA} = {F6510580-C4B7-41B6-9612-23630E83C2B5}
 		{EF29827B-108E-4755-A3FD-749933393880} = {F6510580-C4B7-41B6-9612-23630E83C2B5}
 		{91AD3A69-A920-43D9-83B2-C575F3A76C2A} = {F6510580-C4B7-41B6-9612-23630E83C2B5}
+		{BFEA051F-3C8D-4055-A3AF-EA78C0639457} = {F6510580-C4B7-41B6-9612-23630E83C2B5}
+		{002C022D-63DC-49E3-B91E-71D4324075EE} = {BFEA051F-3C8D-4055-A3AF-EA78C0639457}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22709C88-5741-4CC8-8E81-A66A17B04A0D}
