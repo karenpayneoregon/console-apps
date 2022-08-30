@@ -1,6 +1,7 @@
 ﻿#nullable disable
 using ComputerDetails.Classes;
 using ComputerDetails.Models;
+using System.Net.NetworkInformation;
 
 namespace ComputerDetails
 {
@@ -8,10 +9,17 @@ namespace ComputerDetails
     {
         static void Main(string[] args)
         {
-           
-            CommandLineHelp.ParseArguments(args);
+
+            if (Environment.GetEnvironmentVariables().Contains("HOMESHARE"))
+            {
+                var home = Environment.GetEnvironmentVariable("HOMESHARE");
+                Console.WriteLine(Directory.Exists(home));
+            }
+            //CommandLineHelp.ParseArguments(args);
             Console.ReadLine(); // for testing
             
         }
+
+
     }
 }
