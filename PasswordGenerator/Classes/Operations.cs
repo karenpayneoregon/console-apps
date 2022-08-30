@@ -9,7 +9,7 @@ public class Operations
     public static void Configuration(string[] args)
     {
         Parser.Default.ParseArguments<Options>(args)
-            .WithParsed<Options>(options =>
+            .WithParsed(options =>
             {
                 if (options.Lower)
                 {

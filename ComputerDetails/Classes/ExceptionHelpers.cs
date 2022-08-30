@@ -1,0 +1,54 @@
+﻿namespace ComputerDetails.Classes;
+
+
+public class ExceptionHelpers
+{
+    /// <summary>
+    /// Provides colorful exception messages in cyan and fuchsia
+    /// </summary>
+    /// <param name="exception"><see cref="Exception"/></param>
+    public static void ColorWithCyanFuchsia(Exception exception)
+    {
+        AnsiConsole.WriteException(exception, new ExceptionSettings
+        {
+            Format = ExceptionFormats.Default | ExceptionFormats.ShowLinks,
+            Style = new ExceptionStyle
+            {
+                Exception = new Style().Foreground(Color.Grey),
+                Message = new Style().Foreground(Color.DarkSeaGreen),
+                NonEmphasized = new Style().Foreground(Color.Cornsilk1),
+                Parenthesis = new Style().Foreground(Color.Cornsilk1),
+                Method = new Style().Foreground(Color.Fuchsia),
+                ParameterName = new Style().Foreground(Color.Cornsilk1),
+                ParameterType = new Style().Foreground(Color.Aqua),
+                Path = new Style().Foreground(Color.Red),
+                LineNumber = new Style().Foreground(Color.Cornsilk1),
+            }
+        });
+
+    }
+    /// <summary>
+    /// Provides a colorful exception message
+    /// </summary>
+    /// <param name="exception"><see cref="Exception"/></param>
+    public static void ColorStandard(Exception exception)
+    {
+        AnsiConsole.WriteException(exception, new ExceptionSettings
+        {
+            //Format = ExceptionFormats.ShortenEverything | ExceptionFormats.ShowLinks,
+            Style = new ExceptionStyle
+            {
+                Exception = new Style().Foreground(Color.Grey),
+                Message = new Style().Foreground(Color.White),
+                NonEmphasized = new Style().Foreground(Color.Cornsilk1),
+                Parenthesis = new Style().Foreground(Color.GreenYellow),
+                Method = new Style().Foreground(Color.DarkOrange),
+                ParameterName = new Style().Foreground(Color.Cornsilk1),
+                ParameterType = new Style().Foreground(Color.Aqua),
+                Path = new Style().Foreground(Color.White),
+                LineNumber = new Style().Foreground(Color.Cornsilk1),
+            }
+        });
+
+    }
+}

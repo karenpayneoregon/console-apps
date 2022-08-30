@@ -1,0 +1,5 @@
+﻿<Project>
+	<PropertyGroup>
+		<PathMap>$(MSBuildProjectDirectory)=$(MSBuildProjectName)</PathMap>
+	</PropertyGroup>
+</Project>

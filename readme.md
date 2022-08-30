@@ -84,3 +84,4 @@ This library has about 100 issues/bugs/feature request, even so knowing them you
 - [ShellProgressBar](https://github.com/Mpdreamz/shellprogressbar) display progress in your console application
 - [Colorful.Console](https://github.com/tomakita/Colorful.Console) Style your .NET console output!
 - [Devlead.Console.Template](https://www.devlead.se/posts/2021/2021-01-15-my-preferred-console-stack) this is considered advance console app coding
+- ([Goblinfactory.Konsole](https://github.com/goblinfactory/progress-bar)) progress-bar console progress bar with support for single or multithreaded progress updates.

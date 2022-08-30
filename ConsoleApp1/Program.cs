@@ -1,4 +1,5 @@
 ﻿using ConsoleApp1.Classes;
+using Spectre.Console;
 
 
 namespace ConsoleApp1;
@@ -6,14 +7,12 @@ namespace ConsoleApp1;
 /// <summary>
 /// Tinkering
 /// </summary>
-internal class Program
+partial class Program
 {
     // does nada 
     private static readonly CancellationTokenSource CancellationTokenSource = new();
     static async Task Main(string[] args)
     {
-
-        await Task.Delay(0);
 
         try
         {
@@ -24,15 +23,14 @@ internal class Program
             CancellationTokenSource.Dispose();
         }
 
-        Console.WriteLine("xxx");
-
-        // needed
+        Header();
         Console.ReadLine();
     }
 
     private static async Task WorkerExample()
     {
-        var service = new WorkerService(2);
+        var service = new WorkerService(times: 2, infinite: false);
         await service.StartAsync(CancellationTokenSource.Token);
     }
+
 }

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ComputerDetails": {
+      "commandName": "Project",
+      "commandLineArgs": "-b"
+    }
+  }
+}

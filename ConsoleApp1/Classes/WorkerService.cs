@@ -6,24 +6,22 @@ namespace ConsoleApp1.Classes;
 public class WorkerService : BackgroundService
 {
 
-    /*
-     *      * * * * * every minute
-     *      0 * * * * every hour
-     */
-    private const string Schedule = "* * * * *";
+
+    private static readonly string Schedule = CronSchedules.EveryMinute;
     private readonly CronExpression _cron;
     private readonly int _iterations;
-
+    private readonly bool _infinite;
 
     public WorkerService()
     {
         _cron = CronExpression.Parse(Schedule);
     }
 
-    public WorkerService(int times)
+    public WorkerService(int times, bool infinite = true)
     {
         _cron = CronExpression.Parse(Schedule);
         _iterations = times;
+        _infinite = infinite;
     }
     
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -41,11 +39,13 @@ public class WorkerService : BackgroundService
 
             counter++;
 
+            if (_infinite) continue;
             if (counter > _iterations)
             {
                 Console.WriteLine($"Exiting while on {counter}");
                 return;
             }
+
         }
     }
     /// <summary>
