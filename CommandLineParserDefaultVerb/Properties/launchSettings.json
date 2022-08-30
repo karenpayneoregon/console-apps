@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CommandLineParserDefaultVerb": {
+      "commandName": "Project",
+      "commandLineArgs": "say --hello Karen"
+    }
+  }
+}

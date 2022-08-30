@@ -20,8 +20,8 @@ namespace ComputerDetails.Classes
             var help = HelpText.AutoBuild(result, helpText =>
             {
                 helpText.AdditionalNewLineAfterOption = false;
-                helpText.Heading = "[b]OED/Service desk computer details[/]";
-                helpText.Copyright = $"Copyright (c) {DateTime.Now.Year} OED";
+                helpText.Heading = "[b]Computer details[/]";
+                helpText.Copyright = $"Copyright (c) {DateTime.Now.Year} Karen Payne";
 
 
                 return HelpText.DefaultParsingErrorsHandler(result, helpText);
@@ -39,6 +39,7 @@ namespace ComputerDetails.Classes
         public static void ParseArguments(string[] args)
         {
             Parser parser = new Parser(with => with.HelpWriter = null);
+
 
             ParserResult<Options> results = parser.ParseArguments<Options>(args);
 

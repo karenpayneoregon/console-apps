@@ -1,7 +1,7 @@
 ﻿#nullable disable
 using ComputerDetails.Classes;
 using ComputerDetails.Models;
-using System.Net.NetworkInformation;
+
 
 namespace ComputerDetails
 {
