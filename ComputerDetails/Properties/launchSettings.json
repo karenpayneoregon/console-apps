@@ -2,7 +2,7 @@
   "profiles": {
     "ComputerDetails": {
       "commandName": "Project",
-      "commandLineArgs": "-b"
+      "commandLineArgs": "-a -b"
     }
   }
 }

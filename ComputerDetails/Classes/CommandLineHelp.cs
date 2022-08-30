@@ -20,8 +20,8 @@ namespace ComputerDetails.Classes
             var help = HelpText.AutoBuild(result, helpText =>
             {
                 helpText.AdditionalNewLineAfterOption = false;
-                helpText.Heading = "[greenyellow]Password generator[/]";
-                helpText.Copyright = $"Copyright (c) {DateTime.Now.Year} Karen Payne";
+                helpText.Heading = "[b]OED/Service desk computer details[/]";
+                helpText.Copyright = $"Copyright (c) {DateTime.Now.Year} OED";
 
 
                 return HelpText.DefaultParsingErrorsHandler(result, helpText);
