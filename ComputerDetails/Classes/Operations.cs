@@ -71,7 +71,17 @@ public class Operations
     /// <param name="details">Details obtained via PowerShell</param>
     private static void GetBiosInformation(MachineComputerInformation details)
     {
+        var table = new Table()
+            .Border(TableBorder.None)
+            .AddColumn("[b][u]Setting[/][/]")
+            .AddColumn("[b][u]Value[/][/]")
+            .Alignment(Justify.Left)
+            .BorderColor(Color.LightSlateGrey);
+
+        table.Columns[0].PadRight(5);
+
         Console.WriteLine(details.WindowsRegisteredOrganization);
+        table.AddRow("Organization", details.WindowsRegisteredOrganization);
         Console.WriteLine(details.BiosManufacturer);
         Console.WriteLine(details.BiosReleaseDate);
         Console.WriteLine(details.BiosSeralNumber);
@@ -83,6 +93,8 @@ public class Operations
         Console.WriteLine(details.OsLanguage);
         Console.WriteLine(((details.CsTotalPhysicalMemory / (1024 * 1024 * 1024)) + 1).ToString("###.#GB"));
         Console.WriteLine(Math.Round((double)details.OsFreePhysicalMemory, MidpointRounding.ToPositiveInfinity).ToString("N0"));
+
+        AnsiConsole.Write(table);
     }
 
 }

@@ -9,18 +9,6 @@ internal class PowerShellOperations
     public static async Task<MachineComputerInformation> GetComputerInformationTask()
     {
 
-        string fileName = "computerInformation.json";
-
-        if (Directory.Exists("C:\\OED"))
-        {
-            fileName = Path.Combine("C:\\OED", fileName);
-        }
-
-        if (File.Exists(fileName))
-        {
-            File.Delete(fileName);
-        }
-
         var start = new ProcessStartInfo
         {
             FileName = "powershell.exe",
@@ -36,18 +24,7 @@ internal class PowerShellOperations
 
         var fileContents = await reader.ReadToEndAsync();
 
-        await File.WriteAllTextAsync(fileName, fileContents);
-        await process.WaitForExitAsync();
-
-        var json = await File.ReadAllTextAsync(fileName);
-
-        if (File.Exists(fileName))
-        {
-            File.Delete(fileName);
-
-        }
-
-        return JsonConvert.DeserializeObject<MachineComputerInformation>(json);
+        return JsonConvert.DeserializeObject<MachineComputerInformation>(fileContents);
 
     }
 }
