@@ -25,8 +25,8 @@ namespace MenuConsoleStudentWorkApp
         /// Operations to perform from selection in main menu
         /// </summary>
         /// <param name="menuItem">option from main menu</param>
-        /// <param name="StudentList">current list of students</param>
-        private static void Selection(MenuItem menuItem, List<Student> StudentList)
+        /// <param name="studentList">current list of students</param>
+        private static void Selection(MenuItem menuItem, List<Student> studentList)
         {
             AnsiConsole.Clear();
             
@@ -52,11 +52,11 @@ namespace MenuConsoleStudentWorkApp
                     student = AnsiConsole.Prompt(MenuOperations.StudentMenu());
                     if (student.Id > 0)
                     {
-                        Remove(student, StudentList);
+                        Remove(student, studentList);
                     }
                     break;
                 case 3:
-                    Save(StudentList);
+                    Save(studentList);
                     break;
             }
         }

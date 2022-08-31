@@ -26,19 +26,52 @@ namespace AskConsoleApp.Classes
                     .AllowEmpty());
 
         /// <summary>
-        /// Ask for first name with custom validation error text
+        /// Ask for first name with custom validation error text.
         /// </summary>
         public static string GetFirstName() =>
             AnsiConsole.Prompt(
                 new TextPrompt<string>("[white]First name[/]?")
                     .PromptStyle("yellow")
-                    .Validate(value => value.Length switch
+                    .AllowEmpty()
+                    .Validate(value => value.Trim().Length switch
                     {
-                        < 3 => ValidationResult.Error("[red]Must have at least three characters[/]"),
+                        < 3 => ValidateFirstName(),
                         _ => ValidationResult.Success(),
                     })
                     .ValidationErrorMessage("[red]Please enter your first name[/]"));
 
+
+        private static ValidationResult ValidateFirstName()
+        {
+            /*
+             * This would appear to be a logical option but the library
+             * does not permit to input at once and in this case there is
+             * TextPrompt in GetFirstName that prohibits using Confirm
+             */
+            //if (AnsiConsole.Confirm("[lime]Continue[/]"))
+            //{
+            //    Environment.Exit(0);
+            //}
+
+
+            if (!Prompt.GetYesNo("Do you want to continue?",true, ConsoleColor.Cyan))
+            {
+                Environment.Exit(0);
+            }
+
+            return ValidationResult.Error("[red]Must have at least three characters[/]");
+
+        }
+
+        /// <summary>
+        /// A base for asking for a first name without validation
+        /// </summary>
+        public static string GetFirstNameSafe() =>
+            AnsiConsole.Prompt(
+                new TextPrompt<string>("[white]First name[/]?")
+                    .PromptStyle("yellow")
+                    .AllowEmpty()
+                );
 
         /// <summary>
         /// Ask for last name with custom validation error text
