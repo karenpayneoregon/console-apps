@@ -1,4 +1,5 @@
 ﻿#nullable disable
+using System.Runtime.InteropServices;
 using ComputerDetails.Classes;
 using ComputerDetails.Models;
 
@@ -11,7 +12,7 @@ namespace ComputerDetails
         {
             CommandLineHelp.ParseArguments(args);
             Console.ReadLine(); // for testing
-            
+           
         }
     }
 }

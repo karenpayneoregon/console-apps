@@ -16,4 +16,8 @@
     <Content Include="readme.md" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="EzPasswordValidator" Version="2.1.0" />
+  </ItemGroup>
+
 </Project>

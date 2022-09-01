@@ -29,15 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.WineTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.ListColumnsButton = new System.Windows.Forms.Button();
             this.NewColumnButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ListColumnsButton = new System.Windows.Forms.Button();
+            this.WineTypeButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.WineTypeButton);
+            this.panel1.Controls.Add(this.WineTypeComboBox);
             this.panel1.Controls.Add(this.ListColumnsButton);
             this.panel1.Controls.Add(this.NewColumnButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -45,6 +49,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(566, 51);
             this.panel1.TabIndex = 0;
+            // 
+            // WineTypeComboBox
+            // 
+            this.WineTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.WineTypeComboBox.FormattingEnabled = true;
+            this.WineTypeComboBox.Location = new System.Drawing.Point(230, 16);
+            this.WineTypeComboBox.Name = "WineTypeComboBox";
+            this.WineTypeComboBox.Size = new System.Drawing.Size(205, 23);
+            this.WineTypeComboBox.TabIndex = 2;
+            // 
+            // ListColumnsButton
+            // 
+            this.ListColumnsButton.Location = new System.Drawing.Point(121, 16);
+            this.ListColumnsButton.Name = "ListColumnsButton";
+            this.ListColumnsButton.Size = new System.Drawing.Size(103, 23);
+            this.ListColumnsButton.TabIndex = 1;
+            this.ListColumnsButton.Text = "List columns";
+            this.ListColumnsButton.UseVisualStyleBackColor = true;
+            this.ListColumnsButton.Click += new System.EventHandler(this.ListColumnsButton_Click);
             // 
             // NewColumnButton
             // 
@@ -66,15 +89,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(566, 196);
             this.dataGridView1.TabIndex = 1;
             // 
-            // ListColumnsButton
+            // WineTypeButton
             // 
-            this.ListColumnsButton.Location = new System.Drawing.Point(121, 16);
-            this.ListColumnsButton.Name = "ListColumnsButton";
-            this.ListColumnsButton.Size = new System.Drawing.Size(103, 23);
-            this.ListColumnsButton.TabIndex = 1;
-            this.ListColumnsButton.Text = "List columns";
-            this.ListColumnsButton.UseVisualStyleBackColor = true;
-            this.ListColumnsButton.Click += new System.EventHandler(this.ListColumnsButton_Click);
+            this.WineTypeButton.Location = new System.Drawing.Point(441, 16);
+            this.WineTypeButton.Name = "WineTypeButton";
+            this.WineTypeButton.Size = new System.Drawing.Size(75, 23);
+            this.WineTypeButton.TabIndex = 3;
+            this.WineTypeButton.Text = "Wine type";
+            this.WineTypeButton.UseVisualStyleBackColor = true;
+            this.WineTypeButton.Click += new System.EventHandler(this.WineTypeButton_Click);
             // 
             // Form1
             // 
@@ -98,5 +121,7 @@
         private Button NewColumnButton;
         private DataGridView dataGridView1;
         private Button ListColumnsButton;
+        private ComboBox WineTypeComboBox;
+        private Button WineTypeButton;
     }
 }
