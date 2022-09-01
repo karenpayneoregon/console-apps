@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿#nullable disable
+using System.Diagnostics.CodeAnalysis;
 using EzPasswordValidator.Checks;
 using EzPasswordValidator.Validators;
 using Spectre.Console;
@@ -170,9 +171,9 @@ public class Prompts
                     .Validate(password
                         => TryGetValidPassword(password, out _)
                             ? ValidationResult.Success()
-                            : ValidationResult.Error("[yellow]Invalid password[/]")));
+                            : ValidationResult.Error("[red]Invalid password[/]")));
 
-    public static bool TryGetValidPassword(string? password, [NotNullWhen(true)] out string? validPassword)
+    public static bool TryGetValidPassword(string password, [NotNullWhen(true)] out string validPassword)
     {
         var isValidPassword = !string.IsNullOrWhiteSpace(password) && password.Length > 2;
         validPassword = password;
@@ -202,10 +203,8 @@ public class Prompts
     /// There is also AnsiConsole.Confirm but provides no option to
     /// change text color for (y/n)
     /// </remarks>
-    public static bool AskConfirmation(string questionText, string color = "white")
-    {
-        return Continue(questionText, color).ToUpper() == "Y"; // AnsiConsole.Confirm("[lime]Perform another calculation?[/]");
-    }
+    public static bool AskConfirmation(string questionText, string color = "white") 
+        => Continue(questionText, color).ToUpper() == "Y";
 
     public static List<string> MonthsSelection() => AnsiConsole.Prompt
     (
@@ -215,6 +214,17 @@ public class Prompts
             .Title("[b]Months[/]?")
             .InstructionsText("[grey](Press [yellow]<space>[/] to toggle a month, [yellow]<enter>[/] to accept)[/] or [red]Enter[/] w/o any selections to cancel")
             .AddChoices(CurrentInfo!.MonthNames[..^1])
+            .HighlightStyle(new Style(Color.White, Color.Black, Decoration.Invert))
+    );
+
+    public static List<T> GenericSelectionList<T>(List<T> list) => AnsiConsole.Prompt
+    (
+        new MultiSelectionPrompt<T>()
+            .PageSize(12)
+            .Required(false)
+            .Title("[b]Months[/]?")
+            .InstructionsText("[grey](Press [yellow]<space>[/] to toggle a month, [yellow]<enter>[/] to accept)[/] or [red]Enter[/] w/o any selections to cancel")
+            .AddChoices(list)
             .HighlightStyle(new Style(Color.White, Color.Black, Decoration.Invert))
     );
 }
