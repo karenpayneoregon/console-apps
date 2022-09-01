@@ -16,6 +16,8 @@ For helper utilities with a simple user interface which can be with user input, 
 
 Another use as mentioned above, worker services and ASP.NET Core.
 
+Add you can convert a console application into a dotnet tool [![](assets/Link_16x.png)](dotnetTools.md)
+
 Other than projects located under the Basics folder use enhanced user interfaces provided by Spectre.Console NuGet package and Terminal.Gui which provides mouse support.
 
 Both `Spectre.Console` and `Terminal.Gui` provide examples for using their libraries although in many cases they are not simple examples which is where these code samples are helpful, broken down, easy to run.
@@ -46,6 +48,14 @@ In the following screen the autor of the library does not show events, mine does
 - Lots of developers tend to use ambiguous and/or short variable names. I promote using variable names that make sense, look at it and you know what it's for. I recommend the same to those reading this.
 - Find code which can be used in other projects and move code in a class project
   - Now write unit test
+
+## Spectre.Console library
+
+In the project `SpectreConsoleLibrary` you will find common prompts/inputs which can be copied and placed into your Visual Studio solution, reference the class project in your project and use.
+
+Feel free to change things like colors and text used for the prompts to what suits your needs.
+
+
 
 ## Solution structure
 

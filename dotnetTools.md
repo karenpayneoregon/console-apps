@@ -9,3 +9,8 @@ A .NET tool is a special NuGet package that contains a console application. You 
 # NuGet tool list
 
 The following [site](https://www.nuget.org/packages?packagetype=dotnettool) list published tools.
+
+# Current examples
+
+![x](assets/toolsInSolutionCurrently.png)
+
