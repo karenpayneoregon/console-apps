@@ -55,6 +55,14 @@ public class Prompts
                 .DefaultValue(1m));
     }
 
+    public static double GetDouble()
+    {
+        return AnsiConsole.Prompt(
+            new TextPrompt<double>("[b]Enter decimal[/]")
+                .PromptStyle(PromptStyleColor)
+                .DefaultValue(1));
+    }
+
     public static int GetIntFrom1To10()
     {
         const int maxValue = 10;
@@ -94,22 +102,54 @@ public class Prompts
     }
 
 
-    public static DateOnly? GetDate()
+    public static DateOnly? GetDateOnly(string defaultValue = "09/01/2022")
     {
-        return AnsiConsole.Prompt(
-            new TextPrompt<DateOnly>("[b]Date[/]:")
+        var input =AnsiConsole.Prompt(
+            new TextPrompt<string>("[b]Date[/]:")
                 .PromptStyle(PromptStyleColor)
+                .DefaultValue(defaultValue)
                 .ValidationErrorMessage("[red]Please enter a valid date or press ENTER to not enter a date[/]")
                 .AllowEmpty());
+
+        if (DateOnly.TryParse(input, out var date))
+        {
+            return date;
+        }
+        else
+        {
+            return null;
+        }
+
     }
 
-    public static TimeOnly? GetTime()
+    public static TimeOnly? GetTimeOnly(string defaultValue = "00:00:00")
+    {
+        var  inout = AnsiConsole.Prompt(new TextPrompt<string>("[b]Time[/]:")
+                .PromptStyle(PromptStyleColor)
+                .DefaultValue(defaultValue)
+                .AllowEmpty());
+
+        if (TimeOnly.TryParse(inout, out var time))
+        {
+            return time;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+
+    public static bool GetBool(string title = "Yes or no?")
     {
         return AnsiConsole.Prompt(
-            new TextPrompt<TimeOnly>("[b]Time[/]:")
-                .PromptStyle(PromptStyleColor)
-                .ValidationErrorMessage("[red]Please enter a valid time or press ENTER to not enter a time[/]")
-                .AllowEmpty());
+            new TextPrompt<bool>($"[b]{title}[/]:").PromptStyle(PromptStyleColor));
+    }
+
+    public static string GetYesNo()
+    {
+        return AnsiConsole.Prompt(
+            new TextPrompt<bool>("[b]Yes/No[/]:").PromptStyle(PromptStyleColor)) ? "Yes" : "No";
     }
     public static string GetUserName(bool allowEmpty)
     {
@@ -130,11 +170,12 @@ public class Prompts
                 .Secret()
                 .DefaultValueStyle(new Style(Color.Aqua)));
 
-    public static string GetNewPassword() =>
+    public static string GetNewPassword(string title = "Password") =>
         AnsiConsole.Prompt(
-            new TextPrompt<string>("[b]First name[/]?")
+            new TextPrompt<string>($"[b]{title}[/]?")
                 .PromptStyle(PromptStyleColor)
                 .AllowEmpty()
+                .Secret()
                 .Validate(ValidatePassword)
                 .ValidationErrorMessage("[red]Entry does not match rules for creating a new password[/]"));
 
@@ -206,24 +247,36 @@ public class Prompts
     public static bool AskConfirmation(string questionText, string color = "white") 
         => Continue(questionText, color).ToUpper() == "Y";
 
-    public static List<string> MonthsSelection() => AnsiConsole.Prompt
+    public static List<string> MonthsSelection(int pageSize, string title = "Months") => AnsiConsole.Prompt
     (
         new MultiSelectionPrompt<string>()
-            .PageSize(12)
+            .PageSize(pageSize)
             .Required(false)
-            .Title("[b]Months[/]?")
+            .Title($"[b]{title}[/]?")
             .InstructionsText("[grey](Press [yellow]<space>[/] to toggle a month, [yellow]<enter>[/] to accept)[/] or [red]Enter[/] w/o any selections to cancel")
             .AddChoices(CurrentInfo!.MonthNames[..^1])
             .HighlightStyle(new Style(Color.White, Color.Black, Decoration.Invert))
     );
 
-    public static List<T> GenericSelectionList<T>(List<T> list) => AnsiConsole.Prompt
+
+    /// <summary>
+    /// Present a list where the user can select one or more items
+    /// </summary>
+    /// <typeparam name="T">Model type</typeparam>
+    /// <param name="list">List of items</param>
+    /// <param name="pageSize">How many items to show on the screen</param>
+    /// <param name="title">What to display as the title</param>
+    /// <returns></returns>
+    /// <remarks>
+    /// Might want to add a parameter for InstructionsText
+    /// </remarks>
+    public static List<T> GenericSelectionList<T>(List<T> list, int pageSize, string title) => AnsiConsole.Prompt
     (
         new MultiSelectionPrompt<T>()
-            .PageSize(12)
+            .PageSize(pageSize)
             .Required(false)
-            .Title("[b]Months[/]?")
-            .InstructionsText("[grey](Press [yellow]<space>[/] to toggle a month, [yellow]<enter>[/] to accept)[/] or [red]Enter[/] w/o any selections to cancel")
+            .Title($"[b]{title}[/]?")
+            .InstructionsText("[grey](Press [yellow]<space>[/] to toggle a selection, [yellow]<enter>[/] to accept)[/] or [red]Enter[/] w/o any selections to cancel")
             .AddChoices(list)
             .HighlightStyle(new Style(Color.White, Color.Black, Decoration.Invert))
     );
