@@ -10,6 +10,11 @@ namespace SpectreConsoleLibrary;
 public class Prompts
 {
     public static string PromptStyleColor { get; set; } = "cyan";
+
+    /// <summary>
+    /// Ask for a first name
+    /// </summary>
+    /// <param name="allowEmpty">allows an empty string to return</param>
     public static string GetFirstName(bool allowEmpty)
     {
         return allowEmpty
@@ -22,6 +27,10 @@ public class Prompts
                     .PromptStyle(PromptStyleColor));
     }
 
+    /// <summary>
+    /// Ask for a last name
+    /// </summary>
+    /// <param name="allowEmpty">allows an empty string to return</param>
     public static string GetLastName(bool allowEmpty)
     {
         if (allowEmpty)
@@ -39,6 +48,11 @@ public class Prompts
         }
 
     }
+
+    /// <summary>
+    /// Ask for an int with validation
+    /// </summary>
+    /// <returns>an int</returns>
     public static int GetInt()
     {
         return AnsiConsole.Prompt(
@@ -47,6 +61,10 @@ public class Prompts
                 .ValidationErrorMessage("[red]That's not a number[/]"));
     }
 
+    /// <summary>
+    /// Ask for a decimal with validation
+    /// </summary>
+    /// <returns>a decimal</returns>
     public static decimal GetDecimal()
     {
         return AnsiConsole.Prompt(
@@ -55,6 +73,10 @@ public class Prompts
                 .DefaultValue(1m));
     }
 
+    /// <summary>
+    /// Ask for a double with validation
+    /// </summary>
+    /// <returns>a double</returns>
     public static double GetDouble()
     {
         return AnsiConsole.Prompt(
@@ -78,6 +100,10 @@ public class Prompts
                 }));
     }
 
+    /// <summary>
+    /// Prompt for a birth date
+    /// </summary>
+    /// <returns>A nullable DateTime</returns>
     public static DateTime? GetBirthDate()
     {
         const int minYear = 1920;
@@ -92,6 +118,12 @@ public class Prompts
                 })
                 .AllowEmpty());
     }
+
+
+    /// <summary>
+    /// Prompt for a date
+    /// </summary>
+    /// <returns>A nullable DateTime</returns>
     public static DateTime? GetDateTime()
     {
         return AnsiConsole.Prompt(
@@ -102,6 +134,11 @@ public class Prompts
     }
 
 
+
+    /// <summary>
+    /// Prompt for a DateOnly
+    /// </summary>
+    /// <returns>A nullable DateOnly</returns>
     public static DateOnly? GetDateOnly(string defaultValue = "09/01/2022")
     {
         var input =AnsiConsole.Prompt(
@@ -122,6 +159,11 @@ public class Prompts
 
     }
 
+
+    /// <summary>
+    /// Prompt for a TimeOnly
+    /// </summary>
+    /// <returns>A nullable TimeOnly</returns>
     public static TimeOnly? GetTimeOnly(string defaultValue = "00:00:00")
     {
         var  inout = AnsiConsole.Prompt(new TextPrompt<string>("[b]Time[/]:")
@@ -139,11 +181,22 @@ public class Prompts
         }
     }
 
-
+    /// <summary>
+    /// Prompt for a bool
+    /// </summary>
+    /// <param name="title">text to present</param>
+    /// <returns>bool</returns>
     public static bool GetBool(string title = "Yes or no?")
     {
-        return AnsiConsole.Prompt(
-            new TextPrompt<bool>($"[b]{title}[/]:").PromptStyle(PromptStyleColor));
+         Style highLightStyle = new(Color.Cyan1, Color.Black, Decoration.None);
+         SelectionPrompt<string> items = new()
+         {
+             HighlightStyle = highLightStyle, 
+             Title = title
+         };
+
+        items.AddChoices(new[] { "Yes", "No" });
+        return AnsiConsole.Prompt(items) == "Yes";
     }
 
     public static string GetYesNo()
@@ -151,6 +204,11 @@ public class Prompts
         return AnsiConsole.Prompt(
             new TextPrompt<bool>("[b]Yes/No[/]:").PromptStyle(PromptStyleColor)) ? "Yes" : "No";
     }
+
+    /// <summary>
+    /// Get user name suitable for a login
+    /// </summary>
+    /// <param name="allowEmpty">allows an empty string</param>
     public static string GetUserName(bool allowEmpty)
     {
         return allowEmpty
@@ -163,6 +221,10 @@ public class Prompts
                     .PromptStyle(PromptStyleColor));
     }
 
+
+    /// <summary>
+    /// Get a password without exposing input
+    /// </summary>
     public static string GetPassword() =>
         AnsiConsole.Prompt(
             new TextPrompt<string>("[b]Password[/]:")
@@ -170,6 +232,11 @@ public class Prompts
                 .Secret()
                 .DefaultValueStyle(new Style(Color.Aqua)));
 
+    /// <summary>
+    /// Get a new password using rules from <seealso cref="ValidatePassword"/>
+    /// </summary>
+    /// <param name="title"></param>
+    /// <returns></returns>
     public static string GetNewPassword(string title = "Password") =>
         AnsiConsole.Prompt(
             new TextPrompt<string>($"[b]{title}[/]?")
@@ -179,6 +246,12 @@ public class Prompts
                 .Validate(ValidatePassword)
                 .ValidationErrorMessage("[red]Entry does not match rules for creating a new password[/]"));
 
+
+    /// <summary>
+    /// NuGet package to validate a string via rules
+    /// </summary>
+    /// <param name="password">string to validate</param>
+    /// <returns></returns>
     private static ValidationResult ValidatePassword(string password)
     {
         PasswordValidator validator = new(CheckTypes.Symbols | CheckTypes.CaseUpperLower | CheckTypes.Numbers | CheckTypes.Length)
@@ -203,6 +276,7 @@ public class Prompts
                             ? ValidationResult.Success()
                             : ValidationResult.Error("[yellow]Invalid username[/]")));
 
+
     public static string AskPasswordIfMissing(string current)
         => TryGetValidPassword(current, out var validPassword)
             ? validPassword
@@ -213,6 +287,7 @@ public class Prompts
                         => TryGetValidPassword(password, out _)
                             ? ValidationResult.Success()
                             : ValidationResult.Error("[red]Invalid password[/]")));
+
 
     public static bool TryGetValidPassword(string password, [NotNullWhen(true)] out string validPassword)
     {
@@ -275,7 +350,7 @@ public class Prompts
         new MultiSelectionPrompt<T>()
             .PageSize(pageSize)
             .Required(false)
-            .Title($"[b]{title}[/]?")
+            .Title($"[b]{title}[/]")
             .InstructionsText("[grey](Press [yellow]<space>[/] to toggle a selection, [yellow]<enter>[/] to accept)[/] or [red]Enter[/] w/o any selections to cancel")
             .AddChoices(list)
             .HighlightStyle(new Style(Color.White, Color.Black, Decoration.Invert))
