@@ -80,6 +80,7 @@ This library has about 100 issues/bugs/feature request, even so knowing them you
 
 ## Resources
 
+- The [System.CommandLine library](https://docs.microsoft.com/en-us/dotnet/standard/commandline/) (as of 09/2022 is in preview) provides functionality that is commonly needed by command-line apps, such as parsing the command-line input and displaying help text.
 - ASP.NET Core Web API Project [From Scratch](https://dotnettutorials.net/lesson/build-asp-net-core-web-api-project/) (using a console project)
 - [Configure](https://www.programmingwithwolfgang.com/configure-dependency-injection-for-net-5-console-applications/) Dependency Injection for .NET 5 Console Applications
 - Microsoft Make [HTTP requests](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient) in a .NET console app using C#

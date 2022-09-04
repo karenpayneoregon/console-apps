@@ -18,7 +18,7 @@ Provides easy to use common prompts.
 | GetBool | prompts for Yes or No | returns a bool |
 | GetUserName | prompt for user name  | suitable for a login |
 | GetPassword | prompt for a password masked | suitable for a login |
-| GetNewPassword | prompts for a new password | has default rules which can be changed |
+| GetNewPassword | prompts for a new password | has default rules which can be changed see [package repo](https://github.com/havardt/PasswordValidator) |
 | AskConfirmation | Ask a question  | returns a bool |
 | MonthsSelection | presents a list of months | allows single or mulitple selections |
 | GenericSelectionList&lt;T&gt; | Present a list where the user can select one or more items |  |

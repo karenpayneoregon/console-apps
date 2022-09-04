@@ -13,13 +13,13 @@ namespace EPPlus1.Classes
 {
     class DataOperations
     {
-        private static string ConnectionString =
+        private static readonly string ConnectionString =
             "Data Source=.\\SQLEXPRESS;Initial Catalog=NorthWind2020;" +
             "Integrated Security=True";
 
-        public static void Contacts(string _excelBaseFolder)
+        public static void Contacts(string excelBaseFolder)
         {
-            var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, _excelBaseFolder, "Contacts.xlsx");
+            var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, excelBaseFolder, "Contacts.xlsx");
             
             using var cn = new SqlConnection() { ConnectionString = ConnectionString };
 
@@ -41,7 +41,7 @@ namespace EPPlus1.Classes
             // place an image in for fun
             var pic = worksheet.Drawings.AddPicture("Landscape", 
                 new FileInfo(
-                    Path.Combine(AppDomain.CurrentDomain.BaseDirectory, _excelBaseFolder, "oops.png")));
+                    Path.Combine(AppDomain.CurrentDomain.BaseDirectory, excelBaseFolder, "oops.png")));
 
             pic.SetPosition(2, 0, 5, 0);
             pic.Effect.SetPresetShadow(ePresetExcelShadowType.OuterBottomRight);

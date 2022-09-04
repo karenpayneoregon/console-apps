@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Security.Cryptography.X509Certificates;
+using System.Text.Json;
 
 namespace Holidays.Classes;
 
@@ -16,8 +17,12 @@ internal class Operations
         if (response.IsSuccessStatusCode)
         {
             await using var jsonStream = await response.Content.ReadAsStreamAsync();
-            var publicHolidays = JsonSerializer.Deserialize<PublicHoliday[]>(jsonStream, jsonSerializerOptions);
-            
+
+            // Distinct is used as there were duplicate entries
+            var publicHolidays = 
+                JsonSerializer.Deserialize<PublicHoliday[]>(jsonStream, jsonSerializerOptions)
+                    !.Distinct(PublicHoliday.DateComparer);
+
             AnsiConsole.MarkupLine($"[yellow]Holidays[/]");
 
             var table = new Table()
@@ -32,7 +37,7 @@ internal class Operations
 
                 if (holiday.Date.Month == DateTime.Now.Month)
                 {
-                    table.AddRow($"[cyan]{holiday.Name}[/b]", $"[cyan]{holiday.Date:MM/dd/yyyy}[/]");
+                    table.AddRow($"[cyan]{holiday.Name}[/]", $"[cyan]{holiday.Date:MM/dd/yyyy}[/]");
                 }
                 else
                 {
