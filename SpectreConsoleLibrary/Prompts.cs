@@ -10,6 +10,7 @@ namespace SpectreConsoleLibrary;
 public class Prompts
 {
     public static string PromptStyleColor { get; set; } = "cyan";
+    public static string PromptColor { get; set; } = "b";
 
     /// <summary>
     /// Ask for a first name
@@ -19,11 +20,11 @@ public class Prompts
     {
         return allowEmpty
             ? AnsiConsole.Prompt(
-                new TextPrompt<string>("[b]First name[/]")
+                new TextPrompt<string>($"[{PromptColor}]First name[/]")
                     .PromptStyle(PromptStyleColor)
                     .AllowEmpty())
             : AnsiConsole.Prompt(
-                new TextPrompt<string>("[b]First name[/]:")
+                new TextPrompt<string>($"[{PromptColor}]First name[/]:")
                     .PromptStyle(PromptStyleColor));
     }
 
@@ -36,14 +37,14 @@ public class Prompts
         if (allowEmpty)
         {
             return AnsiConsole.Prompt(
-                new TextPrompt<string>("[b]Last name[/]:")
+                new TextPrompt<string>($"[{PromptColor}]Last name[/]:")
                     .PromptStyle(PromptStyleColor)
                     .AllowEmpty());
         }
         else
         {
             return AnsiConsole.Prompt(
-                new TextPrompt<string>("[b]Last name[/]:")
+                new TextPrompt<string>($"[{PromptColor}]Last name[/]:")
                     .PromptStyle(PromptStyleColor));
         }
 
@@ -56,7 +57,7 @@ public class Prompts
     public static int GetInt()
     {
         return AnsiConsole.Prompt(
-            new TextPrompt<int>("[b]Enter a number[/]:")
+            new TextPrompt<int>($"[{PromptColor}]Enter a number[/]:")
                 .PromptStyle(PromptStyleColor)
                 .ValidationErrorMessage("[red]That's not a number[/]"));
     }
@@ -68,7 +69,7 @@ public class Prompts
     public static decimal GetDecimal()
     {
         return AnsiConsole.Prompt(
-            new TextPrompt<decimal>("[b]Enter decimal[/]")
+            new TextPrompt<decimal>($"[{PromptColor}]Enter decimal[/]")
                 .PromptStyle(PromptStyleColor)
                 .DefaultValue(1m));
     }
@@ -80,7 +81,7 @@ public class Prompts
     public static double GetDouble()
     {
         return AnsiConsole.Prompt(
-            new TextPrompt<double>("[b]Enter decimal[/]")
+            new TextPrompt<double>($"[{PromptColor}]Enter decimal[/]")
                 .PromptStyle(PromptStyleColor)
                 .DefaultValue(1));
     }
@@ -89,7 +90,7 @@ public class Prompts
     {
         const int maxValue = 10;
         return AnsiConsole.Prompt(
-            new TextPrompt<int>("[b]Enter a number[/] between [b]1[/] and [b]10[/]")
+            new TextPrompt<int>($"[{PromptColor}]Enter a number[/] between [b]1[/] and [b]10[/]")
                 .PromptStyle(PromptStyleColor)
                 .ValidationErrorMessage("[red]That's not a valid entry[/]")
                 .Validate(item => item switch
@@ -108,7 +109,7 @@ public class Prompts
     {
         const int minYear = 1920;
         return AnsiConsole.Prompt(
-            new TextPrompt<DateTime>("[b]Birth date[/]:")
+            new TextPrompt<DateTime>($"[{PromptColor}]Birth date[/]:")
                 .PromptStyle(PromptStyleColor)
                 .ValidationErrorMessage("[red]Please enter a valid date or press ENTER to not enter a date[/]")
                 .Validate(dateTime => dateTime.Year switch
@@ -127,7 +128,7 @@ public class Prompts
     public static DateTime? GetDateTime()
     {
         return AnsiConsole.Prompt(
-            new TextPrompt<DateTime>("[b]Date[/]:")
+            new TextPrompt<DateTime>($"[{PromptColor}]Date[/]:")
                 .PromptStyle(PromptStyleColor)
                 .ValidationErrorMessage("[red]Please enter a valid date or press ENTER to not enter a date[/]")
                 .AllowEmpty());
@@ -142,7 +143,7 @@ public class Prompts
     public static DateOnly? GetDateOnly(string defaultValue = "09/01/2022")
     {
         var input =AnsiConsole.Prompt(
-            new TextPrompt<string>("[b]Date[/]:")
+            new TextPrompt<string>($"[{PromptColor}]Date[/]:")
                 .PromptStyle(PromptStyleColor)
                 .DefaultValue(defaultValue)
                 .ValidationErrorMessage("[red]Please enter a valid date or press ENTER to not enter a date[/]")
@@ -166,7 +167,7 @@ public class Prompts
     /// <returns>A nullable TimeOnly</returns>
     public static TimeOnly? GetTimeOnly(string defaultValue = "00:00:00")
     {
-        var  inout = AnsiConsole.Prompt(new TextPrompt<string>("[b]Time[/]:")
+        var  inout = AnsiConsole.Prompt(new TextPrompt<string>($"[{PromptColor}]Time[/]:")
                 .PromptStyle(PromptStyleColor)
                 .DefaultValue(defaultValue)
                 .AllowEmpty());
@@ -195,14 +196,14 @@ public class Prompts
              Title = title
          };
 
-        items.AddChoices(new[] { "Yes", "No" });
+        items.AddChoices("Yes", "No");
         return AnsiConsole.Prompt(items) == "Yes";
     }
 
     public static string GetYesNo()
     {
         return AnsiConsole.Prompt(
-            new TextPrompt<bool>("[b]Yes/No[/]:").PromptStyle(PromptStyleColor)) ? "Yes" : "No";
+            new TextPrompt<bool>($"[{PromptColor}]Yes/No[/]:").PromptStyle(PromptStyleColor)) ? "Yes" : "No";
     }
 
     /// <summary>
@@ -213,11 +214,11 @@ public class Prompts
     {
         return allowEmpty
             ? AnsiConsole.Prompt(
-                new TextPrompt<string>("[b]First name[/]")
+                new TextPrompt<string>($"[{PromptColor}]First name[/]")
                     .PromptStyle(PromptStyleColor)
                     .AllowEmpty())
             : AnsiConsole.Prompt(
-                new TextPrompt<string>("[b]First name[/]:")
+                new TextPrompt<string>($"[{PromptColor}]First name[/]:")
                     .PromptStyle(PromptStyleColor));
     }
 
@@ -227,7 +228,7 @@ public class Prompts
     /// </summary>
     public static string GetPassword() =>
         AnsiConsole.Prompt(
-            new TextPrompt<string>("[b]Password[/]:")
+            new TextPrompt<string>($"[{PromptColor}]Password[/]:")
                 .PromptStyle("grey50")
                 .Secret()
                 .DefaultValueStyle(new Style(Color.Aqua)));
@@ -239,7 +240,7 @@ public class Prompts
     /// <returns></returns>
     public static string GetNewPassword(string title = "Password") =>
         AnsiConsole.Prompt(
-            new TextPrompt<string>($"[b]{title}[/]?")
+            new TextPrompt<string>($"[{PromptColor}]{title}[/]?")
                 .PromptStyle(PromptStyleColor)
                 .AllowEmpty()
                 .Secret()
@@ -264,13 +265,11 @@ public class Prompts
             ValidationResult.Error("Does not match rules for creating a password");
     }
 
-
-
     public static string AskUsernameIfMissing(string current)
         => !string.IsNullOrWhiteSpace(current)
             ? current
             : AnsiConsole.Prompt(
-                new TextPrompt<string>("What's the username?")
+                new TextPrompt<string>($"[{PromptColor}]What's the username?[/]")
                     .Validate(username
                         => !string.IsNullOrWhiteSpace(username)
                             ? ValidationResult.Success()
@@ -281,7 +280,7 @@ public class Prompts
         => TryGetValidPassword(current, out var validPassword)
             ? validPassword
             : AnsiConsole.Prompt(
-                new TextPrompt<string>("What's the password?")
+                new TextPrompt<string>($"[{PromptColor}]What's the password?[/]")
                     .Secret()
                     .Validate(password
                         => TryGetValidPassword(password, out _)
@@ -327,7 +326,7 @@ public class Prompts
         new MultiSelectionPrompt<string>()
             .PageSize(pageSize)
             .Required(false)
-            .Title($"[b]{title}[/]?")
+            .Title($"[{PromptColor}]{title}[/]?")
             .InstructionsText("[grey](Press [yellow]<space>[/] to toggle a month, [yellow]<enter>[/] to accept)[/] or [red]Enter[/] w/o any selections to cancel")
             .AddChoices(CurrentInfo!.MonthNames[..^1])
             .HighlightStyle(new Style(Color.White, Color.Black, Decoration.Invert))
@@ -350,7 +349,7 @@ public class Prompts
         new MultiSelectionPrompt<T>()
             .PageSize(pageSize)
             .Required(false)
-            .Title($"[b]{title}[/]")
+            .Title($"[{PromptColor}]{title}[/]")
             .InstructionsText("[grey](Press [yellow]<space>[/] to toggle a selection, [yellow]<enter>[/] to accept)[/] or [red]Enter[/] w/o any selections to cancel")
             .AddChoices(list)
             .HighlightStyle(new Style(Color.White, Color.Black, Decoration.Invert))

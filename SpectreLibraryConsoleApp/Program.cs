@@ -8,7 +8,7 @@ namespace SpectreLibraryConsoleApp
     {
         static void Main(string[] args)
         {
-
+            GenericSelectionListExample();
             Console.ReadLine();
         }
 
