@@ -7,6 +7,7 @@ Provides easy to use common prompts.
 | Name        |   Description    |   Comments |
 |:------------- |:-------------|:-------------|
 | GetFirstName | prompt for first name | Allows no input which returns an empty string |
+| GetMiddleName | prompt for first name | Allows no input which returns an empty string |
 | GetLastName | prompt for last name | Allows no input which returns an empty string |
 | GetInt | prompts for an int |  |
 | GetDecimal | prompts for a decimal |  |

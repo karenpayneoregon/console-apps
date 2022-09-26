@@ -80,6 +80,7 @@ This library has about 100 issues/bugs/feature request, even so knowing them you
 
 ## Resources
 
+- .NET 6 C# console app template [generates top-level statements](https://learn.microsoft.com/en-us/dotnet/core/tutorials/top-level-templates)
 - The [System.CommandLine library](https://docs.microsoft.com/en-us/dotnet/standard/commandline/) (as of 09/2022 is in preview) provides functionality that is commonly needed by command-line apps, such as parsing the command-line input and displaying help text.
 - ASP.NET Core Web API Project [From Scratch](https://dotnettutorials.net/lesson/build-asp-net-core-web-api-project/) (using a console project)
 - [Configure](https://www.programmingwithwolfgang.com/configure-dependency-injection-for-net-5-console-applications/) Dependency Injection for .NET 5 Console Applications

@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "GenerateAppSettingsSqlServer": {
-      "commandName": "Project",
-      "commandLineArgs": "-u no -f C:\\OED"
-    }
-  }
-}

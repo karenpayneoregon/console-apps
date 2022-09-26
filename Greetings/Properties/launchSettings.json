@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Greetings": {
+      "commandName": "Project",
+      "commandLineArgs": "-c red -p prem"
+    }
+  }
+}

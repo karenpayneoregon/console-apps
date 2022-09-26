@@ -16,15 +16,32 @@ public class Prompts
     /// Ask for a first name
     /// </summary>
     /// <param name="allowEmpty">allows an empty string to return</param>
-    public static string GetFirstName(bool allowEmpty)
+    public static string GetFirstName(bool allowEmpty, string title = "Enter first name")
     {
         return allowEmpty
             ? AnsiConsole.Prompt(
-                new TextPrompt<string>($"[{PromptColor}]First name[/]")
+                new TextPrompt<string>($"[{PromptColor}]{title}[/]")
                     .PromptStyle(PromptStyleColor)
                     .AllowEmpty())
             : AnsiConsole.Prompt(
-                new TextPrompt<string>($"[{PromptColor}]First name[/]:")
+                new TextPrompt<string>($"[{PromptColor}]{title}[/]:")
+                    .PromptStyle(PromptStyleColor));
+    }
+
+    /// <summary>
+    /// Ask for a first name
+    /// </summary>
+    /// <param name="allowEmpty">allows an empty string to return</param>
+    /// <param name="title">prompt to display</param>
+    public static string GetMiddleName(bool allowEmpty, string title = "Enter middle name")
+    {
+        return allowEmpty
+            ? AnsiConsole.Prompt(
+                new TextPrompt<string>($"[{PromptColor}]{title}[/]")
+                    .PromptStyle(PromptStyleColor)
+                    .AllowEmpty())
+            : AnsiConsole.Prompt(
+                new TextPrompt<string>($"[{PromptColor}]{title}[/]:")
                     .PromptStyle(PromptStyleColor));
     }
 
@@ -32,56 +49,51 @@ public class Prompts
     /// Ask for a last name
     /// </summary>
     /// <param name="allowEmpty">allows an empty string to return</param>
-    public static string GetLastName(bool allowEmpty)
+    /// <param name="title">prompt to display</param>
+    public static string GetLastName(bool allowEmpty, string title = "Enter last name")
     {
-        if (allowEmpty)
-        {
-            return AnsiConsole.Prompt(
-                new TextPrompt<string>($"[{PromptColor}]Last name[/]:")
+        return allowEmpty
+            ? AnsiConsole.Prompt(
+                new TextPrompt<string>($"[{PromptColor}]{title}[/]:")
                     .PromptStyle(PromptStyleColor)
-                    .AllowEmpty());
-        }
-        else
-        {
-            return AnsiConsole.Prompt(
-                new TextPrompt<string>($"[{PromptColor}]Last name[/]:")
+                    .AllowEmpty())
+            : AnsiConsole.Prompt(
+                new TextPrompt<string>($"[{PromptColor}]{title}[/]:")
                     .PromptStyle(PromptStyleColor));
-        }
-
     }
 
     /// <summary>
-    /// Ask for an int with validation
+    /// Ask for an int with validation, with optional prompt
     /// </summary>
     /// <returns>an int</returns>
-    public static int GetInt()
+    public static int GetInt(string title = "Enter a integer")
     {
         return AnsiConsole.Prompt(
-            new TextPrompt<int>($"[{PromptColor}]Enter a number[/]:")
+            new TextPrompt<int>($"[{PromptColor}]{title}[/]:")
                 .PromptStyle(PromptStyleColor)
                 .ValidationErrorMessage("[red]That's not a number[/]"));
     }
 
     /// <summary>
-    /// Ask for a decimal with validation
+    /// Ask for a decimal with validation, with optional prompt
     /// </summary>
     /// <returns>a decimal</returns>
-    public static decimal GetDecimal()
+    public static decimal GetDecimal(string title = "Enter a decimal")
     {
         return AnsiConsole.Prompt(
-            new TextPrompt<decimal>($"[{PromptColor}]Enter decimal[/]")
+            new TextPrompt<decimal>($"[{PromptColor}]{title}[/]")
                 .PromptStyle(PromptStyleColor)
                 .DefaultValue(1m));
     }
 
     /// <summary>
-    /// Ask for a double with validation
+    /// Ask for a double with validation, with optional prompt
     /// </summary>
     /// <returns>a double</returns>
-    public static double GetDouble()
+    public static double GetDouble(string title = "Enter a double")
     {
         return AnsiConsole.Prompt(
-            new TextPrompt<double>($"[{PromptColor}]Enter decimal[/]")
+            new TextPrompt<double>($"[{PromptColor}]{title}[/]")
                 .PromptStyle(PromptStyleColor)
                 .DefaultValue(1));
     }
@@ -102,14 +114,19 @@ public class Prompts
     }
 
     /// <summary>
-    /// Prompt for a birth date
+    /// Prompt for a birth date, with optional prompt
     /// </summary>
     /// <returns>A nullable DateTime</returns>
-    public static DateTime? GetBirthDate()
+    public static DateTime? GetBirthDate(string title = "Enter your birth date")
     {
-        const int minYear = 1920;
+        /*
+         * doubtful there is a birth day for the current person
+         * but if checking say a parent or grand-parent this will not allow before 1900
+         */
+        const int minYear = 1900;
+
         return AnsiConsole.Prompt(
-            new TextPrompt<DateTime>($"[{PromptColor}]Birth date[/]:")
+            new TextPrompt<DateTime>($"[{PromptColor}]{title}[/]:")
                 .PromptStyle(PromptStyleColor)
                 .ValidationErrorMessage("[red]Please enter a valid date or press ENTER to not enter a date[/]")
                 .Validate(dateTime => dateTime.Year switch
@@ -122,13 +139,13 @@ public class Prompts
 
 
     /// <summary>
-    /// Prompt for a date
+    /// Prompt for a date, with optional prompt
     /// </summary>
     /// <returns>A nullable DateTime</returns>
-    public static DateTime? GetDateTime()
+    public static DateTime? GetDateTime(string title = "Enter a date")
     {
         return AnsiConsole.Prompt(
-            new TextPrompt<DateTime>($"[{PromptColor}]Date[/]:")
+            new TextPrompt<DateTime>($"[{PromptColor}]{title}[/]:")
                 .PromptStyle(PromptStyleColor)
                 .ValidationErrorMessage("[red]Please enter a valid date or press ENTER to not enter a date[/]")
                 .AllowEmpty());
@@ -137,32 +154,30 @@ public class Prompts
 
 
     /// <summary>
-    /// Prompt for a DateOnly
+    /// Prompt for a DateOnly, with optional prompt and default as 
     /// </summary>
     /// <returns>A nullable DateOnly</returns>
-    public static DateOnly? GetDateOnly(string defaultValue = "09/01/2022")
+    public static DateOnly? GetDateOnly(DateOnly? defaultDate)
     {
-        var input =AnsiConsole.Prompt(
+        var defaultValue = new DateOnly(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+        if (defaultDate.HasValue)
+        {
+            defaultValue = defaultDate.Value;
+        }
+
+        var input = AnsiConsole.Prompt(
             new TextPrompt<string>($"[{PromptColor}]Date[/]:")
                 .PromptStyle(PromptStyleColor)
-                .DefaultValue(defaultValue)
+                .DefaultValue(defaultValue.ToString())
                 .ValidationErrorMessage("[red]Please enter a valid date or press ENTER to not enter a date[/]")
                 .AllowEmpty());
 
-        if (DateOnly.TryParse(input, out var date))
-        {
-            return date;
-        }
-        else
-        {
-            return null;
-        }
-
+        return DateOnly.TryParse(input, out var date) ? date : null;
     }
 
 
     /// <summary>
-    /// Prompt for a TimeOnly
+    /// Prompt for a TimeOnly with default as 00:00:00
     /// </summary>
     /// <returns>A nullable TimeOnly</returns>
     public static TimeOnly? GetTimeOnly(string defaultValue = "00:00:00")
@@ -172,14 +187,7 @@ public class Prompts
                 .DefaultValue(defaultValue)
                 .AllowEmpty());
 
-        if (TimeOnly.TryParse(inout, out var time))
-        {
-            return time;
-        }
-        else
-        {
-            return null;
-        }
+        return TimeOnly.TryParse(inout, out var time) ? time : null;
     }
 
     /// <summary>
