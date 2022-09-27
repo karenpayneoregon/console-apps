@@ -61,7 +61,26 @@ Feel free to change things like colors and text used for the prompts to what sui
 
 Solution folders are used to separate various third party libraries used to work with user interfaces for console projects.
 
+# Top level
+
+By default for .NET Core 6 a new console app is top-down
+
+```
+dotnet new console 
+```
+
+If you like the old style prior to ,NET Core 6
+
+```
+dotnet new console --use-program-main true
+```
+
+Both options are available when creating a new console project in Visual Studio.
+
+![x](assets/TopOptions.png)
+
 ## How to
+
 
 
 
