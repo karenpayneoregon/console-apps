@@ -5,7 +5,7 @@ Simple example for `dependency injection` for EF Core and simple logging in a co
 > **Note**
 >The Dependency Injection Design Pattern in C# allows us to develop loosely coupled software components. In other words, we can say that Dependency Injection Design Pattern is used to reduce the tight coupling between the software components. As a result, we can easily manage future changes and other complexity in our application.
 
-
+Code presented uses Microsoft Visual Studio 2022, .NET Core 6.
 
 # Why in a console project?
 
@@ -111,3 +111,7 @@ Used to ensure the path exists under the executable folder for <kbd>App.Run()</k
 	<MakeDir Directories="$(OutDir)Temp" />
 </Target>
 ```
+
+# Summary
+
+Code provided is meant to show the basics past logging for depenency inject were most other code samples give and extend to showing how to work with Entity Framework Core.
