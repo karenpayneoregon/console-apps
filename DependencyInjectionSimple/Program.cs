@@ -21,6 +21,4 @@ partial class Program
 
         SpectreConsoleHelpers.ExitPrompt();
     }
-
-
 }

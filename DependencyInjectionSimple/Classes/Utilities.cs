@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using ConfigurationLibrary.Classes;
 using DependencyInjectionSimple.Data;
 using Microsoft.Extensions.Configuration;
@@ -33,10 +29,10 @@ namespace DependencyInjectionSimple.Classes
                 {
                     builder.AddConsole();
                     builder.AddDebug();
-                    builder.AddConfiguration(Utilities.ConfigurationRoot().GetSection("Logging"));
+                    builder.AddConfiguration(ConfigurationRoot().GetSection("Logging"));
                 });
 
-                services.Configure<AppSettings>(Utilities.ConfigurationRoot().GetSection("App"));
+                services.Configure<AppSettings>(ConfigurationRoot().GetSection("App"));
 
                 services.AddDbContext<PizzaContext>(options =>
                     options.UseSqlServer(ConfigurationHelper.ConnectionString()));

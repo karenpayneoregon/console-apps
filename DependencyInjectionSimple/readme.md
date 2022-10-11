@@ -11,6 +11,36 @@ Simple example for `dependency injection` for EF Core and simple logging in a co
 
 If for no other reason, consider this for learning which can be taken forward into ASP.NET Core. Otherwise there is really no reason to use DI for smaller projects but that is up to each developer.
 
+# Setup for dependency injection
+
+This is done in `Utilities` class under the `Classes` folder.
+
+The method `ConfigurationRoot()` provides access to settings in appsettings.json for reading `Logging` and `App` sections in the method `ConfigureServices()`.
+
+## Service configuration
+
+This is done in `Utilities.ConfigureServices()`. First logging is configured in the local method `ConfigureService` followed by registering  <kbd>App</kbd> and  <kbd>DataAccess</kbd> servicecs along with setting up a DbContext [PizzaContext](https://github.com/karenpayneoregon/console-apps/blob/master/DependencyInjectionSimple/Data/PizzaContext.cs)
+
+
+# Main method
+
+This is where everything comes together. What is important to consider is many code samples doing DI tend to write all the required setup in one class while in this code sample all the setup has been split out into separate classes and makes it easier to repeat in other projects.
+
+```csharp
+partial class Program
+{
+    public static async Task Main(string[] args)
+    {
+        var services = Utilities.ConfigureServices();
+
+        await using var serviceProvider = services.BuildServiceProvider();
+        await serviceProvider.GetService<App>()!.Run(args);
+        await serviceProvider.GetService<DataAccess>()!.Execute(args);
+    }
+}
+```
+
+
 # Data script
 
 For the data access sample, run script.sql under the scripts folder first.
