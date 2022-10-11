@@ -54,8 +54,8 @@ namespace SpectreLibraryConsoleApp
                 Console.WriteLine("Null");
             }
 
-            DateOnly? dateOnly = Prompts.GetDateOnly(Now.ToString("yyyy-MM-dd"));
-            Console.WriteLine(dateOnly is not null ? dateOnly.Value.ToString("MM/dd/yyyy") : "Null");
+            //DateOnly? dateOnly = Prompts.GetDateOnly(Now.ToString("yyyy-MM-dd"));
+            //Console.WriteLine(dateOnly is not null ? dateOnly.Value.ToString("MM/dd/yyyy") : "Null");
 
 
             Console.WriteLine(Prompts.GetBool("Question").ToYesNo());

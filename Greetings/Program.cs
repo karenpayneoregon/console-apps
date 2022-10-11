@@ -25,7 +25,5 @@ class Program
 
         }
 
-        Console.WriteLine();
-
     }
 }

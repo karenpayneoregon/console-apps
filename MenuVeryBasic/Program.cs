@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
 using MenuVeryBasic.Classes;
-using MenuVeryBasic.Models;
 using Spectre.Console;
 
 namespace MenuVeryBasic
@@ -20,7 +16,8 @@ namespace MenuVeryBasic
                 if (menuItem.Id != -1)
                 {
                     menuItem.Action();
-                    Console.ReadLine();
+                    Console.ReadLine(); // here got demoing only
+                    Console.ReadLine(); // here got demoing only
                 }
                 else
                 {
