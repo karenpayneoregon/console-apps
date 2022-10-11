@@ -64,7 +64,13 @@ For the data access sample, run script.sql under the scripts folder first.
 - `ConsoleHelperLibrary` provides methods to position console windows
 - `Spectre.Console`  library that makes it easier to create beautiful console applications. (there are many code samples in this repository)
 
+**Screen shot with logging**
+
 ![Screen](assets/screen.png)
+
+**Screen shot without EF Core logging**
+
+![Screen No Ef Log](assets/screen_no_ef_log.png)
 
 ## appsettings.json
 
