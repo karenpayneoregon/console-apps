@@ -1,4 +1,4 @@
-﻿# How to implement dependency injection in a console project.
+﻿# How to implement dependency injection in a console project
 
 Simple example for `dependency injection` for EF Core and simple logging in a console project. 
 
