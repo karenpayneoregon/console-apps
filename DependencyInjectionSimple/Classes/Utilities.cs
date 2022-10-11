@@ -10,16 +10,12 @@ namespace DependencyInjectionSimple.Classes
         /// <summary>
         /// Read sections from appsettings.json
         /// </summary>
-        public static IConfigurationRoot ConfigurationRoot()
-        {
-            IConfigurationRoot configuration = new ConfigurationBuilder()
+        public static IConfigurationRoot ConfigurationRoot() =>
+            new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false)
                 .AddEnvironmentVariables()
                 .Build();
-
-            return configuration;
-        }
 
         public static ServiceCollection ConfigureServices()
         {
