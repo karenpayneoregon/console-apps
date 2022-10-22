@@ -17,7 +17,6 @@ namespace MenuVeryBasic
                 {
                     menuItem.Action();
                     Console.ReadLine(); // here got demoing only
-                    Console.ReadLine(); // here got demoing only
                 }
                 else
                 {
