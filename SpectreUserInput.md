@@ -73,6 +73,33 @@ public static DateTime? GetDate() =>
             .AllowEmpty());
 ```
 
+And of course `DateOnly`
+
+```csharp
+/// <summary>
+/// Prompt for a DateOnly, with optional prompt and default as 
+/// </summary>
+/// <returns>A nullable DateOnly</returns>
+public static DateOnly? GetDateOnly(DateOnly? defaultDate)
+{
+    var defaultValue = new DateOnly(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+    if (defaultDate.HasValue)
+    {
+        defaultValue = defaultDate.Value;
+    }
+
+    var input = AnsiConsole.Prompt(
+        new TextPrompt<string>($"[{PromptColor}]Date[/]:")
+            .PromptStyle(PromptStyleColor)
+            .DefaultValue(defaultValue.ToString())
+            .ValidationErrorMessage("[red]Please enter a valid date or press ENTER to not enter a date[/]")
+            .AllowEmpty());
+
+    return DateOnly.TryParse(input, out var date) ? date : null;
+}
+```
+
+
 The same is possible with other types, let's look at `int` where input must be between two numbers.
 
 ```csharp

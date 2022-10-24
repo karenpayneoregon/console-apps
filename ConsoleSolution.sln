@@ -206,7 +206,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependency Injection", "Dep
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjectionSimple", "DependencyInjectionSimple\DependencyInjectionSimple.csproj", "{A2FF74DA-7207-462D-9702-2D9512AF0AB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecordApp", "RecordApp\RecordApp.csproj", "{EB5D28E4-5E21-4127-BB18-8AD38EE85AED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecordApp", "RecordApp\RecordApp.csproj", "{EB5D28E4-5E21-4127-BB18-8AD38EE85AED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetIntConsoleApp1", "GetIntConsoleApp1\GetIntConsoleApp1.csproj", "{25373F8F-6D71-4F02-BD84-0D020409A0B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -518,6 +520,10 @@ Global
 		{EB5D28E4-5E21-4127-BB18-8AD38EE85AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB5D28E4-5E21-4127-BB18-8AD38EE85AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB5D28E4-5E21-4127-BB18-8AD38EE85AED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25373F8F-6D71-4F02-BD84-0D020409A0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25373F8F-6D71-4F02-BD84-0D020409A0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25373F8F-6D71-4F02-BD84-0D020409A0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25373F8F-6D71-4F02-BD84-0D020409A0B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -608,6 +614,7 @@ Global
 		{5F2BA7C6-C727-48F8-A140-4303244AD345} = {F6510580-C4B7-41B6-9612-23630E83C2B5}
 		{A2FF74DA-7207-462D-9702-2D9512AF0AB4} = {C7C26129-AEB8-4ED6-AB62-373AB92C830C}
 		{EB5D28E4-5E21-4127-BB18-8AD38EE85AED} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
+		{25373F8F-6D71-4F02-BD84-0D020409A0B8} = {DD926E12-C692-469A-A54E-BE5536FB49E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22709C88-5741-4CC8-8E81-A66A17B04A0D}
