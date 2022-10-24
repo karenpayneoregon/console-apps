@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RecordApp.Data;
-using Spectre.Console.Rendering;
 
 namespace RecordApp
 {
@@ -19,13 +18,13 @@ namespace RecordApp
 
             for (int index = 0; index < 10; index++)
             {
-                AnsiConsole.MarkupLine($"[blue]{customers[index].CompanyName,-50}{customers[index].Contact.FirstName,-20} {customers[index].Contact.LastName}[/]");
+                AnsiConsole.MarkupLine(
+                    $"[blue]{customers[index].CompanyName,-50}"+ 
+                    $"{customers[index].Contact.FirstName,-20} "+ 
+                    $"{customers[index].Contact.LastName}[/]");
             }
+
             AnsiConsole.MarkupLine("Done");
-            /*
-             * - Write to an HTML file, note the colors used above are used in the export
-             * - Spans are used so it's not perfect, may be jagged.
-             */
             File.WriteAllText("Demo.html", AnsiConsole.ExportHtml());
             Console.ReadLine();
           
