@@ -8,6 +8,9 @@ namespace RecordApp
         static void Main(string[] args)
         {
             using var context = new Context();
+            
+            var test = Array.Empty<string>();
+            var list = new List<string>(0);
 
             var customers = context.Customers
                 .Include(c => c.Contact)
