@@ -1,6 +1,4 @@
-﻿using Spectre.Console;
-using SqlServerColumnDescriptions.Classes;
-using SqlServerColumnDescriptions.Models;
+﻿using SqlServerColumnDescriptions.Classes;
 
 namespace SqlServerColumnDescriptions
 {
@@ -8,10 +6,8 @@ namespace SqlServerColumnDescriptions
     {
         static void Main(string[] args)
         {
-
             Console.Title = "";
             Worker.Execute();
-
         }
     }
 }

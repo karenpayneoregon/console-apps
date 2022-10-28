@@ -1,11 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DbLibrary.LanguageExtensions;
 using SqlServerColumnDescriptions.Models;
 
 namespace SqlServerColumnDescriptions.Classes;
@@ -18,7 +12,7 @@ internal class DataOperations
     {
         List<DatabaseName> list = new();
         int identifier = 1;
-        using var cn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=master;integrated security=True;Encrypt=False");
+        using var cn = new SqlConnection($"Data Source={Server};Initial Catalog=master;integrated security=True;Encrypt=False");
         using var cmd = new SqlCommand { Connection = cn, CommandText = SqlStatements.GetDatabaseNames};
         cn.Open();
         using var reader =  cmd.ExecuteReader();
@@ -33,26 +27,42 @@ internal class DataOperations
         return list;
     }
 
-    public static List<DatabaseTable> GetDetails(string databaseName)
+    public static (List<DatabaseTable> list, Exception exception) GetDetails(string databaseName)
     {
         List<DatabaseTable> list = new ();
 
-        using var cn = new SqlConnection($"Data Source={Server};Initial Catalog={databaseName};integrated security=True;Encrypt=False");
-        using var cmd = new SqlCommand { Connection = cn, CommandText = SqlStatements.GetTableNames(databaseName) };
-        cn.Open();
-        using var reader = cmd.ExecuteReader();
-
-
-        List<string> names = new List<string>();
-        while (reader.Read())
+        try
         {
-            names.Add(reader.GetString(0).Replace("dbo.", ""));
+            using var cn = new SqlConnection($"Data Source={Server};Initial Catalog={databaseName};integrated security=True;Encrypt=False");
+            using var cmd = new SqlCommand { Connection = cn, CommandText = SqlStatements.GetTableNames(databaseName) };
+            cn.Open();
+            using var reader = cmd.ExecuteReader();
+
+
+            List<string> names = new List<string>();
+            while (reader.Read())
+            {
+                names.Add(reader.GetString(0).Replace("dbo.", ""));
+            }
+
+
+            return (GetDescriptions(databaseName, names),null)!;
         }
+        catch (Exception exception)
+        {
 
-
-        return GetDescriptions(databaseName, names);
+            return (list, exception);
+        }
     }
 
+    /// <summary>
+    /// Get column descriptions for a table
+    /// </summary>
+    /// <param name="databaseName">catalog</param>
+    /// <param name="tableNames">table names in catalog</param>
+    /// <remarks>
+    /// Being optimistic that we can dispense with exception handling since we just open the connection in the calling procedure
+    /// </remarks>
     public static List<DatabaseTable> GetDescriptions(string databaseName,List<string> tableNames)
     {
         List<DatabaseTable> list = new();
@@ -67,6 +77,7 @@ internal class DataOperations
             cmd.Parameters["@TableName"].Value = tableName;
 
             var reader = cmd.ExecuteReader();
+
             if (reader.HasRows)
             {
                 DatabaseTable item = new() {DatabaseName = databaseName, TableName = tableName, ColumnsList = new List<Columns>()};

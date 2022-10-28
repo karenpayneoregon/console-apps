@@ -7,9 +7,6 @@ namespace GetDirFileCount
     {
         static void Main(string[] args)
         {
-            // for testing
-            //var folderName = @"C:\OED\Dotnetland"; // Prompts.GetFolderNameAllowNone();
-
 
             var folderName = Prompts.GetFolderNameAllowNone();
             

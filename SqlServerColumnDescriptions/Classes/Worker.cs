@@ -27,10 +27,18 @@ public class Worker
                 return;
             }
 
-            List<DatabaseTable> result = DataOperations.GetDetails(databaseName.Name);
-            if (result.Count == 0)
+            var (list, exception) = DataOperations.GetDetails(databaseName.Name);
+            if (list.Count == 0)
             {
-                AnsiConsole.MarkupLine($"[cyan]{databaseName.Name}[/] has no columns with descriptions press and key for menu");
+                if (exception is not null)
+                {
+                    AnsiConsole.WriteException(exception);
+                }
+                else
+                {
+                    AnsiConsole.MarkupLine($"[cyan]{databaseName.Name}[/] has no columns with descriptions press and key for menu");
+                }
+                AnsiConsole.MarkupLine("Press [cyan]Enter[/] for menu");
                 Console.ReadLine();
             }
             else
@@ -44,7 +52,7 @@ public class Worker
                     .BorderColor(Color.LightSlateGrey);
 
 
-                foreach (var table in result)
+                foreach (var table in list)
                 {
                     resultTable.AddRow($"[yellow]{table.TableName}[/]");
                     foreach (var col in table.ColumnsList)

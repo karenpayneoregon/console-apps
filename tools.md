@@ -21,3 +21,9 @@ C:\\Users\WindowLoginName\\.dotnet\\tools
 ## dotnet tool uninstall
 
 `dotnet tool uninstall` - Uninstalls the specified .NET tool from your machine.  [![](assets/Link_16x.png)](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-uninstall)
+
+
+```
+dotnet tool install --global --add-source ./nupkg SqlServerColumnDescriptions
+dotnet tool uninstall -g SqlServerColumnDescriptions
+```
