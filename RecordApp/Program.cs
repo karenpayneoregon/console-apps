@@ -18,7 +18,7 @@ namespace RecordApp
 
             
             AnsiConsole.Record();
-
+            AnsiConsole.WriteLine("Title");
             for (int index = 0; index < 10; index++)
             {
                 AnsiConsole.MarkupLine(
