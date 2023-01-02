@@ -1,7 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.IO;
 
 namespace MenuConsoleApp.Classes
 {
@@ -18,11 +15,11 @@ namespace MenuConsoleApp.Classes
         {
             try
             {
-                return (JsonConvert.DeserializeObject<List<T>>(File.ReadAllText(fileName)), null);
+                return (JsonConvert.DeserializeObject<List<T>>(File.ReadAllText(fileName)), null)!;
             }
             catch (Exception exception)
             {
-                return (null, exception);
+                return (null, exception)!;
             }
 
         }

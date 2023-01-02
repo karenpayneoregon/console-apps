@@ -140,7 +140,7 @@ namespace MenuConsoleAppBasic.Classes
                 return;
             }
 
-            var lastId = list.LastOrDefault(emp => emp.Id > -1).Id +1;
+            var lastId = list.LastOrDefault(emp => emp.Id > -1)!.Id +1;
 
             for (int index = 0; index < list.Count; index++)
             {

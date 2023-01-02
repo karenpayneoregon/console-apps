@@ -16,6 +16,7 @@ namespace MenuVeryBasic
                 if (menuItem.Id != -1)
                 {
                     menuItem.Action();
+                    Console.WriteLine(menuItem.Information);
                     Console.ReadLine(); // here got demoing only
                 }
                 else

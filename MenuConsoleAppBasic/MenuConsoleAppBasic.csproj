@@ -2,17 +2,22 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net5.0</TargetFramework>
-		<LangVersion>9.0</LangVersion>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
 		<ApplicationIcon>csharp.ico</ApplicationIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Remove="Employees.json" />
 		<None Remove="readme.md" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Content Include="bin\Debug\net5.0\Employees.json" />
+		<Content Include="Employees.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
 		<Content Include="readme.md" />
 	</ItemGroup>
 

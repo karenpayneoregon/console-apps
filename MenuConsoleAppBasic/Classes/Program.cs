@@ -15,6 +15,7 @@ namespace MenuConsoleAppBasic
         public static void Init()
         {
             Console.Title = "Code sample";
+            Console.SetWindowSize(50, 20);
             W.SetConsoleWindowPosition(W.AnchorWindow.Center);
 
         }

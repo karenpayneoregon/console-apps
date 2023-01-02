@@ -15,7 +15,7 @@ namespace AskConsoleApp
         {
             Console.Title = "Code sample";
 
-            W.ShowWindow(W.GetConsoleWindow(), 3);
+            W.SetConsoleWindowPosition(W.AnchorWindow.Center);
 
             AnsiConsole.Write(
                 new Panel(new Text("Various prompt examples").Centered())

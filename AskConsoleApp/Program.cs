@@ -14,7 +14,8 @@ namespace AskConsoleApp
     {
         static void Main(string[] args)
         {
-            
+
+            int result = Prompts.GetInt();
             //OldSchool();
             CurrentSchool();
             Console.ReadLine();

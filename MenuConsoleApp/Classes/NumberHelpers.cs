@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace MenuConsoleApp.Classes;
 
-namespace MenuConsoleApp.Classes
+public class NumberHelpers
 {
-    public class NumberHelpers
-    {
-        public static double GetRandomDouble(double minimum, double maximum)
-            => Math.Truncate(100 * new Random().NextDouble() * (maximum - minimum) + minimum) / 100;
+    public static double GetRandomDouble(double minimum, double maximum)
+        => Math.Truncate(100 * new Random().NextDouble() * (maximum - minimum) + minimum) / 100;
 
-        public static int GetRandomInt(int minimum, int maximum)
-            => new Random().Next(minimum, maximum);
-    }
+    public static int GetRandomInt(int minimum, int maximum)
+        => new Random().Next(minimum, maximum);
 }
