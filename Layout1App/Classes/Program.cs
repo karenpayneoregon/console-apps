@@ -15,13 +15,12 @@ internal partial class Program
 
     public static void ExitPrompt()
     {
-        Console.WriteLine();
         Render(new Rule($"[yellow]Press[/] [cyan]ENTER[/] [yellow]to exit the demo[/]").RuleStyle(Style.Parse("silver")).Centered());
+        Console.SetCursorPosition(0,0);
         Console.ReadLine();
     }
     private static void Render(Rule rule)
     {
         AnsiConsole.Write(rule);
-        AnsiConsole.WriteLine();
     }
 }
