@@ -120,3 +120,10 @@ This library has about 100 issues/bugs/feature request, even so knowing them you
 # Social
 
 [![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/5509738/karen-payne) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](http://www.twitter.com/KarenPayneMVP) 
+
+# Mention
+
+https://twitter.com/dotnet/status/1612949916350832644
+
+![mention](assets/mentioned.png)
+
