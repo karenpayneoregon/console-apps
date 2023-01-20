@@ -234,6 +234,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AskConsoleApp6", "AskConsol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumQuestion", "ForumQuestion\ForumQuestion.csproj", "{C797B8CE-C4F5-4B86-A0F4-F54126FA576C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogApp", "SerilogApp\SerilogApp.csproj", "{3AE5FEDC-04B9-45EA-B461-1E84E31BE257}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -592,6 +594,10 @@ Global
 		{C797B8CE-C4F5-4B86-A0F4-F54126FA576C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C797B8CE-C4F5-4B86-A0F4-F54126FA576C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C797B8CE-C4F5-4B86-A0F4-F54126FA576C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE5FEDC-04B9-45EA-B461-1E84E31BE257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE5FEDC-04B9-45EA-B461-1E84E31BE257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE5FEDC-04B9-45EA-B461-1E84E31BE257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE5FEDC-04B9-45EA-B461-1E84E31BE257}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -695,6 +701,7 @@ Global
 		{B0AB04DD-8B7B-45DE-A53B-36B18DBD7BAB} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
 		{3931BEA0-68FD-4859-82A9-D7D936A79E89} = {DD926E12-C692-469A-A54E-BE5536FB49E5}
 		{C797B8CE-C4F5-4B86-A0F4-F54126FA576C} = {D41E8ACC-6999-41E2-BF35-B1F84BD6FA2D}
+		{3AE5FEDC-04B9-45EA-B461-1E84E31BE257} = {DC3C214D-82F0-48E4-8068-4A56C5DBA7DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22709C88-5741-4CC8-8E81-A66A17B04A0D}
