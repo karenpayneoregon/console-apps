@@ -4,15 +4,16 @@ internal partial class Program
 {
     static void Main(string[] args)
     {
-        ConsoleHelpers.CenterLinesFromTop("Hello world","Enjoy the ride");
+        ConsoleHelpers.CenterLines("Hello world","Enjoy the ride");
         Console.ReadLine();
     }
-
-
 }
 
 public class ConsoleHelpers
 {
+    /// <summary>
+    /// Center lines horizontally and vertically 
+    /// </summary>
     public static void CenterLines(params string[] lines)
     {
 
@@ -27,6 +28,9 @@ public class ConsoleHelpers
             ++verticalPosition;
         }
     }
+    /// <summary>
+    /// Center lines vertically starting at top of screen
+    /// </summary>
     public static void CenterLinesFromTop(params string[] lines)
     {
 

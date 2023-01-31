@@ -25,10 +25,10 @@ namespace LoopWaitForSpecificKeys
                 {
                     case { Key: ConsoleKey.Y }: 
                         Console.WriteLine("Y pressed"); 
-                        break;
+                        return;
                     case { Key: ConsoleKey.N }: 
-                        Console.WriteLine("N pressed"); 
-                        break;
+                        Console.WriteLine("N pressed");
+                        return;
                 }
             }
         }
