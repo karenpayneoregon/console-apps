@@ -1,7 +1,4 @@
-﻿// <copyright file="Program.cs" company="Endjin Limited">
-// Copyright (c) Endjin Limited. All rights reserved.
-// </copyright>
-
+﻿
 namespace SystemCommandLine.Demo
 {
     using System.CommandLine;

@@ -12,7 +12,15 @@ public class Operations
     {
         foreach (var module in options.Modules)
         {
-            Debug.WriteLine($"'{module}'"); // change to Console.WriteLine for a dotnet tool
+            if (module.Equals("item three", StringComparison.OrdinalIgnoreCase) )
+            {
+                Debug.WriteLine($"\t\"{module}\""); // change to Console.WriteLine for a dotnet tool
+            }
+            else
+            {
+                Debug.WriteLine($"\"{module}\""); // change to Console.WriteLine for a dotnet tool
+            }
+            
         }
     }
 }

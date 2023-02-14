@@ -15,6 +15,11 @@ Passed arguments
 
 ![Main](assets/main.png)
 
+
+# Output
+
+![Output](assets/output.png)
+
 # Requires
 
 :heavy_check_mark: NuGet package [CommandLineParser](https://www.nuget.org/packages/CommandLineParser).
