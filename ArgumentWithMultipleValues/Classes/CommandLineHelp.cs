@@ -16,7 +16,7 @@ public class CommandLineHelp
         {
             helpText.AdditionalNewLineAfterOption = false;
             helpText.Heading = "Fictitious utility";
-            helpText.Copyright = $"Copyright (c) {DateTime.Now.Year} OED Web team";
+            helpText.Copyright = $"Copyright (c) {DateTime.Now.Year} Some company";
 
             return HelpText.DefaultParsingErrorsHandler(result, helpText);
 
@@ -37,7 +37,7 @@ public class CommandLineHelp
         ParserResult<CommandLineOptions> results = parser.ParseArguments<CommandLineOptions>(args);
 
         results.WithParsed<CommandLineOptions>(Operations.RunWork).WithNotParsed(errors =>
-            CommandLineHelp.DisplayHelp(results, errors));
+            DisplayHelp(results, errors));
 
     }
 }

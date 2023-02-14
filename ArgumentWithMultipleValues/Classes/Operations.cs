@@ -10,15 +10,17 @@ public class Operations
     /// <param name="options"><see cref="CommandLineOptions"/></param>
     public static void RunWork(CommandLineOptions options)
     {
+        Debug.WriteLine("Arguments");
         foreach (var module in options.Modules)
         {
+            
             if (module.Equals("item three", StringComparison.OrdinalIgnoreCase) )
             {
-                Debug.WriteLine($"\t\"{module}\""); // change to Console.WriteLine for a dotnet tool
+                Debug.WriteLine($"\t\t\"{module}\""); // change to Console.WriteLine for a dotnet tool
             }
             else
             {
-                Debug.WriteLine($"\"{module}\""); // change to Console.WriteLine for a dotnet tool
+                Debug.WriteLine($"\t\"{module}\""); // change to Console.WriteLine for a dotnet tool
             }
             
         }
