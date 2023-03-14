@@ -2,7 +2,7 @@
   "profiles": {
     "Greetings": {
       "commandName": "Project",
-      "commandLineArgs": "-t 5"
+      "commandLineArgs": "-f 1 -s 10 -t 3"
     }
   }
 }

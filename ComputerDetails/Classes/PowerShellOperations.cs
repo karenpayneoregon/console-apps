@@ -22,9 +22,9 @@ internal class PowerShellOperations
 
         process.EnableRaisingEvents = true;
 
-        var fileContents = await reader.ReadToEndAsync();
+        //var fileContents = await reader.ReadToEndAsync();
 
-        return JsonConvert.DeserializeObject<MachineComputerInformation>(fileContents);
+        return JsonConvert.DeserializeObject<MachineComputerInformation>(await reader.ReadToEndAsync());
 
     }
 
@@ -47,9 +47,9 @@ internal class PowerShellOperations
 
         process.EnableRaisingEvents = true;
 
-        var fileContents = await reader.ReadToEndAsync();
+        //var fileContents = await reader.ReadToEndAsync();
 
-        return decimal.TryParse(fileContents, out var value) ? 
+        return decimal.TryParse(await reader.ReadToEndAsync(), out var value) ? 
             $"{(int)Math.Round(value, 0, MidpointRounding.AwayFromZero)} GB" : 
             "Unknown";
 

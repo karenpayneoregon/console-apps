@@ -4,26 +4,30 @@ namespace Greetings;
 
 class Program
 {
-    public static int Main(string[] args)
-    {
-        return CommandLineApplication.Execute<Program>(args);
-    }
+    public static int Main(string[] args) => CommandLineApplication.Execute<Program>(args);
 
-    [Option("-t|--times")]
+    [Option("-f|--first")]
     [Range(0, 10)]
     [Required]
-    public int Count { get; }
+    public int Arg1 { get;  }
+
+    [Option("-s|--second")]
+    [Range(10,20)]
+    [Required]
+    public int Arg2 { get; }
+
+    [Option(ShortName = "t", LongName = "third")]
+    [Required]
+    public int Arg3 { get; }
 
     public void OnExecute()
     {
-        AnsiConsole.Clear();
-        AnsiConsole.MarkupLine($"[white on red]Greetings[/][red on red]{new string('.',12)}[/]");
-        AnsiConsole.MarkupLine($"[yellow on red]Iterating[/][red on red]{new string('.',12)}[/]");
-        for (var index = 0; index < Count; index++)
-        {
-            AnsiConsole.MarkupLine($"\t[white on red]{(index +1), -3:D2} iteration[/]");
 
-        }
+        Console.WriteLine($"Arg1: {Arg1} Arg2: {Arg2} Arg3: {Arg3}");
+        Console.WriteLine(Arg1 + Arg2 + Arg3);
 
+        Console.ReadLine();
     }
+
+
 }

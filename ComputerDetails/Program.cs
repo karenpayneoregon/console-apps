@@ -1,18 +1,13 @@
 ﻿#nullable disable
-using System.Runtime.InteropServices;
 using ComputerDetails.Classes;
-using ComputerDetails.Models;
 
 
-namespace ComputerDetails
+namespace ComputerDetails;
+
+internal partial class Program
 {
-    internal partial class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            CommandLineHelp.ParseArguments(args);
-            Console.ReadLine(); // for testing
-           
-        }
+        CommandLineHelp.ParseArguments(args);
     }
 }

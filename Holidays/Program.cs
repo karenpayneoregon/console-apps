@@ -1,6 +1,4 @@
-﻿using System.Text.Json;
-using Holidays.Classes;
-using Nager.Date;
+﻿using Holidays.Classes;
 
 namespace Holidays
 {
@@ -8,7 +6,6 @@ namespace Holidays
     {
         static async Task Main(string[] args)
         {
-            AnsiConsole.MarkupLine("[yellow]Getting holidays[/]");
 
             try
             {
@@ -19,9 +16,6 @@ namespace Holidays
                 AnsiConsole.Clear();
                 ExceptionHelpers.ColorWithCyanFuchsia(localException);
             }
-
-            AnsiConsole.MarkupLine("[yellow]Exit[/]");
-            Console.ReadLine();
         }
     }
 }

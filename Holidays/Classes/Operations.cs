@@ -30,14 +30,14 @@ internal class Operations
                 .AddColumn("[b]Name[/]")
                 .AddColumn("[b]Date[/]")
                 .Alignment(Justify.Left)
-                .BorderColor(Color.LightSlateGrey);
+                .BorderColor(Color.CadetBlue);
 
             foreach (var holiday in publicHolidays!)
             {
 
-                if (holiday.Date.Month == DateTime.Now.Month)
+                if (holiday.Date > DateTime.Now)
                 {
-                    table.AddRow($"[cyan]{holiday.Name}[/]", $"[cyan]{holiday.Date:MM/dd/yyyy}[/]");
+                    table.AddRow($"[cyan]{holiday.Name}[/]", $"[white]{holiday.Date:MM/dd/yyyy}[/]");
                 }
                 else
                 {
@@ -46,7 +46,6 @@ internal class Operations
             }
 
 
-            AnsiConsole.Clear();
             AnsiConsole.Write(table);
         }
 

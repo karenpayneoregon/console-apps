@@ -6,14 +6,21 @@ namespace ComputerDetails.Classes;
 
 public class Operations
 {
-
-
     public static void Execute(Options options)
     {
         
         if (options.Basic || options.Advance)
         {
             AnsiConsole.MarkupLine("[yellow]Reading information from your computer[/]");
+            AnsiConsole.Status()
+                .AutoRefresh(false)
+                .Spinner(Spinner.Known.Star)
+                .SpinnerStyle(Style.Parse("green bold"))
+                .Start("Thinking...", ctx =>
+                {
+                    // Omitted
+                    ctx.Refresh();
+                });
             var result =  ReadInformation().GetAwaiter().GetResult();
             AnsiConsole.Clear();
             if (result.sucess)

@@ -3,9 +3,9 @@
 	<PropertyGroup>
 		<Description>Get person's age</Description>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net5.0</TargetFramework>
-		<LangVersion>9</LangVersion>
-		<Nullable>Enable</Nullable>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
 		<RollForward>LatestMajor</RollForward>
 		<VersionPrefix>1.0.1</VersionPrefix>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>

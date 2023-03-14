@@ -2,7 +2,7 @@
   "profiles": {
     "ArgumentWithMultipleValues": {
       "commandName": "Project",
-      "commandLineArgs": "--modules Item1,Item2,\"Item three\""
+      "commandLineArgs": "--modules 1,2,\"Item three\""
     }
   }
 }

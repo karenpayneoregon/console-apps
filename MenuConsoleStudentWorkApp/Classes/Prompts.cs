@@ -18,14 +18,10 @@ namespace MenuConsoleStudentWorkApp.Classes
             Console.ReadLine();
         }
 
-        /// <summary>
-        /// Same code as <see cref="Edit"/> which expects values for each property, for this method
-        /// simply pass in a new student without setting any properties. Once done add the Student to
-        /// <see cref="BogusOperations.Students"/>
-        /// </summary>
-        /// <param name="student">new student without any properties set</param>
-        public static void Create(Student student)
+
+        public static void Create()
         {
+            Student student = new Student();
             student.FirstName = FirstName(student.FirstName);
             student.LastName = LastName(student.LastName);
             student.Grade = Grade(student.Grade);
