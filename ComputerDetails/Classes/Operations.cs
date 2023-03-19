@@ -12,15 +12,7 @@ public class Operations
         if (options.Basic || options.Advance)
         {
             AnsiConsole.MarkupLine("[yellow]Reading information from your computer[/]");
-            AnsiConsole.Status()
-                .AutoRefresh(false)
-                .Spinner(Spinner.Known.Star)
-                .SpinnerStyle(Style.Parse("green bold"))
-                .Start("Thinking...", ctx =>
-                {
-                    // Omitted
-                    ctx.Refresh();
-                });
+
             var result =  ReadInformation().GetAwaiter().GetResult();
             AnsiConsole.Clear();
             if (result.sucess)
@@ -120,6 +112,7 @@ public class Operations
         //Console.WriteLine(details.CsUserName);
         //Console.WriteLine(details.OsLanguage);
         //Console.WriteLine(Math.Round((double)details.OsFreePhysicalMemory, MidpointRounding.ToPositiveInfinity).ToString("N0"));
+
         AnsiConsole.Write(table);
     }
 

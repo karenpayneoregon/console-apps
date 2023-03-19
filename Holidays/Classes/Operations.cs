@@ -5,7 +5,7 @@ namespace Holidays.Classes;
 
 internal class Operations
 {
-    public static async Task Run(string countryCode = "US")
+    public static async Task Run(string countryCode = "AU")
     {
         var jsonSerializerOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 

@@ -47,8 +47,6 @@ internal class PowerShellOperations
 
         process.EnableRaisingEvents = true;
 
-        //var fileContents = await reader.ReadToEndAsync();
-
         return decimal.TryParse(await reader.ReadToEndAsync(), out var value) ? 
             $"{(int)Math.Round(value, 0, MidpointRounding.AwayFromZero)} GB" : 
             "Unknown";

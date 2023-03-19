@@ -16,6 +16,8 @@ namespace Holidays
                 AnsiConsole.Clear();
                 ExceptionHelpers.ColorWithCyanFuchsia(localException);
             }
+
+            Console.ReadLine();
         }
     }
 }
