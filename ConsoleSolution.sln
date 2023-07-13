@@ -236,7 +236,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumQuestion", "ForumQuest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerilogApp", "SerilogApp\SerilogApp.csproj", "{3AE5FEDC-04B9-45EA-B461-1E84E31BE257}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AskConsoleApp1A", "AskConsoleApp1A\AskConsoleApp1A.csproj", "{BD2DDBBC-83CF-4443-8444-1E757431D1EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AskConsoleApp1A", "AskConsoleApp1A\AskConsoleApp1A.csproj", "{BD2DDBBC-83CF-4443-8444-1E757431D1EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Razor", "Razor", "{106221E2-AE92-4DE1-8A65-A8D3F450ECF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

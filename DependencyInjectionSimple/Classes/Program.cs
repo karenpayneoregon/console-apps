@@ -1,8 +1,4 @@
-﻿using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using ConfigurationLibrary.Classes;
-using DependencyInjectionSimple.Data;
+﻿using System.Runtime.CompilerServices;
 using DependencyInjectionSimple.LanguageExtensions;
 
 // ReSharper disable once CheckNamespace

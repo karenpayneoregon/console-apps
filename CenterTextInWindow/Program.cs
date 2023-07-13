@@ -4,7 +4,7 @@ internal partial class Program
 {
     static void Main(string[] args)
     {
-        ConsoleHelpers.CenterLines("Hello world","Enjoy the ride");
+        ConsoleHelpers.CenterLinesFromTop("Hello world","Enjoy the ride");
         Console.ReadLine();
     }
 }

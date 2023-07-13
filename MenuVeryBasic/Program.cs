@@ -12,12 +12,12 @@ namespace MenuVeryBasic
             {
                 Console.Clear();
 
-                var menuItem = AnsiConsole.Prompt(MenuOperations.SelectionPrompt());
+                var menuItem = AnsiConsole.Prompt(MenuOperations.MainSelectionPrompt());
                 if (menuItem.Id != -1)
                 {
                     menuItem.Action();
-                    Console.WriteLine(menuItem.Information);
-                    Console.ReadLine(); // here got demoing only
+                    //Console.WriteLine(menuItem.Information);
+                    //Console.ReadLine(); 
                 }
                 else
                 {

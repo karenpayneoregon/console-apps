@@ -1,29 +1,26 @@
-﻿using System;
-using System.Threading.Tasks;
-using Spectre.Console;
+﻿using Spectre.Console;
 
-namespace ProgressApp
+namespace ProgressApp;
+
+partial class Program
 {
-    partial class Program
+    static async Task Main(string[] args)
     {
-        static async Task Main(string[] args)
+
+        await AnsiConsole.Progress().StartAsync(async ctx =>
         {
 
-            await AnsiConsole.Progress().StartAsync(async ctx =>
+            var gettingReadyTask = ctx.AddTask("[cyan]Getting things ready[/]");
+                
+            while (!ctx.IsFinished)
             {
 
-                var gettingReadyTask = ctx.AddTask("[cyan]Getting things ready[/]");
-                
-                while (!ctx.IsFinished)
-                {
+                await Task.Delay(300);
+                gettingReadyTask.Increment(10.5);
 
-                    await Task.Delay(300);
-                    gettingReadyTask.Increment(10.5);
+            }
+        });
 
-                }
-            });
-
-            Console.ReadLine();
-        }
+        Console.ReadLine();
     }
 }
