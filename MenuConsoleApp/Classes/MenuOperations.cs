@@ -43,7 +43,6 @@ public class MenuOperations
     /// <summary>
     /// Product menu list
     /// </summary>
-    /// <param name="productContinue">used to terminate menu</param>
     /// <param name="category">Filter products by category identifier</param>
     public static Products ProductMenu(Categories category)
     {

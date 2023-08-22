@@ -160,6 +160,6 @@ namespace MenuConsoleAppBasic.Classes
 
         }
         public static List<Employee> ReadEmployees()
-            => JsonSerializer.Deserialize<List<Employee>>(File.ReadAllText(_fileName));
+            => JsonSerializer.Deserialize<List<Employee>>(File.ReadAllText(_fileName))!;
     }
 }
