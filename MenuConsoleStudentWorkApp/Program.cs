@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using MenuConsoleAppBasic.Models;
+﻿using MenuConsoleAppBasic.Models;
 using MenuConsoleStudentWorkApp.Classes;
 using MenuConsoleStudentWorkApp.Models;
 using Spectre.Console;
@@ -9,11 +7,13 @@ namespace MenuConsoleStudentWorkApp
 {
     partial class Program
     {
+        public static List<Student> studentList { get; set; }
         static void Main(string[] args)
         {
             MenuItem menuItem = new MenuItem();
 
-            List<Student> StudentList = BogusOperations.GetStudents();
+
+            studentList = FileOperations.GetStudents();
 
             while (menuItem.Id > -1)
             {
@@ -26,7 +26,7 @@ namespace MenuConsoleStudentWorkApp
                         .Header("[LightGreen]About[/]")
                         .HeaderAlignment(Justify.Center));
                 menuItem = AnsiConsole.Prompt(MenuOperations.MainMenu());
-                Selection(menuItem, StudentList);
+                Selection(menuItem, studentList);
             }
 
         }

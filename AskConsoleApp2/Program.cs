@@ -12,7 +12,7 @@ namespace AskConsoleApp2
         {
             UserChoices userChoices = Configuration.Get();
 
-            var table = new Table()
+            Table table = new Table()
                 .RoundedBorder()
                 .AddColumn("[b]Setting[/]")
                 .AddColumn("[b]Value[/]")

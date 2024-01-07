@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Bogus;
+﻿using Bogus;
 using MenuConsoleStudentWorkApp.Models;
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
 namespace MenuConsoleStudentWorkApp.Classes
 {
@@ -29,30 +28,6 @@ namespace MenuConsoleStudentWorkApp.Classes
             return list;
         }
 
-        /// <summary>
-        /// Used to read bogus students, if not generated, generate and if they
-        /// have already been generated return the generated students
-        /// </summary>
-        /// <returns></returns>
-        public static List<Student> GetStudents() => Students ??= GenerateStudents();
 
-        /// <summary>
-        /// Get next available key for a Student
-        /// </summary>
-        /// <returns></returns>
-        public static int NextIdentifier()
-        {
-            var identifier = GetStudents().LastOrDefault(x => x.Id > -1)!.Id;
-            if (identifier == 0)
-            {
-                identifier = 1;
-            }
-            else
-            {
-                identifier++;
-            }
-
-            return identifier;
-        }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using MenuConsoleAppBasic.Models;
+﻿using MenuConsoleAppBasic.Models;
 using MenuConsoleStudentWorkApp.Models;
 using Spectre.Console;
 
@@ -8,7 +7,7 @@ namespace MenuConsoleStudentWorkApp.Classes
 {
     public class MenuOperations
     {
-        private static Style _highLightStyle => new(
+        private static Style HighLightStyle => new(
             Color.LightGreen,
             Color.Black,
             Decoration.None);
@@ -18,7 +17,7 @@ namespace MenuConsoleStudentWorkApp.Classes
 
             SelectionPrompt<MenuItem> menu = new()
             {
-                HighlightStyle = _highLightStyle
+                HighlightStyle = HighLightStyle
             };
 
             menu.Title("Select an [B]option[/]");
@@ -39,11 +38,11 @@ namespace MenuConsoleStudentWorkApp.Classes
 
             SelectionPrompt<Student> menu = new()
             {
-                HighlightStyle = _highLightStyle
+                HighlightStyle = HighLightStyle
             };
 
             menu.Title("Select a [B]Student[/]");
-            menu.AddChoices(BogusOperations.GetStudents());
+            menu.AddChoices(FileOperations.GetStudents());
 
             return menu;
         }

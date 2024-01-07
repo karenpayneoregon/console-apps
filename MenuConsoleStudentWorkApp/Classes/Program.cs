@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
+using System.Text.Json;
 using MenuConsoleAppBasic.Models;
 using MenuConsoleStudentWorkApp.Classes;
 using MenuConsoleStudentWorkApp.Models;
@@ -12,12 +11,14 @@ namespace MenuConsoleStudentWorkApp
 {
     partial class Program
     {
+        public static readonly string FileName = "data.json";
+
         [ModuleInitializer]
         public static void Init()
         {
             Console.Title = "Code sample: basically homework helper";
 
-            W.SetConsoleWindowPosition(W.AnchorWindow.Left | W.AnchorWindow.Top);
+            W.SetConsoleWindowPosition(W.AnchorWindow.Center);
 
         }
 
@@ -56,7 +57,7 @@ namespace MenuConsoleStudentWorkApp
                     }
                     break;
                 case 3:
-                    Save(studentList);
+                    FileOperations.Save(studentList);
                     break;
             }
         }
@@ -77,18 +78,21 @@ namespace MenuConsoleStudentWorkApp
         public static void Edit(Student student)
         {
             Prompts.Edit(student);
+            var index = studentList.FindIndex(x => x.Id == student.Id);
+            studentList[index] = student;
         }
+
 
         /// <summary>
         /// Remove student from list
         /// </summary>
         /// <param name="student">student to remove</param>
-        /// <param name="StudentList">list to remove student from</param>
-        public static void Remove(Student student, List<Student> StudentList)
+        /// <param name="studentList">list to remove student from</param>
+        public static void Remove(Student student, List<Student> studentList)
         {
             if (AnsiConsole.Confirm($"Remove {student.FirstName} {student.LastName}?", false))
             {
-                StudentList.Remove(student);
+                studentList.Remove(student);
             }
         }
 
@@ -99,7 +103,9 @@ namespace MenuConsoleStudentWorkApp
         /// <param name="list"></param>
         public static void Save(List<Student> list)
         {
-            // optional, perhaps to a json file
+            list.RemoveAt(list.Count -1);
+            File.WriteAllText(FileName, JsonSerializer.Serialize(
+                list, new JsonSerializerOptions { WriteIndented = true }));
         }
     }
 }

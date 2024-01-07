@@ -5,10 +5,7 @@ namespace MenuConsoleAppBasic.Classes;
 
 public class MenuOperations
 {
-    private static Style HighLightStyle => new(
-        Color.LightGreen,
-        Color.Black,
-        Decoration.None);
+    private static Style HighLightStyle => new(Color.LightGreen, Color.Black, Decoration.None);
 
     public static SelectionPrompt<MenuItem> MainMenu()
     {

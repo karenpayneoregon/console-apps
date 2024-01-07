@@ -9,7 +9,7 @@ namespace Holidays
 
             try
             {
-                await Operations.Run();
+                await Operations.Run("US");
             }
             catch (Exception localException)
             {
