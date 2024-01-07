@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Runtime.CompilerServices;
 using Terminal.Gui;
 using W = ConsoleHelperLibrary.Classes.WindowUtility;
@@ -28,7 +28,7 @@ partial class Program
             X = Pos.Center(),
             Y = 5, 
             Width = Dim.Percent(50),
-            Height = 17, ColorScheme = Colors.ColorSchemes[""]
+            Height = 17, ColorScheme = CreateGreenOnBlack()
         };
 
             
@@ -146,12 +146,16 @@ partial class Program
         // place logic here for main program code
     }
 
-    public static ColorScheme CreateTextColor()
+    public static ColorScheme CreateGreenOnBlack()
     {
-        var scheme = new ColorScheme();
-        var driver = Application.Driver;
-        scheme.Normal = driver.MakeAttribute(Color.White, Color.Blue);
-        scheme.Focus = driver.MakeAttribute(Color.White, Color.Blue);
-        return scheme;
+        var greenOnBlack = new ColorScheme
+        {
+            Normal = new Terminal.Gui.Attribute(Color.Green, Color.Black),
+            HotNormal = new Terminal.Gui.Attribute(Color.BrightGreen, Color.Black),
+            Focus = new Terminal.Gui.Attribute(Color.White, Color.Black),
+            HotFocus = new Terminal.Gui.Attribute(Color.BrightGreen, Color.Black),
+            Disabled = new Terminal.Gui.Attribute(Color.White, Color.Black)
+        };
+        return greenOnBlack;
     }
 }

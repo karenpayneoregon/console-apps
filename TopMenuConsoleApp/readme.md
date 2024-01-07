@@ -17,3 +17,9 @@ The screenshot is different to the current code in that this shows full screen w
 
 ![Screen Shot](assets/screenShot.png)
 
+
+## 2024
+
+- NET5 to NET8
+- [Terminal Gui Designer on GitHub](https://github.com/gui-cs/TerminalGuiDesigner) invoke with `terminalguidesigner`
+- My Views -> C:\OED\Views
