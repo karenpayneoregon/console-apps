@@ -22,4 +22,5 @@ The screenshot is different to the current code in that this shows full screen w
 
 - NET5 to NET8
 - [Terminal Gui Designer on GitHub](https://github.com/gui-cs/TerminalGuiDesigner) invoke with `terminalguidesigner`
+- [Views](https://gui-cs.github.io/Terminal.Gui/docs/views.html)
 - My Views -> C:\OED\Views
