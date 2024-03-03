@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<ApplicationIcon>csharp.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=./</PathMap>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="readme.md" />
+	</ItemGroup>
+
+	<!--<ItemGroup>
+	  <ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
+	</ItemGroup>-->
+
+	<ItemGroup>
+		<PackageReference Include="ConsoleHelperLibrary" Version="1.0.2" />
+		<PackageReference Include="Spectre.Console" Version="0.44.0" />
+	</ItemGroup>
+
+
+
+</Project>

@@ -250,7 +250,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuFuelApp", "MenuFuelApp\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DownloadStringWebApp", "DownloadStringWebApp\DownloadStringWebApp.csproj", "{C8B443F0-F618-47C4-AB41-B678B5524553}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathApp", "MathApp\MathApp.csproj", "{EBD10300-A29C-45C6-9F23-1AD83C73F4EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathApp", "MathApp\MathApp.csproj", "{EBD10300-A29C-45C6-9F23-1AD83C73F4EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionsConsoleAppGlobal1", "ExceptionsConsoleAppGlobal1\ExceptionsConsoleAppGlobal1.csproj", "{9CDD5204-C245-46D8-BC73-A8D8853B9176}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -642,6 +644,10 @@ Global
 		{EBD10300-A29C-45C6-9F23-1AD83C73F4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBD10300-A29C-45C6-9F23-1AD83C73F4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBD10300-A29C-45C6-9F23-1AD83C73F4EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CDD5204-C245-46D8-BC73-A8D8853B9176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDD5204-C245-46D8-BC73-A8D8853B9176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDD5204-C245-46D8-BC73-A8D8853B9176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDD5204-C245-46D8-BC73-A8D8853B9176}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -753,6 +759,7 @@ Global
 		{15B4B407-E0CC-4F46-8D4B-70E4B138F566} = {696DDFE7-F646-43EB-9230-AF54C703F361}
 		{C8B443F0-F618-47C4-AB41-B678B5524553} = {3AC85B1E-1610-4678-8AAF-E399F12C9B08}
 		{EBD10300-A29C-45C6-9F23-1AD83C73F4EC} = {DD926E12-C692-469A-A54E-BE5536FB49E5}
+		{9CDD5204-C245-46D8-BC73-A8D8853B9176} = {53057864-8DF9-4A9D-924C-36A8C899CB6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22709C88-5741-4CC8-8E81-A66A17B04A0D}
