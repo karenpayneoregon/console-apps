@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using AskConsoleApp5.Classes;
-using AskConsoleApp5.Models;
-using Spectre.Console;
+﻿using System.Runtime.CompilerServices;
 using W = ConsoleHelperLibrary.Classes.WindowUtility;
 
 // ReSharper disable once CheckNamespace

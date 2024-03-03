@@ -15,7 +15,7 @@ namespace AskConsoleApp5
                 return;
             }
             
-            AnsiConsole.MarkupLine($"[yellow]{language.Title}[/]");
+            AnsiConsole.MarkupLine($"[yellow]{language.Title}[/] [cyan]{language.Code}[/]");
             AnsiConsole.MarkupLine("[b]Press a key to continue[/]");
 
             Console.ReadLine();

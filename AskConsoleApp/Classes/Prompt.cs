@@ -21,7 +21,7 @@ namespace AskConsoleApp.Classes
         /// <summary>
         /// Gets a yes/no response from the console after displaying a <paramref name="prompt" />.
         /// <para>
-        /// The parsing is case insensitive. Valid responses include: yes, no, y, n.
+        /// The parsing is case-insensitive. Valid responses include: yes, no, y, n.
         /// </para>
         /// </summary>
         /// <param name="prompt">The question to display on the command line</param>
