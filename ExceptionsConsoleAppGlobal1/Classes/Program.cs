@@ -33,7 +33,8 @@ partial class Program
         input = input.Insert(startIndex: input.Length, value: " ").Insert(startIndex: 0, value: " ");
 
         return input.Length > maxLength
-            ? input.Substring(startIndex: 0, length: maxLength - 3).Insert(startIndex: maxLength - 3, value: " ").PadLeft(totalWidth: maxLength - 1, paddingChar: c)
+            ? input.Substring(startIndex: 0, length: maxLength - 3).Insert(startIndex: maxLength - 3, value: " ")
+                .PadLeft(totalWidth: maxLength - 1, paddingChar: c)
                 .PadRight(totalWidth: maxLength, paddingChar: c)
             : input.PadLeft(
                     totalWidth: input.Length + ((maxLength - input.Length) / 2) +
