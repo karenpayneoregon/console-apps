@@ -23,12 +23,13 @@ partial class Program
     /// </summary>
     private static Window CreateWindow()
     {
-        var applicationLoginWindow = new Window("Login!!!")
+        var applicationLoginWindow = new Window("Login")
         {
             X = Pos.Center(),
             Y = 5, 
             Width = Dim.Percent(50),
-            Height = 17, ColorScheme = CreateGreenOnBlack()
+            Height = 17, 
+            ColorScheme = CreateGreenOnBlack()
         };
 
             
@@ -112,7 +113,7 @@ partial class Program
     }
 
     /// <summary>
-    /// Here we create one event to get user name and password
+    /// Here we create one event to get username and password
     /// </summary>
     private static void CreateEvents(Button loginButton, TextField loginText, TextField passText, Button cancelButton, Toplevel top)
     {
@@ -150,8 +151,8 @@ partial class Program
     {
         var greenOnBlack = new ColorScheme
         {
-            Normal = new Terminal.Gui.Attribute(Color.Green, Color.Black),
-            HotNormal = new Terminal.Gui.Attribute(Color.BrightGreen, Color.Black),
+            Normal = new Terminal.Gui.Attribute(Color.Cyan, Color.Black),
+            HotNormal = new Terminal.Gui.Attribute(Color.White, Color.Black),
             Focus = new Terminal.Gui.Attribute(Color.White, Color.Black),
             HotFocus = new Terminal.Gui.Attribute(Color.BrightGreen, Color.Black),
             Disabled = new Terminal.Gui.Attribute(Color.White, Color.Black)

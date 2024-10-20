@@ -1,5 +1,5 @@
-﻿using System;
-using Spectre.Console;
+﻿using Spectre.Console;
+using static FullScreen.Classes.SpectreConsoleHelpers;
 
 namespace FullScreen
 {
@@ -7,8 +7,10 @@ namespace FullScreen
     {
         static void Main(string[] args)
         {
-            AnsiConsole.MarkupLine("[cyan]Full-screen[/]");
-            Console.ReadLine();
+
+            AnsiConsole.MarkupLine($"[{Color.Cyan1}]Full-screen[/] [{Color.Yellow}] .NET Version: {Environment.Version.ToString()}[/]");
+
+            ExitPrompt();
         }
     }
 }

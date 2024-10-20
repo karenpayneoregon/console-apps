@@ -16,6 +16,7 @@ public class Prompts
     /// Ask for a first name
     /// </summary>
     /// <param name="allowEmpty">allows an empty string to return</param>
+    /// <param name="title"></param>
     public static string GetFirstName(bool allowEmpty, string title = "Enter first name")
     {
         return allowEmpty
