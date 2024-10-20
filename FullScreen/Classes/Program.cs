@@ -1,5 +1,4 @@
-﻿using System;
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 using W = ConsoleHelperLibrary.Classes.WindowUtility;
 
 // ReSharper disable once CheckNamespace
